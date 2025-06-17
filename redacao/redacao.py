@@ -5,7 +5,7 @@ import os
 import locale
 import yaml
 import sys
-
+from pathlib import Path
 
 ##renamed modules
 import streamlit as st
@@ -16,24 +16,21 @@ from langchain.memory import ConversationBufferMemory
 from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
 from langchain.prompts import ChatPromptTemplate
-from pathlib import Path
 
 #internal ChatCPG functions
 from utils import parse_creative_outputs, save_creative_outputs
 
-# Absolute path for importing locally created tools
-tools_path = r'G:\Meu Drive\Pessoal\nAmI\ferramentas'
+# Get the absolute path to the project root
+base_dir = Path(__file__).resolve().parent.parent
 
-# Add to sys.path if not already present
-if tools_path not in sys.path:
-    sys.path.append(tools_path)
+# Add the project root to Python path
+if str(base_dir) not in sys.path:
+    sys.path.append(str(base_dir))
 
 # Tools import
-from src.redacao_cpg.tools.extrator_seo import extrair_seo
+from redacao.src.redacao_cpg.tools.extrator_seo import extrair_seo
 
 load_dotenv()
-
-base_dir = Path(__file__).resolve().parent.parent
 
 def missing_outputs():
     """Check if we need to generate creative outputs."""
