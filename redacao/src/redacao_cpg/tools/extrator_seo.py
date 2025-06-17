@@ -1,10 +1,8 @@
 import os
 import requests
-
 from dotenv import load_dotenv 
-from openai import OpenAI
+from langchain_openai import ChatOpenAI
 from typing import Literal, List, Tuple
-
 from pathlib import Path
 
 load_dotenv()
@@ -32,9 +30,6 @@ def get_google_suggestions(tema: str) -> List[str]:
         print(f"❌ Erro em get_google_suggestions: {e}")
         return []
 
-from typing import Literal
-from openai import OpenAI
-
 def classificar_intencao(tema: str, api_key: str) -> str:
     """
     Classifica a intenção de busca utilizando uma API de modelos de linguagem.
@@ -50,24 +45,19 @@ def classificar_intencao(tema: str, api_key: str) -> str:
     >>> classificar_intencao("Como escolher shampoo sem sulfato", "sua_chave_api")
     'informacional'
     """
-    from openai import OpenAI
-    client = OpenAI(api_key=api_key)
-
     try:
-        response = client.chat.completions.create(
+        llm = ChatOpenAI(
             model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "Você é um especialista em SEO."},
-                {"role": "user", "content": (
-                    f"Classifique a seguinte intenção de busca como 'informacional', 'comercial' ou 'indefinido':\n\n"
-                    f"Tema: {tema}\n\n"
-                    "Responda apenas com a palavra correspondente."
-                )}
-            ],
             temperature=0,
-            max_tokens=10
+            api_key=api_key
         )
-        return response.choices[0].message.content.strip().lower()
+        
+        response = llm.invoke(
+            f"Classifique a seguinte intenção de busca como 'informacional', 'comercial' ou 'indefinido':\n\n"
+            f"Tema: {tema}\n\n"
+            "Responda apenas com a palavra correspondente."
+        )
+        return response.content.strip().lower()
     except Exception as e:
         print(f"❌ Erro em classificar_intencao: {e}")
         return "indefinido"
@@ -105,23 +95,21 @@ def gerar_titulos_otimizados(tema: str, api_key: str) -> List[str]:
     >>> gerar_titulos_otimizados("Python para iniciantes", "sua_chave_api")
     ['Aprenda Python do Zero', 'Python: Guia Completo para Iniciantes']
     """
-    client = OpenAI(api_key=api_key)
     try:
-        response = client.chat.completions.create(
+        llm = ChatOpenAI(
             model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "Você é um redator especialista em SEO."},
-                {"role": "user", "content": f"Crie 2 títulos criativos e otimizados para blog sobre o tema: {tema}"}
-            ],
             temperature=0.7,
-            max_tokens=150
+            api_key=api_key
         )
-        texto = response.choices[0].message.content
+        
+        response = llm.invoke(
+            f"Crie 2 títulos criativos e otimizados para blog sobre o tema: {tema}"
+        )
+        texto = response.content
         return [linha.strip('-• ') for linha in texto.split('\n') if linha.strip()]
     except Exception as e:
         print(f"❌ Erro em gerar_titulos_otimizados: {e}")
         return []
-
 
 def gerar_campos_semanticos(tema: str) -> dict:
     return {
