@@ -29,7 +29,7 @@ if tools_path not in sys.path:
     sys.path.append(tools_path)
 
 # Tools import
-from extrator_seo import extrair_seo
+from src.redacao_cpg.tools.extrator_seo import extrair_seo
 
 load_dotenv()
 
