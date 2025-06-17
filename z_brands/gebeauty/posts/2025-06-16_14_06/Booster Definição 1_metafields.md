@@ -1,0 +1,3 @@
+meta_title: Realce Seus Cachos com o Booster Definição | Dicas Práticas  
+meta_description: Descubra como o Booster Definição transforma seus cachos, garantindo definição e controle do frizz. Leia para saber mais!  
+produtos_relacionados: [Booster Definição](https://gebeauty.com.br/products/booster-definicao-ge-beauty-15ml), [Primer Cachos Definidos](https://gebeauty.com.br/products/primer-cachos-definidos), [Leave-in com Proteção Térmica](https://gebeauty.com.br/products/leave-in-com-protecao-termica-ge-beauty-150ml), [Máscara Condicionadora](https://gebeauty.com.br/products/mascara-condicionadora-ge-beauty-200ml), [Booster Hidratante](https://gebeauty.com.br/products/booster-hidratante-ge-beauty-15ml)

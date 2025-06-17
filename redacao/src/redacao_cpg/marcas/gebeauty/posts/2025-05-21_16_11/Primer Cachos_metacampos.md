@@ -1,0 +1,3 @@
+- meta_title: segredo para cachos perfeitos e leves
+- meta_description: descubra como obter definição e leveza nos cachos com produtos veganos da GE Beauty. Garanta cachos incríveis e tratamentos personalizados hoje!
+- produtos_relacionados: primer cachos definidos, booster definição, leave-in com proteção térmica, shampoo sem sulfato, máscara condicionadora

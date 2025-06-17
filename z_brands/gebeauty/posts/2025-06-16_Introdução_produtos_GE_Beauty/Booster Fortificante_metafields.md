@@ -1,0 +1,3 @@
+meta_title: Como Fortalecer Seus Fios com Booster Fortificante  
+meta_description: Descubra como intensificar a saúde dos seus cabelos com o Booster Fortificante. Fortaleça, controle oleosidade e experimente resultados incríveis!  
+produtos_relacionados: [Booster Fortificante](https://gebeauty.com.br/products/booster-fortificante-ge-beauty-15ml), [Shampoo Sem Sulfato](https://gebeauty.com.br/products/shampoo-sem-sulfato-ge-beauty-250ml), [Máscara Condicionadora](https://gebeauty.com.br/products/mascara-condicionadora-ge-beauty-200ml), [Leave-in com Proteção Térmica](https://gebeauty.com.br/products/leave-in-com-protecao-termica-ge-beauty-150ml), [Booster Antifrizz](https://gebeauty.com.br/products/booster-antifrizz)

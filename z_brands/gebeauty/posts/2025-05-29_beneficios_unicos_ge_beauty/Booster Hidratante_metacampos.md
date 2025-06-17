@@ -1,0 +1,5 @@
+```markdown
+- meta_title: Hidratação Extra e Brilho com Booster Hidratante
+- meta_description: Descubra como o Booster Hidratante transforma seu cabelo, trazendo hidratação extra e brilho irresistível, para fios saudáveis e radiantes.
+- produtos_relacionados: [Booster Hidratante](https://gebeauty.com.br/products/booster-hidratante-ge-beauty-15ml), [Máscara Condicionadora](https://gebeauty.com.br/products/mascara-condicionadora-ge-beauty-200ml), [Leave-in com Proteção Térmica](https://gebeauty.com.br/products/leave-in-com-protecao-termica-ge-beauty-150ml), [Shampoo Sem Sulfato](https://gebeauty.com.br/products/shampoo-sem-sulfato-ge-beauty-250ml), [Booster Antifrizz](https://gebeauty.com.br/products/booster-antifrizz)
+```

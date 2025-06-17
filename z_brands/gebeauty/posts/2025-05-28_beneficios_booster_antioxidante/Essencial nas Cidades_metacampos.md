@@ -1,0 +1,3 @@
+- meta_title: vitalize e proteja seu cabelo nas cidades grandes
+- meta_description: descubra os benefícios do booster antioxidante para cabelos em áreas urbanas. Proteção contra poluição e revitalização em uma rotina prática.
+- produtos_relacionados: Booster Antioxidante, Shampoo Sem Sulfato, Máscara Condicionadora, Leave-in com Proteção Térmica, Primer Cachos Definidos, Primer Lisos Intacto
