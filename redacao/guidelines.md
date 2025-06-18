@@ -450,10 +450,8 @@ Use this message with the universal prompt to adapt it for any of the above cust
 
 You should always deliver a table containing the segment's handle (column 1) and the corresponding adapted message (column 2).
 
-Format the final Adapted message to be used in a WhatsApp URL message. Replace all special characters and line breaks with the appropriate percent-encoded values (e.g. space = `%20`, line break = `%0A`, exclamation = `%21`, $ = `%24`). The final message should be **one single URL-safe string**.
-
 Apply WhatsApp-compatible formatting to highlight emotional or action-driven parts of the message:
-- Use *italics* (with underscores) for soft or intimate expressions (e.g. "_do your way_" or "_your ritual_"), maintaing the _underscore_ visible to the user. Remember, the text will be copied for future processing.
+- Use _italics_ (with underscores) for soft or intimate expressions (e.g. "_do your way_" or "_your ritual_"), maintaing the _underscore_ visible to the user. Remember, the text will be copied for future processing.
 - Use *bold* (with asterisks) for action or call-to-action elements (e.g. "*Discover now*", "*Come back to your ritual*"), maintaing the *astherisc* visible to the user. Remember, the text will be copied for future processing.
 - Do not use Markdown or HTML tags. Only WhatsApp-native syntax is allowed.
 
