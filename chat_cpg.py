@@ -26,15 +26,13 @@ system_lang = locale.getdefaultlocale()[0]
 UI_TEXT = {
     'en_US': {
         'functions_tab': 'Functions',
-        'references_tab': 'References',
         'brands_tab': 'Brands',
         'llms_tab': 'LLMs',
         'choose_function': 'Choose function',
-        'choose_reference': 'Choose reference',
         'choose_brand': 'Choose brand',
         'choose_llm': 'Choose LLM',
         'select_version': 'Select version',
-        'restart': 'Restart',
+        'load': 'Load',
         'missing_files': "Incomplete files for brand '{}'",
         'missing_brand_info': "Oops! Some brand information is missing. Check your inputs!",
         'no_reference': "No reference loaded.",
@@ -51,15 +49,13 @@ UI_TEXT = {
     },
     'pt_BR': {
         'functions_tab': 'Funções',
-        'references_tab': 'Referências',
         'brands_tab': 'Marcas',
         'llms_tab': 'LLMs',
         'choose_function': 'Escolha a função',
-        'choose_reference': 'Escolha a referência',
         'choose_brand': 'Escolha a marca',
         'choose_llm': 'Escolha um LLM',
         'select_version': 'Selecione a versão',
-        'restart': 'Reiniciar',
+        'load': 'Carregar',
         'missing_files': "Arquivos incompletos para a marca '{}'",
         'missing_brand_info': "Ops! Ainda falta alguma informação da marca. Verifique seus inputs!",
         'no_reference': "Sem referência carregada.",
@@ -202,47 +198,42 @@ st.set_page_config(
     )
 
 def sidebar_menu():
-    tabs = st.tabs([LANG['functions_tab'], LANG['references_tab']])
+    selected_function = st.selectbox(LANG['choose_function'], 
+                                    available_functions.keys())
+    selected_function_id = available_functions[selected_function]
+    st.session_state['chosen_function'] = selected_function_id
+    
+    base_dir = Path(__file__).resolve().parent
+    file_guidelines = base_dir / selected_function_id / 'guidelines.md'
+          
+    try:
+        if not file_guidelines.exists():
+            raise FileNotFoundError(LANG['file_not_found'].format(file_guidelines))
+            
+        with open(file_guidelines, 'r', encoding='utf-8') as f:
+            guidelines = f.read()
+            if not guidelines.strip():
+                raise ValueError(LANG['empty_guidelines'])
+            st.session_state['guidelines'] = escape_braces(guidelines)
+    
+    except (FileNotFoundError, ValueError) as e:
+        st.error(LANG['guidelines_error'].format(str(e)))
+        st.session_state['guidelines'] = LANG['no_guidelines']
 
-    with tabs[0]:
-        selected_function = st.selectbox(LANG['choose_function'], 
-                                        available_functions.keys())
-        selected_function_id = available_functions[selected_function]
-        st.session_state['chosen_function'] = selected_function_id
-        
-        base_dir = Path(__file__).resolve().parent
-        file_guidelines = base_dir / selected_function_id / 'guidelines.md'
-              
-        try:
-            if not file_guidelines.exists():
-                raise FileNotFoundError(LANG['file_not_found'].format(file_guidelines))
-                
-            with open(file_guidelines, 'r', encoding='utf-8') as f:
-                guidelines = f.read()
-                if not guidelines.strip():
-                    raise ValueError(LANG['empty_guidelines'])
-                st.session_state['guidelines'] = escape_braces(guidelines)
-        
-        except (FileNotFoundError, ValueError) as e:
-            st.error(LANG['guidelines_error'].format(str(e)))
-            st.session_state['guidelines'] = LANG['no_guidelines']
+    # Set default reference to RYB
+    selected_ref_id = 'ryb'
+    st.session_state['selected_ref'] = selected_ref_id
 
-    with tabs[1]:
-        selected_ref = st.selectbox(LANG['choose_reference'], 
-                                     available_refs.keys())
-        selected_ref_id = available_refs[selected_ref]
-        st.session_state['selected_ref'] = selected_ref_id
+    file_reference = base_dir / 'z_refs'/ f'{selected_ref_id}.md'
 
-        file_reference = base_dir / 'z_refs'/ f'{selected_ref_id}.md'
-
-        try:
-            with open(file_reference, 'r', encoding='utf-8') as f:
-                reference = f.read()
-                st.session_state['reference'] = reference
-        
-        except FileNotFoundError:
-            st.warning(LANG['reference_not_found'].format(selected_ref_id))
-            st.session_state['reference'] = LANG['no_specific_reference']
+    try:
+        with open(file_reference, 'r', encoding='utf-8') as f:
+            reference = f.read()
+            st.session_state['reference'] = reference
+    
+    except FileNotFoundError:
+        st.warning(LANG['reference_not_found'].format(selected_ref_id))
+        st.session_state['reference'] = LANG['no_specific_reference']
 
     # Set default brand (GE Beauty)
     brand_id = 'gebeauty'
@@ -269,7 +260,7 @@ def sidebar_menu():
     api_key = api_key_env
     st.session_state[f'api_key_{chosen_provider}'] = api_key
 
-    if st.button(LANG['restart'], use_container_width=True):
+    if st.button(LANG['load'], use_container_width=True):
         st.session_state['memory'] = intro
 
 def handle_chat_interaction(prompt_message: str, chain, memory, key: str = "main_chat"):
