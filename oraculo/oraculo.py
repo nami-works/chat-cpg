@@ -181,43 +181,6 @@ def handle_oraculo_flow(chat_interaction, chain, memory):
     Handle the oraculo-specific chat flow.
     Uses the centralized chat_interaction function for UI.
     """
-    # Render file processing UI
-    with st.expander("Process Knowledge Base Files"):
-        directory_path = st.text_input("Enter the directory path to scan:",
-                                     placeholder="e.g., C:/Users/Documents")
-
-        if st.button("Start Scanning"):
-            if not directory_path:
-                st.warning("⚠️ Please enter a directory path")
-                return
-
-            found_files = scan_directory(directory_path)
-
-            if not found_files:
-                st.warning(f"⚠️ No files found in directory: {directory_path}")
-                return
-
-            progress_bar = st.progress(0)
-            progress_text = st.empty()
-            
-            total_files = len(found_files)
-            processed_files = 0
-            
-            for file_path in found_files:
-                try:
-                    processed_result = file_reader.load_input(file_path)
-                    file_metadata = {"source": file_path}
-                    update_knowledge_base(processed_result, file_metadata)
-                    
-                    processed_files += 1
-                    progress_bar.progress(processed_files / total_files)
-                    progress_text.text(f"Processing files... ({processed_files}/{total_files})")
-                    
-                except Exception as error:
-                    st.error(f"❌ Error processing file {file_path}: {error}")
-
-            progress_text.text("✅ Processing completed!")
-
     # Handle chat interaction
     response = chat_interaction('Como posso te ajudar hoje?', chain, memory, key="oraculo_chat")
     

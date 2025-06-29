@@ -18,6 +18,7 @@ from pathlib import Path
 
 ##internal functions
 from utils import parse_creative_outputs, save_creative_outputs
+from file_reader import load_input
 
 # Get system language
 system_lang = locale.getdefaultlocale()[0]
@@ -29,12 +30,17 @@ UI_TEXT = {
         'references_tab': 'References',
         'brands_tab': 'Brands',
         'llms_tab': 'LLMs',
+        'knowledge_tab': 'Add Knowledge',
         'choose_function': 'Choose function',
         'choose_reference': 'Choose reference',
         'choose_brand': 'Choose brand',
         'choose_llm': 'Choose LLM',
         'select_version': 'Select version',
         'restart': 'Restart',
+        'upload_files': 'Upload files to add to knowledge base',
+        'additional_context': 'Additional context about the files',
+        'context_placeholder': 'Provide additional context about these files...',
+        'send_knowledge': 'Send to Knowledge Base',
         'missing_files': "Incomplete files for brand '{}'",
         'missing_brand_info': "Oops! Some brand information is missing. Check your inputs!",
         'no_reference': "No reference loaded.",
@@ -47,19 +53,27 @@ UI_TEXT = {
         'chatcpg_not_loaded': "ChatCPG is not loaded yet",
         'click_to_load': "Click here to load!",
         'no_api_key': "⚠️ No API Key defined.",
-        'chat_placeholder': "Type your message here..."
+        'chat_placeholder': "Type your message here...",
+        'knowledge_success': "✅ Files successfully added to knowledge base!",
+        'knowledge_error': "❌ Error processing files: {}",
+        'no_files_selected': "⚠️ Please select files to upload"
     },
     'pt_BR': {
         'functions_tab': 'Funções',
         'references_tab': 'Referências',
         'brands_tab': 'Marcas',
         'llms_tab': 'LLMs',
+        'knowledge_tab': 'Adicionar Conhecimento',
         'choose_function': 'Escolha a função',
         'choose_reference': 'Escolha a referência',
         'choose_brand': 'Escolha a marca',
         'choose_llm': 'Escolha um LLM',
         'select_version': 'Selecione a versão',
         'restart': 'Reiniciar',
+        'upload_files': 'Carregue arquivos para adicionar à base de conhecimento',
+        'additional_context': 'Contexto adicional sobre os arquivos',
+        'context_placeholder': 'Forneça contexto adicional sobre estes arquivos...',
+        'send_knowledge': 'Enviar para Base de Conhecimento',
         'missing_files': "Arquivos incompletos para a marca '{}'",
         'missing_brand_info': "Ops! Ainda falta alguma informação da marca. Verifique seus inputs!",
         'no_reference': "Sem referência carregada.",
@@ -72,7 +86,10 @@ UI_TEXT = {
         'chatcpg_not_loaded': "O ChatCPG ainda não foi carregado",
         'click_to_load': "Clique aqui para carregar!",
         'no_api_key': "⚠️ Nenhuma API Key foi definida.",
-        'chat_placeholder': "Digite sua mensagem aqui..."
+        'chat_placeholder': "Digite sua mensagem aqui...",
+        'knowledge_success': "✅ Arquivos adicionados com sucesso à base de conhecimento!",
+        'knowledge_error': "❌ Erro ao processar arquivos: {}",
+        'no_files_selected': "⚠️ Por favor, selecione arquivos para carregar"
     }
 }
 
@@ -122,6 +139,82 @@ def escape_braces(text):
         return text.replace("{", "{{").replace("}", "}}")
     return text
 
+def process_knowledge_files(uploaded_files, additional_context=""):
+    """
+    Process uploaded files and add them to the knowledge base.
+    
+    Args:
+        uploaded_files: List of uploaded files from Streamlit
+        additional_context: Additional context provided by the user
+    """
+    try:
+        # Get the brand context to determine where to save the knowledge
+        context = st.session_state.get('context', {})
+        brand_id = context.get('brand_id', 'gebeauty')
+        
+        # Define knowledge base path
+        knowledge_base_path = base_dir / 'z_brands' / brand_id / 'knowledge.md'
+        
+        # Ensure the directory exists
+        knowledge_base_path.parent.mkdir(parents=True, exist_ok=True)
+        
+        # Process each uploaded file
+        for uploaded_file in uploaded_files:
+            try:
+                # Load and process the file content
+                file_content = load_input(uploaded_file, uploaded_file.name)
+                
+                # Create entry metadata
+                file_metadata = {
+                    'source': uploaded_file.name,
+                    'type': uploaded_file.type,
+                    'additional_context': additional_context
+                }
+                
+                # Update knowledge base
+                update_knowledge_base_entry(file_content, file_metadata, knowledge_base_path)
+                
+            except Exception as e:
+                st.error(f"Error processing file {uploaded_file.name}: {str(e)}")
+                continue
+                
+    except Exception as e:
+        raise Exception(f"Failed to process knowledge files: {str(e)}")
+
+def update_knowledge_base_entry(content, metadata, knowledge_base_path):
+    """
+    Update the knowledge base with a new entry.
+    
+    Args:
+        content: The processed file content
+        metadata: File metadata including source, type, and context
+        knowledge_base_path: Path to the knowledge base file
+    """
+    try:
+        # Create the knowledge base file if it doesn't exist
+        if not knowledge_base_path.exists():
+            with open(knowledge_base_path, 'w', encoding='utf-8') as f:
+                f.write("# Knowledge Base\n\n")
+        
+        # Append new entry to knowledge base
+        with open(knowledge_base_path, 'a', encoding='utf-8') as f:
+            f.write(f"\n## Document: {metadata.get('source', 'unknown')}\n\n")
+            
+            # Add additional context if provided
+            if metadata.get('additional_context'):
+                f.write(f"### Context:\n{metadata['additional_context']}\n\n")
+            
+            # Add file metadata
+            f.write(f"### Metadata:\n")
+            f.write(f"- **Source**: {metadata.get('source', 'unknown')}\n")
+            f.write(f"- **Type**: {metadata.get('type', 'unknown')}\n\n")
+            
+            # Add the content
+            f.write(f"### Content:\n<details>\n<summary>Expand</summary>\n\n{content}\n\n</details>\n\n---\n")
+            
+    except Exception as e:
+        raise Exception(f"Failed to update knowledge base: {str(e)}")
+
 def load_brand_files(brand_name: str):
     brand_folder = base_dir / 'z_brands' / brand_name
 
@@ -166,6 +259,19 @@ def load_model(chosen_provider, version_id, api_key):
 
     guidelines = st.session_state.get('guidelines', '...')
     reference = st.session_state.get('reference', LANG['no_reference'])
+    
+    # Load knowledge base if it exists
+    knowledge_base = ""
+    context = st.session_state.get('context', {})
+    brand_id = context.get('brand_id', 'gebeauty')
+    knowledge_base_path = base_dir / 'z_brands' / brand_id / 'knowledge.md'
+    
+    if knowledge_base_path.exists():
+        try:
+            with open(knowledge_base_path, 'r', encoding='utf-8') as f:
+                knowledge_base = f.read()
+        except Exception as e:
+            st.warning(f"Could not load knowledge base: {e}")
 
     prompt = f'''
     You have several information about the user's business:
@@ -178,6 +284,9 @@ def load_model(chosen_provider, version_id, api_key):
     Besides that, you've been given a detailed set of {guidelines} for this specific interaction.
     You must know everything about the business you're partnering with, and use
     {reference} as your main reference of knowledge and best practices to work with.
+
+    {"Additional Knowledge Base:" if knowledge_base else ""}
+    {knowledge_base}
 
     ####
     {st.session_state.get('result', '')}
@@ -202,7 +311,7 @@ st.set_page_config(
     )
 
 def sidebar_menu():
-    tabs = st.tabs([LANG['functions_tab'], LANG['references_tab']])
+    tabs = st.tabs([LANG['functions_tab'], LANG['knowledge_tab']])
 
     with tabs[0]:
         selected_function = st.selectbox(LANG['choose_function'], 
@@ -228,21 +337,33 @@ def sidebar_menu():
             st.session_state['guidelines'] = LANG['no_guidelines']
 
     with tabs[1]:
-        selected_ref = st.selectbox(LANG['choose_reference'], 
-                                     available_refs.keys())
-        selected_ref_id = available_refs[selected_ref]
-        st.session_state['selected_ref'] = selected_ref_id
-
-        file_reference = base_dir / 'z_refs'/ f'{selected_ref_id}.md'
-
-        try:
-            with open(file_reference, 'r', encoding='utf-8') as f:
-                reference = f.read()
-                st.session_state['reference'] = reference
+        # Knowledge tab
+        st.write(LANG['upload_files'])
+        uploaded_files = st.file_uploader(
+            "Choose files", 
+            accept_multiple_files=True,
+            type=['pdf', 'txt', 'doc', 'docx', 'md', 'csv', 'json']
+        )
         
-        except FileNotFoundError:
-            st.warning(LANG['reference_not_found'].format(selected_ref_id))
-            st.session_state['reference'] = LANG['no_specific_reference']
+        # Additional context input field
+        additional_context = st.text_area(
+            LANG['additional_context'],
+            placeholder=LANG['context_placeholder'],
+            height=100
+        )
+        
+        # Send button (removed load button as requested)
+        if st.button(LANG['send_knowledge'], use_container_width=True):
+            if not uploaded_files:
+                st.warning(LANG['no_files_selected'])
+            else:
+                try:
+                    # Process uploaded files and add to knowledge base
+                    process_knowledge_files(uploaded_files, additional_context)
+                    st.success(LANG['knowledge_success'])
+                    st.rerun()
+                except Exception as e:
+                    st.error(LANG['knowledge_error'].format(str(e)))
 
     # Set default brand (GE Beauty)
     brand_id = 'gebeauty'
