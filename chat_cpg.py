@@ -93,6 +93,62 @@ UI_TEXT = {
     }
 }
 
+# Function-specific context configurations
+FUNCTION_CONTEXTS = {
+    'redacao': {
+        'title': '🦊 ChatCPG - Redação',
+        'subtitle': 'Bem-vindo ao sistema de Redação da GE Beauty!',
+        'description': """
+        O ChatCPG Redação é seu assistente especializado para criar conteúdo no tom de voz GE Beauty!
+        Aqui você pode:
+        • Gerar temas e briefings para blog posts
+        • Criar mensagens personalizadas baseadas em RFM
+        • Desenvolver campanhas de email marketing
+        • Adaptar conteúdo para diferentes canais
+        
+        Vamos começar? 💛
+        """,
+        'icon': '✍️'
+    },
+    'oraculo': {
+        'title': '🦊 ChatCPG - Oráculo',
+        'subtitle': 'Bem-vindo ao Oráculo da GE Beauty!',
+        'description': """
+        O ChatCPG Oráculo é seu assistente inteligente para consultar a base de conhecimento!
+        Aqui você pode:
+        • Pesquisar informações específicas da empresa
+        • Obter respostas rápidas e precisas
+        • Consultar documentos e políticas
+        • Acessar dados históricos e relatórios
+        
+        Como posso ajudá-lo hoje? 🔍
+        """,
+        'icon': '🔮'
+    }
+}
+
+def get_function_context(function_id):
+    """
+    Get dynamic context based on selected function
+    
+    Args:
+        function_id: The selected function identifier
+        
+    Returns:
+        dict: Context information for the function
+    """
+    default_context = {
+        'title': '🦊 ChatCPG',
+        'subtitle': 'Bem-vindo ao ChatCPG da GE Beauty!',
+        'description': """
+        ChatCPG é seu assistente virtual para trabalhar com a GE Beauty! 
+        Selecione uma função na barra lateral para começar. 💛
+        """,
+        'icon': '🦊'
+    }
+    
+    return FUNCTION_CONTEXTS.get(function_id, default_context)
+
 # Default to English if system language not supported
 LANG = UI_TEXT.get(system_lang, UI_TEXT['en_US'])
 
@@ -418,12 +474,15 @@ def handle_chat_interaction(prompt_message: str, chain, memory, key: str = "main
     return None
 
 def chat_cpg():
-    st.header('🦊 ChatCPG',divider='red')
-    st.subheader('Bem-vindo ao ChatCPG da GE Beauty!')
-    st.write("""
-    ChatCPG é seu assistente virtual para criar conteúdo no tom de voz GE Beauty! Vamos começar? 💛
-    """)
     chosen_function = st.session_state.get('chosen_function')
+    
+    # Get dynamic context based on selected function
+    context_info = get_function_context(chosen_function)
+    
+    # Display dynamic header and content
+    st.header(context_info['title'], divider='red')
+    st.subheader(context_info['subtitle'])
+    st.write(context_info['description'])
     
     with st.sidebar:
         sidebar_menu()
