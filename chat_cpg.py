@@ -36,11 +36,11 @@ UI_TEXT = {
         'choose_brand': 'Choose brand',
         'choose_llm': 'Choose LLM',
         'select_version': 'Select version',
-        'restart': 'Restart',
+        'load': 'Load',
         'upload_files': 'Upload files to add to knowledge base',
         'additional_context': 'Additional context about the files',
         'context_placeholder': 'Provide additional context about these files...',
-        'send_knowledge': 'Send to Knowledge Base',
+        'send_knowledge': 'Send',
         'missing_files': "Incomplete files for brand '{}'",
         'missing_brand_info': "Oops! Some brand information is missing. Check your inputs!",
         'no_reference': "No reference loaded.",
@@ -69,11 +69,11 @@ UI_TEXT = {
         'choose_brand': 'Escolha a marca',
         'choose_llm': 'Escolha um LLM',
         'select_version': 'Selecione a versão',
-        'restart': 'Reiniciar',
+        'load': 'Carregar',
         'upload_files': 'Carregue arquivos para adicionar à base de conhecimento',
         'additional_context': 'Contexto adicional sobre os arquivos',
         'context_placeholder': 'Forneça contexto adicional sobre estes arquivos...',
-        'send_knowledge': 'Enviar para Base de Conhecimento',
+        'send_knowledge': 'Enviar',
         'missing_files': "Arquivos incompletos para a marca '{}'",
         'missing_brand_info': "Ops! Ainda falta alguma informação da marca. Verifique seus inputs!",
         'no_reference': "Sem referência carregada.",
@@ -93,6 +93,63 @@ UI_TEXT = {
     }
 }
 
+# Function-specific context configurations
+FUNCTION_CONTEXTS = {
+    'oraculo': {
+        'title': '🦊 ChatCPG | Copiloto',
+        'subtitle': 'Bem-vindo ao ChatCPG da GE Beauty!',
+        'description': """
+        Esse é o assistente inteligente da GE Beauty para tarefas do dia-a-dia!
+        Aqui você pode:\n
+        • Fazer diversas perguntas e pedir ajuda para questões específicas\n
+        • Pesquisar informações específicas da empresa\n
+        • Obter respostas rápidas e precisas\n
+        • Consultar documentos e políticas\n
+        • Acessar dados históricos e relatórios\n
+        \n\n
+        Como posso te ajudar hoje? 🫡
+        """,
+        'icon': '🔮'
+    },
+    'redacao': {
+        'title': '🦊 ChatCPG | Copywriter',
+        'subtitle': 'Bem-vindo à Redação da GE Beauty!',
+        'description': """
+        Esse é o assistente especializado para criar conteúdo no tom de voz GE Beauty!
+        Aqui você pode:\n
+        • Gerar temas e briefings para blog posts\n
+        • Criar mensagens personalizadas baseadas nas categorias de RFM\n
+        • Desenvolver campanhas de email marketing\n
+        • Adaptar conteúdo para diferentes canais\n
+        \n\n
+        Vamos começar? 💛
+        """,
+        'icon': '✍️'
+    },
+}
+
+def get_function_context(function_id):
+    """
+    Get dynamic context based on selected function
+    
+    Args:
+        function_id: The selected function identifier
+        
+    Returns:
+        dict: Context information for the function
+    """
+    default_context = {
+        'title': '🦊 ChatCPG',
+        'subtitle': 'Bem-vindo ao ChatCPG da GE Beauty!',
+        'description': """
+        ChatCPG é seu assistente virtual para trabalhar com a GE Beauty! 
+        Selecione uma função na barra lateral para começar. 💛
+        """,
+        'icon': '🦊'
+    }
+    
+    return FUNCTION_CONTEXTS.get(function_id, default_context)
+
 # Default to English if system language not supported
 LANG = UI_TEXT.get(system_lang, UI_TEXT['en_US'])
 
@@ -103,8 +160,8 @@ client_brands = {
 }
 
 available_functions = {
-    'Redação CPG': 'redacao',
-    'Oráculo CPG': 'oraculo',
+    'Copiloto': 'oraculo',
+    'Copywriter': 'redacao',
 }
 
 available_llms = {
@@ -125,11 +182,6 @@ available_llms = {
             'Compound Beta': 'compound-beta',
         },
         'Chain': ChatGroq},
-}
-
-available_refs = {
-    'Ramping your Brand': 'ryb',
-    'The Great CEO Within': 'tgcw',
 }
 
 base_dir = Path(__file__).resolve().parent
@@ -336,6 +388,11 @@ def sidebar_menu():
             st.error(LANG['guidelines_error'].format(str(e)))
             st.session_state['guidelines'] = LANG['no_guidelines']
 
+        if st.button(LANG['load'], use_container_width=True):
+            st.session_state['memory'] = intro
+
+
+
     with tabs[1]:
         # Knowledge tab
         st.write(LANG['upload_files'])
@@ -390,9 +447,6 @@ def sidebar_menu():
     api_key = api_key_env
     st.session_state[f'api_key_{chosen_provider}'] = api_key
 
-    if st.button(LANG['restart'], use_container_width=True):
-        st.session_state['memory'] = intro
-
 def handle_chat_interaction(prompt_message: str, chain, memory, key: str = "main_chat"):
     interaction = st.chat_input(LANG['chat_placeholder'], key=key)
     if not interaction:
@@ -418,12 +472,15 @@ def handle_chat_interaction(prompt_message: str, chain, memory, key: str = "main
     return None
 
 def chat_cpg():
-    st.header('🦊 ChatCPG',divider='red')
-    st.subheader('Bem-vindo ao ChatCPG da GE Beauty!')
-    st.write("""
-    ChatCPG é seu assistente virtual para criar conteúdo no tom de voz GE Beauty! Vamos começar? 💛
-    """)
     chosen_function = st.session_state.get('chosen_function')
+    
+    # Get dynamic context based on selected function
+    context_info = get_function_context(chosen_function)
+    
+    # Display dynamic header and content
+    st.header(context_info['title'], divider='red')
+    st.subheader(context_info['subtitle'])
+    st.write(context_info['description'])
     
     with st.sidebar:
         sidebar_menu()
