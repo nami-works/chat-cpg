@@ -325,27 +325,30 @@ def load_model(chosen_provider, version_id, api_key):
         except Exception as e:
             st.warning(f"Could not load knowledge base: {e}")
 
-    prompt = f'''
-    You have several information about the user's business:
-    - {brand}
-    - {products}
-    - {style}
-    - content available at their {blog}
-    - {benchmarks}
+    # Build prompt without f-string to avoid template variable conflicts
+    prompt_parts = [
+        "You have several information about the user's business:",
+        f"- {brand}",
+        f"- {products}",
+        f"- {style}",
+        f"- content available at their {blog}",
+        f"- {benchmarks}",
+        "",
+        f"Besides that, you've been given a detailed set of {guidelines} for this specific interaction.",
+        f"You must know everything about the business you're partnering with, and use",
+        f"{reference} as your main reference of knowledge and best practices to work with.",
+        "",
+        "Additional Knowledge Base:" if knowledge_base else "",
+        knowledge_base,
+        "",
+        "####",
+        st.session_state.get('result', ''),
+        "####",
+        "",
+        "Use all of that as the main ground for all your iterations."
+    ]
     
-    Besides that, you've been given a detailed set of {guidelines} for this specific interaction.
-    You must know everything about the business you're partnering with, and use
-    {reference} as your main reference of knowledge and best practices to work with.
-
-    {"Additional Knowledge Base:" if knowledge_base else ""}
-    {knowledge_base}
-
-    ####
-    {st.session_state.get('result', '')}
-    ####
-
-    Use all of that as the main ground for all your iterations.
-    '''
+    prompt = "\n".join(prompt_parts)
 
     template = ChatPromptTemplate.from_messages([
         ('system', prompt),
