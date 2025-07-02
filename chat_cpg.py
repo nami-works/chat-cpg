@@ -285,12 +285,15 @@ def load_brand_files(brand_name: str):
 
     with open(file_style, 'r', encoding='utf-8') as f:
         style = f.read()
+        style = escape_braces(style)
 
     with open(file_products, 'r', encoding='utf-8') as f:
         products = f.read()
+        products = escape_braces(products)
 
     with open(file_format, 'r', encoding='utf-8') as f:
         format_recommendations = f.read()
+        format_recommendations = escape_braces(format_recommendations)
 
     return registration['brand'], registration['blog'], registration['benchmarks'], style, products, format_recommendations
 
@@ -322,6 +325,8 @@ def load_model(chosen_provider, version_id, api_key):
         try:
             with open(knowledge_base_path, 'r', encoding='utf-8') as f:
                 knowledge_base = f.read()
+                # Escape braces in knowledge base content to prevent template conflicts
+                knowledge_base = escape_braces(knowledge_base)
         except Exception as e:
             st.warning(f"Could not load knowledge base: {e}")
 
