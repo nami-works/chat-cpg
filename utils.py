@@ -8,56 +8,64 @@ from pathlib import Path
 
 # Function to parse creative outputs from model response
 def parse_creative_outputs(resposta):
-    st.write("Analyzing model response:", resposta)  # Debug output
-
+    """
+    Parse themes, seo_themes, and macro_name from LLM response.
+    This function extracts Python dictionaries and variables from the response text.
+    """
+    
     # Try to extract themes dictionary from response
-    theme_pattern = re.search(r'themes\s*=\s*\{[^}]+\}', resposta, re.DOTALL)
+    # Improved pattern to handle multi-line dictionaries and various formatting
+    theme_pattern = re.search(r'themes\s*=\s*\{([^}]*(?:\{[^}]*\}[^}]*)*)\}', resposta, re.DOTALL)
     if theme_pattern:
         try:
-            theme_text = theme_pattern.group(0)
-            st.write("Theme text found:", theme_text)  # Debug output
+            theme_text = f"themes = {{{theme_pattern.group(1)}}}"
+            # Clean up the text and try to evaluate it
             theme_dict = ast.literal_eval(theme_text.split('=')[1].strip())
-            if isinstance(theme_dict, dict):
+            if isinstance(theme_dict, dict) and theme_dict:
                 st.session_state['themes'] = theme_dict
                 st.session_state['adjustment_mode'] = False
-                st.write("✅ Themes extracted successfully:", theme_dict)  # Debug output
-        except Exception as e:
-            st.warning(f"Error interpreting themes: {e}")
-            st.write("Text found:", theme_pattern.group(0))  # Debug output
+        except Exception:
+            # Try alternative pattern for simpler cases
+            try:
+                simple_pattern = re.search(r'themes\s*=\s*(\{[^{}]*\})', resposta, re.DOTALL)
+                if simple_pattern:
+                    theme_dict = ast.literal_eval(simple_pattern.group(1))
+                    if isinstance(theme_dict, dict) and theme_dict:
+                        st.session_state['themes'] = theme_dict
+                        st.session_state['adjustment_mode'] = False
+            except Exception:
+                pass
 
     # Try to extract seo_themes dictionary from response
-    seo_theme_pattern = re.search(r'seo_themes\s*=\s*\{[^}]+\}', resposta, re.DOTALL)
+    seo_theme_pattern = re.search(r'seo_themes\s*=\s*\{([^}]*(?:\{[^}]*\}[^}]*)*)\}', resposta, re.DOTALL)
     if seo_theme_pattern:
         try:
-            seo_theme_text = seo_theme_pattern.group(0)
-            st.write("SEO themes text found:", seo_theme_text)  # Debug output
+            seo_theme_text = f"seo_themes = {{{seo_theme_pattern.group(1)}}}"
             seo_theme_dict = ast.literal_eval(seo_theme_text.split('=')[1].strip())
-            if isinstance(seo_theme_dict, dict):
+            if isinstance(seo_theme_dict, dict) and seo_theme_dict:
                 st.session_state['seo_themes'] = seo_theme_dict
                 st.session_state['adjustment_mode'] = False
-                st.write("✅ SEO themes extracted successfully:", seo_theme_dict)  # Debug output
-        except Exception as e:
-            st.warning(f"Error interpreting seo_themes: {e}")
-            st.write("Text found:", seo_theme_pattern.group(0))  # Debug output
+        except Exception:
+            # Try alternative pattern for simpler cases
+            try:
+                simple_pattern = re.search(r'seo_themes\s*=\s*(\{[^{}]*\})', resposta, re.DOTALL)
+                if simple_pattern:
+                    seo_theme_dict = ast.literal_eval(simple_pattern.group(1))
+                    if isinstance(seo_theme_dict, dict) and seo_theme_dict:
+                        st.session_state['seo_themes'] = seo_theme_dict
+                        st.session_state['adjustment_mode'] = False
+            except Exception:
+                pass
 
     # Try to extract macro_name from response
     macro_name_pattern = re.search(r'macro_name\s*=\s*["\']([^"\']+)["\']', resposta)
     if macro_name_pattern:
         try:
-            macro_name = macro_name_pattern.group(1)  # Get the actual name without quotes
+            macro_name = macro_name_pattern.group(1)
             st.session_state['macro_name'] = macro_name
             st.session_state['adjustment_mode'] = False
-            st.write("✅ Macro name extracted successfully:", macro_name)  # Debug output
-        except Exception as e:
-            st.warning(f"Error interpreting macro_name: {e}")
-            st.write("Text found:", macro_name_pattern.group(0))  # Debug output
-    
-    # Debug output for session state
-    st.write("Current session state:", {
-        'themes': st.session_state.get('themes'),
-        'seo_themes': st.session_state.get('seo_themes'),
-        'macro_name': st.session_state.get('macro_name')
-    })
+        except Exception:
+            pass
 
 def save_creative_outputs(brand_folder, themes, seo_themes, extrair_seo):
     """

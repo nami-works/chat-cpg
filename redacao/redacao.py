@@ -91,8 +91,12 @@ def handle_redacao_flow(chat_interaction, chain, memory):
             # Process the response
             parse_creative_outputs(response)
             
+            # Check if dictionaries were successfully parsed
+            themes_found = 'themes' in st.session_state and st.session_state['themes']
+            seo_themes_found = 'seo_themes' in st.session_state and st.session_state['seo_themes']
+            
             # If dictionaries weren't parsed, ask explicitly with format example
-            if 'themes' not in st.session_state or 'seo_themes' not in st.session_state:
+            if not themes_found or not seo_themes_found:
                 format_prompt = '''
                 Please generate the themes and seo_themes dictionaries again in the correct Python format.
                 
@@ -113,8 +117,13 @@ def handle_redacao_flow(chat_interaction, chain, memory):
                 response = chat_interaction(format_prompt, chain, memory, key="format_prompt")
                 if response:
                     parse_creative_outputs(response)
+                    # Check again if dictionaries were parsed after the second attempt
+                    themes_found = 'themes' in st.session_state and st.session_state['themes']
+                    seo_themes_found = 'seo_themes' in st.session_state and st.session_state['seo_themes']
             
-            st.rerun()
+            # Only rerun if we successfully got both dictionaries
+            if themes_found and seo_themes_found:
+                st.rerun()
     else:
         # Show action buttons
         col1, col2 = st.columns(2)
@@ -123,6 +132,7 @@ def handle_redacao_flow(chat_interaction, chain, memory):
             adjustments_button = st.button("🔴 Fazer ajustes", use_container_width=True, disabled=False)
             if adjustments_button:
                 st.session_state['adjustment_mode'] = True
+                st.rerun()
 
         with col2:
             request_button = st.button('🟢 Solicitar conteúdo', use_container_width=True, disabled=False)
