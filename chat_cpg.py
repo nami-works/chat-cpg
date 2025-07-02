@@ -314,6 +314,8 @@ def load_model(chosen_provider, version_id, api_key):
 
     guidelines = st.session_state.get('guidelines', '...')
     reference = st.session_state.get('reference', LANG['no_reference'])
+    # Escape braces in reference to prevent template conflicts
+    reference = escape_braces(reference)
     
     # Load knowledge base if it exists
     knowledge_base = ""
@@ -347,7 +349,7 @@ def load_model(chosen_provider, version_id, api_key):
         knowledge_base,
         "",
         "####",
-        st.session_state.get('result', ''),
+        escape_braces(st.session_state.get('result', '')),
         "####",
         "",
         "Use all of that as the main ground for all your iterations."
