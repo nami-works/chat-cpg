@@ -12,7 +12,6 @@ import streamlit as st
 from dotenv import load_dotenv
 from langchain.memory import ConversationBufferMemory
 from langchain_openai import ChatOpenAI
-from langchain_groq import ChatGroq
 from langchain.prompts import ChatPromptTemplate
 from pathlib import Path
 
