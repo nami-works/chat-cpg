@@ -4,6 +4,9 @@ import shutil
 import smtplib
 import sys
 import warnings
+import zipfile
+import streamlit as st
+import re
 
 from redacao.src.redacao_cpg.crew import Redacao_CPG
 from datetime import date, datetime
@@ -20,6 +23,28 @@ email_senha = os.getenv("EMAIL_PASS")
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
 base_dir = Path(__file__).resolve().parent
+
+def sanitize_filename(filename):
+    """
+    Sanitize filename by removing invalid characters.
+    Windows doesn't allow: < > : " | ? * \ /
+    """
+    # Remove invalid characters completely
+    invalid_chars = r'[<>:"|?*\\/]'
+    sanitized = re.sub(invalid_chars, '', filename)
+    
+    # Remove leading/trailing spaces and dots
+    sanitized = sanitized.strip(' .')
+    
+    # Ensure the filename is not empty
+    if not sanitized:
+        sanitized = 'untitled'
+    
+    # Limit length to avoid path too long errors
+    if len(sanitized) > 200:
+        sanitized = sanitized[:200]
+    
+    return sanitized
 
 def enviar_email(destinatario, assunto, corpo, anexos=None):
     msg = EmailMessage()
@@ -78,8 +103,11 @@ def run(inputs):
             pasta_posts = base_dir / pasta_marca / 'posts'
             onde_salvar = pasta_posts / f'{hoje}_{nome_macro}'
             os.makedirs(onde_salvar, exist_ok=True)
-            shutil.copy(pasta_posts / 'content.html', onde_salvar / f'{nome}.html')
-            shutil.copy(pasta_posts / 'metafields.md', onde_salvar / f'{nome}_metafields.md')
+            
+            # Sanitize the filename to avoid invalid characters
+            safe_filename = sanitize_filename(nome)
+            shutil.copy(pasta_posts / 'content.html', onde_salvar / f'{safe_filename}.html')
+            shutil.copy(pasta_posts / 'metafields.md', onde_salvar / f'{safe_filename}_metafields.md')
 
             # enviar_email(
             # destinatario = email_para,

@@ -8,5 +8,3 @@ python-dotenv==1.1.0
 PyYAML==6.0.2
 PyYAML==6.0.2
 streamlit==1.45.0
-# Ensure new SQLite version for chromadb
-pysqlite3-binary>=0.5.2

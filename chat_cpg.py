@@ -40,7 +40,7 @@ UI_TEXT = {
         'upload_files': 'Upload files to add to knowledge base',
         'additional_context': 'Additional context about the files',
         'context_placeholder': 'Provide additional context about these files...',
-        'send_knowledge': 'Send',
+        'send_knowledge': 'Send to Knowledge Base',
         'missing_files': "Incomplete files for brand '{}'",
         'missing_brand_info': "Oops! Some brand information is missing. Check your inputs!",
         'no_reference': "No reference loaded.",
@@ -73,7 +73,7 @@ UI_TEXT = {
         'upload_files': 'Carregue arquivos para adicionar à base de conhecimento',
         'additional_context': 'Contexto adicional sobre os arquivos',
         'context_placeholder': 'Forneça contexto adicional sobre estes arquivos...',
-        'send_knowledge': 'Enviar',
+        'send_knowledge': 'Enviar para Base de Conhecimento',
         'missing_files': "Arquivos incompletos para a marca '{}'",
         'missing_brand_info': "Ops! Ainda falta alguma informação da marca. Verifique seus inputs!",
         'no_reference': "Sem referência carregada.",
@@ -285,15 +285,12 @@ def load_brand_files(brand_name: str):
 
     with open(file_style, 'r', encoding='utf-8') as f:
         style = f.read()
-        style = escape_braces(style)
 
     with open(file_products, 'r', encoding='utf-8') as f:
         products = f.read()
-        products = escape_braces(products)
 
     with open(file_format, 'r', encoding='utf-8') as f:
         format_recommendations = f.read()
-        format_recommendations = escape_braces(format_recommendations)
 
     return registration['brand'], registration['blog'], registration['benchmarks'], style, products, format_recommendations
 
@@ -312,10 +309,26 @@ def load_model(chosen_provider, version_id, api_key):
         st.error(LANG['missing_brand_info'])
         st.stop()
 
-    guidelines = st.session_state.get('guidelines', '...')
+    # Always load the correct guidelines for the selected function
+    chosen_function = st.session_state.get('chosen_function', 'oraculo')
+    base_dir = Path(__file__).resolve().parent
+    file_guidelines = base_dir / chosen_function / 'guidelines.md'
+    
+    try:
+        if not file_guidelines.exists():
+            raise FileNotFoundError(LANG['file_not_found'].format(file_guidelines))
+            
+        with open(file_guidelines, 'r', encoding='utf-8') as f:
+            guidelines = f.read()
+            if not guidelines.strip():
+                raise ValueError(LANG['empty_guidelines'])
+            guidelines = escape_braces(guidelines)
+    
+    except (FileNotFoundError, ValueError) as e:
+        st.error(LANG['guidelines_error'].format(str(e)))
+        guidelines = LANG['no_guidelines']
+
     reference = st.session_state.get('reference', LANG['no_reference'])
-    # Escape braces in reference to prevent template conflicts
-    reference = escape_braces(reference)
     
     # Load knowledge base if it exists
     knowledge_base = ""
@@ -327,35 +340,30 @@ def load_model(chosen_provider, version_id, api_key):
         try:
             with open(knowledge_base_path, 'r', encoding='utf-8') as f:
                 knowledge_base = f.read()
-                # Escape braces in knowledge base content to prevent template conflicts
-                knowledge_base = escape_braces(knowledge_base)
         except Exception as e:
             st.warning(f"Could not load knowledge base: {e}")
 
-    # Build prompt without f-string to avoid template variable conflicts
-    prompt_parts = [
-        "You have several information about the user's business:",
-        f"- {brand}",
-        f"- {products}",
-        f"- {style}",
-        f"- content available at their {blog}",
-        f"- {benchmarks}",
-        "",
-        f"Besides that, you've been given a detailed set of {guidelines} for this specific interaction.",
-        f"You must know everything about the business you're partnering with, and use",
-        f"{reference} as your main reference of knowledge and best practices to work with.",
-        "",
-        "Additional Knowledge Base:" if knowledge_base else "",
-        knowledge_base,
-        "",
-        "####",
-        escape_braces(st.session_state.get('result', '')),
-        "####",
-        "",
-        "Use all of that as the main ground for all your iterations."
-    ]
+    prompt = f'''
+    You have several information about the user's business:
+    - {brand}
+    - {products}
+    - {style}
+    - content available at their {blog}
+    - {benchmarks}
     
-    prompt = "\n".join(prompt_parts)
+    Besides that, you've been given a detailed set of {guidelines} for this specific interaction.
+    You must know everything about the business you're partnering with, and use
+    {reference} as your main reference of knowledge and best practices to work with.
+
+    {"Additional Knowledge Base:" if knowledge_base else ""}
+    {knowledge_base}
+
+    ####
+    {st.session_state.get('result', '')}
+    ####
+
+    Use all of that as the main ground for all your iterations.
+    '''
 
     template = ChatPromptTemplate.from_messages([
         ('system', prompt),
@@ -381,27 +389,19 @@ def sidebar_menu():
         selected_function_id = available_functions[selected_function]
         st.session_state['chosen_function'] = selected_function_id
         
-        base_dir = Path(__file__).resolve().parent
-        file_guidelines = base_dir / selected_function_id / 'guidelines.md'
-              
-        try:
-            if not file_guidelines.exists():
-                raise FileNotFoundError(LANG['file_not_found'].format(file_guidelines))
-                
-            with open(file_guidelines, 'r', encoding='utf-8') as f:
-                guidelines = f.read()
-                if not guidelines.strip():
-                    raise ValueError(LANG['empty_guidelines'])
-                st.session_state['guidelines'] = escape_braces(guidelines)
-        
-        except (FileNotFoundError, ValueError) as e:
-            st.error(LANG['guidelines_error'].format(str(e)))
-            st.session_state['guidelines'] = LANG['no_guidelines']
-
         if st.button(LANG['load'], use_container_width=True):
             st.session_state['memory'] = intro
-
-
+            # Load model when button is clicked
+            context = st.session_state.get('context', {})
+            chosen_provider = 'OpenAI' if 'api_key_OpenAI' in st.session_state else 'Groq'
+            version_id = st.session_state.get('version_id', 'gpt-4o-mini')
+            api_key = st.session_state.get(f'api_key_{chosen_provider}', None)
+            
+            if api_key:
+                load_model(chosen_provider, version_id, api_key)
+                st.rerun()
+            else:
+                st.warning(LANG['no_api_key'])
 
     with tabs[1]:
         # Knowledge tab
