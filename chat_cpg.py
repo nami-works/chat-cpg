@@ -172,15 +172,6 @@ available_llms = {
         'GPT-3.5 Instruct': 'gpt-3.5-turbo-instruct',
         },
         'Chain': ChatOpenAI},
-    'Groq':{
-        'Versions': {
-            'LLaMA 3 70B': 'llama3-groq-70b-8192-tool-use-preview',
-            'LLaMA 3 8B': 'llama3-groq-8b-8192-tool-use-preview',
-            'LLaMA 3.3 70B': 'llama-3.3-70b-versatile',
-            'LLaMA 3.1 8B': 'llama-3.1-8b-instant',
-            'Compound Beta': 'compound-beta',
-        },
-        'Chain': ChatGroq},
 }
 
 base_dir = Path(__file__).resolve().parent
