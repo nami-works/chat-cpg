@@ -125,6 +125,21 @@ FUNCTION_CONTEXTS = {
         """,
         'icon': '✍️'
     },
+    'geocommerce': {
+        'title': '🗺️ ChatCPG | GeoCommerce',
+        'subtitle': 'Bem-vindo ao GeoCommerce da GE Beauty!',
+        'description': """
+        Esse é o sistema de análise geográfica e insights de e-commerce da GE Beauty!
+        Aqui você pode:\n
+        • Analisar dados de vendas por região\n
+        • Visualizar performance geográfica dos produtos\n
+        • Identificar oportunidades de mercado\n
+        • Integrar dados do Shopify com análises geográficas\n
+        \n\n
+        Conecte-se ao Shopify para começar! 🛍️
+        """,
+        'icon': '🗺️'
+    },
 }
 
 def get_function_context(function_id):
@@ -161,6 +176,7 @@ client_brands = {
 available_functions = {
     'Copiloto': 'oraculo',
     'Copywriter': 'redacao',
+    'GeoCommerce': 'geocommerce',
 }
 
 available_llms = {
@@ -521,6 +537,10 @@ def chat_cpg():
     elif chosen_function == 'oraculo':
         from oraculo.oraculo import handle_oraculo_flow
         handle_oraculo_flow(handle_chat_interaction, chain, memory)
+    elif chosen_function == 'geocommerce':
+        from geocommerce.geocommerce_shopify import GeoCommerceShopifyApp
+        app = GeoCommerceShopifyApp()
+        app.render_geocommerce_content()
 
 if __name__ == "__main__":
     chat_cpg()
