@@ -14,6 +14,7 @@ from langchain.chains.summarize import load_summarize_chain
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from unstructured.documents.elements import Element
+from oraculo.context import ORACULO_CONTEXT
 
 # Absolute path for importing custom tools
 tools_path = r'G:\Meu Drive\Pessoal\nAmI\ferramentas'

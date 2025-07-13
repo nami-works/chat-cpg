@@ -18,6 +18,7 @@ from langchain.prompts import ChatPromptTemplate
 
 #internal ChatCPG functions
 from utils import parse_creative_outputs, save_creative_outputs
+from redacao.context import REDACAO_CONTEXT
 
 # Get the absolute path to the project root
 base_dir = Path(__file__).resolve().parent.parent

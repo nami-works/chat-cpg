@@ -1,0 +1,34 @@
+# GeoCommerce - E-commerce Geographic Analysis Platform
+# Core dependencies for geographic analysis and data processing
+
+# Data processing
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Geocoding and geographic calculations
+geopy>=2.3.0
+
+# Data visualization (for future Streamlit interface)
+plotly>=5.15.0
+folium>=0.14.0
+
+# Additional utilities
+python-dateutil>=2.8.0
+requests>=2.28.0
+
+# Development and testing
+pytest>=7.0.0
+black>=22.0.0
+flake8>=5.0.0
+
+# Optional: For advanced geographic analysis
+geopandas>=0.12.0
+shapely>=1.8.0
+
+# Optional: For performance optimization
+numba>=0.56.0
+multiprocessing-logging>=0.3.0
+
+# Optional: For enhanced mapping capabilities
+streamlit-folium>=0.12.0
+streamlit-plotly-events>=0.0.4 

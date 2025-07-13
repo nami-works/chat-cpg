@@ -18,6 +18,9 @@ from pathlib import Path
 ##internal functions
 from utils import parse_creative_outputs, save_creative_outputs
 from file_reader import load_input
+from oraculo.context import ORACULO_CONTEXT
+from redacao.context import REDACAO_CONTEXT
+from geocommerce.context import GEOCOMMERCE_CONTEXT
 
 # Get system language
 system_lang = locale.getdefaultlocale()[0]
@@ -94,37 +97,9 @@ UI_TEXT = {
 
 # Function-specific context configurations
 FUNCTION_CONTEXTS = {
-    'oraculo': {
-        'title': '🦊 ChatCPG | Copiloto',
-        'subtitle': 'Bem-vindo ao ChatCPG da GE Beauty!',
-        'description': """
-        Esse é o assistente inteligente da GE Beauty para tarefas do dia-a-dia!
-        Aqui você pode:\n
-        • Fazer diversas perguntas e pedir ajuda para questões específicas\n
-        • Pesquisar informações específicas da empresa\n
-        • Obter respostas rápidas e precisas\n
-        • Consultar documentos e políticas\n
-        • Acessar dados históricos e relatórios\n
-        \n\n
-        Como posso te ajudar hoje? 🫡
-        """,
-        'icon': '🔮'
-    },
-    'redacao': {
-        'title': '🦊 ChatCPG | Copywriter',
-        'subtitle': 'Bem-vindo à Redação da GE Beauty!',
-        'description': """
-        Esse é o assistente especializado para criar conteúdo no tom de voz GE Beauty!
-        Aqui você pode:\n
-        • Gerar temas e briefings para blog posts\n
-        • Criar mensagens personalizadas baseadas nas categorias de RFM\n
-        • Desenvolver campanhas de email marketing\n
-        • Adaptar conteúdo para diferentes canais\n
-        \n\n
-        Vamos começar? 💛
-        """,
-        'icon': '✍️'
-    },
+    'oraculo': ORACULO_CONTEXT,
+    'redacao': REDACAO_CONTEXT,
+    'geocommerce': GEOCOMMERCE_CONTEXT,
 }
 
 def get_function_context(function_id):
@@ -144,7 +119,14 @@ def get_function_context(function_id):
         ChatCPG é seu assistente virtual para trabalhar com a GE Beauty! 
         Selecione uma função na barra lateral para começar. 💛
         """,
-        'icon': '🦊'
+        'icon': '🦊',
+        'chat_enabled': False,
+        'how_to_use_col1': """
+        Selecione uma função na barra lateral para começar a usar o ChatCPG.
+        """,
+        'how_to_use_col2': """
+        Cada função tem recursos específicos para diferentes necessidades.
+        """
     }
     
     return FUNCTION_CONTEXTS.get(function_id, default_context)
@@ -161,6 +143,7 @@ client_brands = {
 available_functions = {
     'Copiloto': 'oraculo',
     'Copywriter': 'redacao',
+    'GeoCommerce': 'geocommerce',
 }
 
 available_llms = {
@@ -367,31 +350,26 @@ def load_model(chosen_provider, version_id, api_key):
 
 st.set_page_config(
     page_title='ChatCPG',
-    page_icon='🦊'
+    page_icon='🦊',
+    layout='wide',
     )
 
 def sidebar_menu():
     tabs = st.tabs([LANG['functions_tab'], LANG['knowledge_tab']])
 
     with tabs[0]:
-        selected_function = st.selectbox(LANG['choose_function'], 
-                                        available_functions.keys())
-        selected_function_id = available_functions[selected_function]
-        st.session_state['chosen_function'] = selected_function_id
-        
-        if st.button(LANG['load'], use_container_width=True):
-            st.session_state['memory'] = intro
-            # Load model when button is clicked
-            context = st.session_state.get('context', {})
-            chosen_provider = 'OpenAI' if 'api_key_OpenAI' in st.session_state else 'Groq'
-            version_id = st.session_state.get('version_id', 'gpt-4o-mini')
-            api_key = st.session_state.get(f'api_key_{chosen_provider}', None)
-            
-            if api_key:
-                load_model(chosen_provider, version_id, api_key)
+        for fname, fid in available_functions.items():
+            is_selected = st.session_state.get('chosen_function', 'oraculo') == fid
+            btn = st.button(fname, use_container_width=True, key=f"func_btn_{fid}")
+            if btn:
+                st.session_state['chosen_function'] = fid
+                # Always reset memory for chat-enabled functions to avoid duplicate welcome
+                if FUNCTION_CONTEXTS.get(fid, {}).get('chat_enabled', False):
+                    st.session_state['memory'] = ConversationBufferMemory()
+                else:
+                    st.session_state['memory'] = None
                 st.rerun()
-            else:
-                st.warning(LANG['no_api_key'])
+            # Optionally highlight selected button (Streamlit limitation: can't style buttons directly)
 
     with tabs[1]:
         # Knowledge tab
@@ -472,16 +450,41 @@ def handle_chat_interaction(prompt_message: str, chain, memory, key: str = "main
     return None
 
 def chat_cpg():
+    # Set default function if not already set
+    if 'chosen_function' not in st.session_state:
+        st.session_state['chosen_function'] = 'oraculo'
     chosen_function = st.session_state.get('chosen_function')
-    
-    # Get dynamic context based on selected function
     context_info = get_function_context(chosen_function)
-    
-    # Display dynamic header and content
+
     st.header(context_info['title'], divider='red')
-    st.subheader(context_info['subtitle'])
-    st.write(context_info['description'])
-    
+
+
+    if context_info['chat_enabled']:
+        # Chat-enabled functions: display context as system message only ONCE per session/function switch
+        if 'Chain' in st.session_state:
+            memory = st.session_state.get('memory', intro)
+            if memory is not None:
+                system_message_exists = any(
+                    msg.content == context_info['description'] and msg.type == 'ai' 
+                    for msg in memory.buffer_as_messages
+                )
+                if not system_message_exists:
+                    system_message = st.chat_message('ai', avatar='🦊')
+                    system_message.markdown(context_info['description'])
+                    memory.chat_memory.add_ai_message(context_info['description'])
+                    st.session_state['memory'] = memory
+            else:
+                # If memory is None, initialize it to intro
+                memory = intro
+                st.session_state['memory'] = memory
+    else:
+        with st.expander("ℹ️ Como usar", expanded=False):
+            col1, col2 = st.columns(2)
+            with col1:
+                st.markdown(context_info['how_to_use_col1'])
+            with col2:
+                st.markdown(context_info['how_to_use_col2'])
+
     with st.sidebar:
         sidebar_menu()
     
@@ -510,7 +513,7 @@ def chat_cpg():
         st.stop()
 
     memory = st.session_state.get('memory', intro)
-    if memory:
+    if memory is not None:
         for message in memory.buffer_as_messages:
             chat = st.chat_message(message.type, avatar='👤' if message.type == 'human' else '🦊')
             chat.markdown(message.content)
@@ -521,6 +524,14 @@ def chat_cpg():
     elif chosen_function == 'oraculo':
         from oraculo.oraculo import handle_oraculo_flow
         handle_oraculo_flow(handle_chat_interaction, chain, memory)
+    elif chosen_function == 'geocommerce':
+        # Import and run the new Shopify API-powered GeoCommerce system
+        
+        from geocommerce.geocommerce_shopify import GeoCommerceShopifyApp
+        # Create app instance without initializing Streamlit config (already done in chat_cpg.py)
+        app = GeoCommerceShopifyApp()
+        # Run the app content without calling app.run() to avoid double page config
+        app.render_geocommerce_content()
 
 if __name__ == "__main__":
     chat_cpg()
