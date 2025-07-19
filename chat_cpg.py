@@ -28,7 +28,8 @@ system_lang = locale.getdefaultlocale()[0]
 # UI text translations
 UI_TEXT = {
     'en_US': {
-        'functions_tab': 'Functions',
+        'chats_tab': 'Chats',
+        'analysis_tab': 'Analysis',
         'references_tab': 'References',
         'brands_tab': 'Brands',
         'llms_tab': 'LLMs',
@@ -61,7 +62,8 @@ UI_TEXT = {
         'no_files_selected': "⚠️ Please select files to upload"
     },
     'pt_BR': {
-        'functions_tab': 'Funções',
+        'chats_tab': 'Chats',
+        'analysis_tab': 'Análises',
         'references_tab': 'Referências',
         'brands_tab': 'Marcas',
         'llms_tab': 'LLMs',
@@ -140,9 +142,12 @@ client_brands = {
     'GE Beauty': 'gebeauty',
 }
 
-available_functions = {
+available_chats = {
     'Copiloto': 'oraculo',
     'Copywriter': 'redacao',
+}
+
+available_analyses = {
     'GeoCommerce': 'geocommerce',
 }
 
@@ -355,10 +360,10 @@ st.set_page_config(
     )
 
 def sidebar_menu():
-    tabs = st.tabs([LANG['functions_tab'], LANG['knowledge_tab']])
+    tabs = st.tabs([LANG['chats_tab'], LANG['analysis_tab'], LANG['knowledge_tab']])
 
     with tabs[0]:
-        for fname, fid in available_functions.items():
+        for fname, fid in available_chats.items():
             is_selected = st.session_state.get('chosen_function', 'oraculo') == fid
             btn = st.button(fname, use_container_width=True, key=f"func_btn_{fid}")
             if btn:
@@ -372,6 +377,14 @@ def sidebar_menu():
             # Optionally highlight selected button (Streamlit limitation: can't style buttons directly)
 
     with tabs[1]:
+        for fname, fid in available_analyses.items():
+            is_selected = st.session_state.get('chosen_function', 'oraculo') == fid
+            btn = st.button(fname, use_container_width=True, key=f"func_btn_{fid}")
+            if btn:
+                st.session_state['chosen_function'] = fid
+                st.rerun()
+        
+    with tabs[2]:
         # Knowledge tab
         st.write(LANG['upload_files'])
         uploaded_files = st.file_uploader(
@@ -458,6 +471,8 @@ def chat_cpg():
 
     st.header(context_info['title'], divider='red')
 
+    with st.sidebar:
+        sidebar_menu()
 
     if context_info['chat_enabled']:
         # Chat-enabled functions: display context as system message only ONCE per session/function switch
@@ -477,6 +492,37 @@ def chat_cpg():
                 # If memory is None, initialize it to intro
                 memory = intro
                 st.session_state['memory'] = memory
+        
+        # Chain loading logic for chat-enabled functions
+        if 'Chain' not in st.session_state:
+            context = st.session_state.get('context', {})
+            chosen_provider = 'OpenAI' if 'api_key_OpenAI' in st.session_state else 'Groq'
+            version_id = st.session_state.get('version_id', 'gpt-4o')
+            api_key = st.session_state.get(f'api_key_{chosen_provider}', None)
+
+        chain = st.session_state.get('Chain')
+
+        if chain is None:
+            st.error(LANG['chatcpg_not_loaded'])
+            if st.button(LANG['click_to_load'], use_container_width=True):
+                context = st.session_state.get('context', {})
+                chosen_provider = 'OpenAI' if 'api_key_OpenAI' in st.session_state else 'Groq'
+                version_id = st.session_state.get('version_id', 'gpt-4o')
+                api_key = st.session_state.get(f'api_key_{chosen_provider}', None)
+
+                if not api_key:
+                    st.warning(LANG['no_api_key'])
+                    st.stop()
+
+                load_model(chosen_provider, version_id, api_key)
+                st.rerun()
+            st.stop()
+
+        memory = st.session_state.get('memory', intro)
+        if memory is not None:
+            for message in memory.buffer_as_messages:
+                chat = st.chat_message(message.type, avatar='👤' if message.type == 'human' else '🦊')
+                chat.markdown(message.content)
     else:
         with st.expander("ℹ️ Como usar", expanded=False):
             col1, col2 = st.columns(2)
@@ -485,39 +531,6 @@ def chat_cpg():
             with col2:
                 st.markdown(context_info['how_to_use_col2'])
 
-    with st.sidebar:
-        sidebar_menu()
-    
-    if 'Chain' not in st.session_state:
-        context = st.session_state.get('context', {})
-        chosen_provider = 'OpenAI' if 'api_key_OpenAI' in st.session_state else 'Groq'
-        version_id = st.session_state.get('version_id', 'gpt-4o')
-        api_key = st.session_state.get(f'api_key_{chosen_provider}', None)
-
-    chain = st.session_state.get('Chain')
-
-    if chain is None:
-        st.error(LANG['chatcpg_not_loaded'])
-        if st.button(LANG['click_to_load'], use_container_width=True):
-            context = st.session_state.get('context', {})
-            chosen_provider = 'OpenAI' if 'api_key_OpenAI' in st.session_state else 'Groq'
-            version_id = st.session_state.get('version_id', 'gpt-4o')
-            api_key = st.session_state.get(f'api_key_{chosen_provider}', None)
-
-            if not api_key:
-                st.warning(LANG['no_api_key'])
-                st.stop()
-
-            load_model(chosen_provider, version_id, api_key)
-            st.rerun()
-        st.stop()
-
-    memory = st.session_state.get('memory', intro)
-    if memory is not None:
-        for message in memory.buffer_as_messages:
-            chat = st.chat_message(message.type, avatar='👤' if message.type == 'human' else '🦊')
-            chat.markdown(message.content)
-
     if chosen_function == 'redacao':
         from redacao.redacao import handle_redacao_flow
         handle_redacao_flow(handle_chat_interaction, chain, memory)
@@ -525,11 +538,11 @@ def chat_cpg():
         from oraculo.oraculo import handle_oraculo_flow
         handle_oraculo_flow(handle_chat_interaction, chain, memory)
     elif chosen_function == 'geocommerce':
-        # Import and run the new Shopify API-powered GeoCommerce system
+        # Import and run the GeoCommerce system
         
-        from geocommerce.geocommerce_shopify import GeoCommerceShopifyApp
+        from geocommerce.geocommerce import GeoCommerceManualApp
         # Create app instance without initializing Streamlit config (already done in chat_cpg.py)
-        app = GeoCommerceShopifyApp()
+        app = GeoCommerceManualApp()
         # Run the app content without calling app.run() to avoid double page config
         app.render_geocommerce_content()
 

@@ -472,7 +472,7 @@ class GeoCommerceShopifyApp:
             
             st.markdown("---")
 
-        col1, col2, col3 = st.columns([1, 1, 3])
+        col1, col2, col3, col4, col5 = st.columns([1, 1, 1, 1, 1])
         
         with col1:
             # Data fetching options
@@ -499,11 +499,15 @@ class GeoCommerceShopifyApp:
         with col3:
             # Geographic and Value filters in the same column
             self.render_geographic_filters()
-            st.markdown("---")  # Add separator
+
+        with col4:
             self.render_order_value_filters()
+
+        with col5:
+            self.render_customer_filters()
         
         # Fetch data button
-        button_text = "Atualizar dados" if st.session_state.get('shopify_data_loaded', False) else "Analisar dados"
+        button_text = "Atualizar dados" if st.session_state.get('shopify_data_loaded', False) else "Carregar dados"
         if st.button(button_text, type="primary"):
                 # Convert data type selection to boolean flags
                 fetch_customers = data_type in ["Clientes", "Clientes e Pedidos"]
@@ -564,86 +568,82 @@ class GeoCommerceShopifyApp:
     
     def render_geographic_filters(self):
         """Render geographic filters (stacked vertically)"""
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            # Country filter
-            available_countries = self.config.get_available_countries()
-            selected_countries = st.multiselect(
-                "🌍 Países",
-                options=available_countries,
-                default=st.session_state.get('geo_filter', {}).get('countries', ["Brasil"])
-            )
-            st.session_state.geo_filter = st.session_state.get('geo_filter', {})
-            st.session_state.geo_filter['countries'] = selected_countries
+        # Country filter
+        available_countries = self.config.get_available_countries()
+        selected_countries = st.multiselect(
+            "🌍 Países",
+            options=available_countries,
+            default=st.session_state.get('geo_filter', {}).get('countries', ["Brasil"])
+        )
+        st.session_state.geo_filter = st.session_state.get('geo_filter', {})
+        st.session_state.geo_filter['countries'] = selected_countries
 
-            # Province filter
-            if selected_countries:
-                if len(selected_countries) == 1:
-                    available_provinces = self.config.get_provinces_for_country(selected_countries[0])
-                    default_provinces = st.session_state.geo_filter.get('provinces', [])
-                    valid_provinces = [p for p in default_provinces if p in available_provinces]
-                else:
-                    all_provinces = []
-                    for country in selected_countries:
-                        all_provinces.extend(self.config.get_provinces_for_country(country))
-                    available_provinces = sorted(list(set(all_provinces)))
-                    valid_provinces = st.session_state.geo_filter.get('provinces', [])
+        # Province filter
+        if selected_countries:
+            if len(selected_countries) == 1:
+                available_provinces = self.config.get_provinces_for_country(selected_countries[0])
+                default_provinces = st.session_state.geo_filter.get('provinces', [])
+                valid_provinces = [p for p in default_provinces if p in available_provinces]
             else:
-                available_provinces = []
-                valid_provinces = []
-
-            selected_provinces = st.multiselect(
-                "🗺️ Estados",
-                options=available_provinces,
-                default=valid_provinces
-            )
-            st.session_state.geo_filter['provinces'] = selected_provinces
-
-            # City filter
-            if selected_countries:
                 all_provinces = []
                 for country in selected_countries:
                     all_provinces.extend(self.config.get_provinces_for_country(country))
-                all_cities = []
-                for country in selected_countries:
-                    for province in all_provinces:
-                        cities = self.config.get_cities_for_province(country, province)
-                        all_cities.extend(cities)
-                available_cities = sorted(list(set(all_cities)))
-                valid_cities = st.session_state.geo_filter.get('cities', [])
-            else:
-                available_cities = []
-                valid_cities = []
+                available_provinces = sorted(list(set(all_provinces)))
+                valid_provinces = st.session_state.geo_filter.get('provinces', [])
+        else:
+            available_provinces = []
+            valid_provinces = []
 
-            selected_cities = st.multiselect(
-                "🌇 Cidades",
-                options=available_cities,
-                default=valid_cities
+        selected_provinces = st.multiselect(
+            "🗺️ Estados",
+            options=available_provinces,
+            default=valid_provinces
+        )
+        st.session_state.geo_filter['provinces'] = selected_provinces
+
+        # City filter
+        if selected_countries:
+            all_provinces = []
+            for country in selected_countries:
+                all_provinces.extend(self.config.get_provinces_for_country(country))
+            all_cities = []
+            for country in selected_countries:
+                for province in all_provinces:
+                    cities = self.config.get_cities_for_province(country, province)
+                    all_cities.extend(cities)
+            available_cities = sorted(list(set(all_cities)))
+            valid_cities = st.session_state.geo_filter.get('cities', [])
+        else:
+            available_cities = []
+            valid_cities = []
+
+        selected_cities = st.multiselect(
+            "🌇 Cidades",
+            options=available_cities,
+            default=valid_cities
+        )
+        st.session_state.geo_filter['cities'] = selected_cities
+
+        # Geographic radius (for proximity analysis) - optional with checkbox
+        limit_radius = st.checkbox(
+            "📍 Limitar raio (km)",
+            value=st.session_state.geo_filter.get('limit_radius', False),
+            help="Ativar para limitar análise por raio geográfico"
+        )
+        st.session_state.geo_filter['limit_radius'] = limit_radius
+
+        if limit_radius:
+            radius_km = st.number_input(
+                "Raio Geográfico (km)",
+                min_value=1,
+                max_value=1000,
+                value=st.session_state.geo_filter.get('radius_km', 50),
+                help="Para análise baseada em proximidade"
             )
-            st.session_state.geo_filter['cities'] = selected_cities
-
-            # Geographic radius (for proximity analysis) - optional with checkbox
-            limit_radius = st.checkbox(
-                "📍 Limitar raio (km)",
-                value=st.session_state.geo_filter.get('limit_radius', False),
-                help="Ativar para limitar análise por raio geográfico"
-            )
-            st.session_state.geo_filter['limit_radius'] = limit_radius
-
-            if limit_radius:
-                radius_km = st.number_input(
-                    "Raio Geográfico (km)",
-                    min_value=1,
-                    max_value=1000,
-                    value=st.session_state.geo_filter.get('radius_km', 50),
-                    help="Para análise baseada em proximidade"
-                )
-                st.session_state.geo_filter['radius_km'] = radius_km
+            st.session_state.geo_filter['radius_km'] = radius_km
     
     def render_order_value_filters(self):
         """Render order value filters"""
-        st.subheader("💰 Filtros de Valor")
-        
         # Minimum order value
         min_order_value = st.number_input(
             "Valor Mínimo do Pedido (R$)",
@@ -665,62 +665,28 @@ class GeoCommerceShopifyApp:
         )
         st.session_state.order_filter['max_value'] = max_order_value
         
-        # Order status filter
-        order_statuses = st.multiselect(
-            "Status do Pedido",
-            options=["aberto", "fechado", "cancelado", "pendente", "entregue"],
-            default=["aberto", "fechado", "entregue"]
-        )
-        st.session_state.order_filter['statuses'] = order_statuses
-        
-        # Payment status filter
-        payment_statuses = st.multiselect(
-            "Status do Pagamento",
-            options=["pendente", "autorizado", "pago", "parcialmente_pago", "reembolsado"],
-            default=["pago", "autorizado"]
-        )
-        st.session_state.order_filter['payment_statuses'] = payment_statuses
+        # Set default order and payment status filters (confirmed and paid orders only)
+        st.session_state.order_filter['statuses'] = ["aberto", "fechado", "entregue"]
+        st.session_state.order_filter['payment_statuses'] = ["pago", "autorizado"]
     
     def render_customer_filters(self):
         """Render customer-specific filters"""
-        col1, col2 = st.columns(2)
+        # Customer type filter
+        customer_types = st.multiselect(
+            "Tipos de Cliente",
+            options=["novo", "recorrente", "vip", "inativo"],
+            default=["novo", "recorrente", "vip"]
+        )
+        st.session_state.customer_filter = st.session_state.get('customer_filter', {})
+        st.session_state.customer_filter['types'] = customer_types
         
-        with col1:
-            # Customer type filter
-            customer_types = st.multiselect(
-                "Tipos de Cliente",
-                options=["novo", "recorrente", "vip", "inativo"],
-                default=["novo", "recorrente", "vip"]
-            )
-            st.session_state.customer_filter = st.session_state.get('customer_filter', {})
-            st.session_state.customer_filter['types'] = customer_types
-            
-            # Minimum orders count
-            min_orders = st.number_input(
-                "Mínimo de Pedidos por Cliente",
-                min_value=0,
-                max_value=100,
-                value=0
-            )
-            st.session_state.customer_filter['min_orders'] = min_orders
-        
-        with col2:
-            # Maximum orders count
-            max_orders = st.number_input(
-                "Máximo de Pedidos por Cliente",
-                min_value=0,
-                max_value=1000,
-                value=1000
-            )
-            st.session_state.customer_filter['max_orders'] = max_orders
-            
-            # Customer tags
-            customer_tags = st.multiselect(
-                "Tags do Cliente",
-                options=["atacado", "varejo", "vip", "newsletter", "fidelidade"],
-                default=[]
-            )
-            st.session_state.customer_filter['tags'] = customer_tags
+        # Customer tags
+        customer_tags = st.multiselect(
+            "Tags do Cliente",
+            options=["atacado", "varejo", "vip", "newsletter", "fidelidade"],
+            default=[]
+        )
+        st.session_state.customer_filter['tags'] = customer_tags
     
     def collect_filter_parameters(self) -> Dict:
         """Collect all filter parameters into a single dictionary"""
@@ -944,15 +910,9 @@ class GeoCommerceShopifyApp:
                           incremental_update: bool, filter_params: Dict = None):
         """Fetch data from Shopify API"""
         try:
-            # Show progress
-            progress_container = st.container()
-            
-            with progress_container:
-                progress_bar = st.progress(0)
-                status_text = st.empty()
-                
-                status_text.text("Initializing data fetch...")
-                progress_bar.progress(10)
+            # Show animated spinner and status updates
+            with st.spinner("🔄 Iniciando carregamento de dados..."):
+                status_placeholder = st.empty()
                 
                 # Calculate date for incremental update and apply filters
                 updated_since = None
@@ -989,14 +949,10 @@ class GeoCommerceShopifyApp:
                             
                             # Fetch customers
                             if fetch_customers:
-                                status_text.text("Fetching customers from Shopify...")
-                                progress_bar.progress(20)
+                                status_placeholder.info("Carregando clientes do Shopify...")
                                 
                                 def customer_progress(count, pages):
-                                    status_text.text(f"Fetched {count} customers ({pages} pages)...")
-                                    # Simple progress calculation
-                                    progress_val = min(50, 20 + (count / 1000) * 30)
-                                    progress_bar.progress(int(progress_val))
+                                    status_placeholder.info(f"{count} clientes carregados...")
                                 
                                 # Extract geographic filters for API-level filtering
                                 geo_filters = filter_params.get('geo_filter', {}) if filter_params else None
@@ -1009,13 +965,10 @@ class GeoCommerceShopifyApp:
                             
                             # Fetch orders
                             if fetch_orders:
-                                status_text.text("Fetching orders from Shopify...")
-                                progress_bar.progress(60)
+                                status_placeholder.info("Carregando pedidos do Shopify...")
                                 
                                 def order_progress(count, pages):
-                                    status_text.text(f"Fetched {count} orders ({pages} pages)...")
-                                    progress_val = min(90, 60 + (count / 1000) * 30)
-                                    progress_bar.progress(int(progress_val))
+                                    status_placeholder.info(f"{count} pedidos carregados...")
                                 
                                 # Extract filters for API-level filtering (removed order_filters for compatibility)
                                 geo_filters = filter_params.get('geo_filter', {}) if filter_params else None
@@ -1030,8 +983,7 @@ class GeoCommerceShopifyApp:
                     loop.run_until_complete(fetch_data())
                     
                     # Process the data
-                    status_text.text("Processing data...")
-                    progress_bar.progress(95)
+                    status_placeholder.info("Processando dados...")
                     
                     # Process customers
                     customers_df = pd.DataFrame()
@@ -1062,14 +1014,13 @@ class GeoCommerceShopifyApp:
                     # Save geocoding cache
                     self.data_processor.save_cache()
                     
-                    # Complete progress
-                    progress_bar.progress(100)
-                    status_text.text("Data fetch completed successfully!")
+                    # Show success
+                    status_placeholder.success("Dados carregados com sucesso!")
                     
                     # Show success message with filter summary
                     filter_summary = self.get_filter_summary(filter_params)
                     display_success_message(
-                        f"Successfully fetched {len(customers_df)} customers and {len(orders_df)} orders!"
+                        f"{len(customers_df)} clientes e {len(orders_df)} pedidos carregados!"
                     )
                     
                     # Show filter summary with API optimization info
@@ -1079,21 +1030,19 @@ class GeoCommerceShopifyApp:
                             st.success(f"🚀 API-optimized filters: {api_optimized}")
                         st.info(f"🔍 Applied filters: {filter_summary}")
                     
-                    # Clear progress indicators after a brief pause
-                    import time
+                    # Brief pause for user to see success
                     time.sleep(2)
-                    progress_bar.empty()
-                    status_text.empty()
+                    status_placeholder.empty()
                     
                     # Rerun to show analysis tabs
                     st.rerun()
-                    
+                
                 finally:
                     loop.close()
                     
         except Exception as e:
-            st.error(f"Data fetch failed: {str(e)}")
-            st.error("Please check your connection and try again.")
+            st.error(f"Carregamento de dados falhou: {str(e)}")
+            st.error("Por favor, verifique sua conexão e tente novamente.")
             
             # Show detailed error in expander
             with st.expander("Error Details"):
@@ -1102,41 +1051,11 @@ class GeoCommerceShopifyApp:
     def render_analysis_tabs(self):
         """Render the main analysis interface with tabs"""
         
-        # Get filtered data
+        # Get already filtered data from session state
         customers_df = st.session_state.get('customers_df', pd.DataFrame())
         orders_df = st.session_state.get('orders_df', pd.DataFrame())
         
-        if not customers_df.empty:
-            customers_df = self.analyzer.filter_data(customers_df, st.session_state.filters)
-        if not orders_df.empty:
-            orders_df = self.analyzer.filter_data(orders_df, st.session_state.filters)
-        
-        # Show post-fetch filters (applied after data is loaded)
-        if st.session_state.get('shopify_data_loaded'):
-            st.header("🔍 Filtros Pós-Carregamento")
-            st.info("Estes filtros são aplicados após o carregamento dos dados para análise mais refinada.")
-            
-            # Post-fetch filter sections
-            col1, col2 = st.columns(2)
-            
-            with col1:
-                with st.expander("💰 Valores", expanded=False):
-                    self.render_order_value_filters()
-            
-            with col2:
-                with st.expander("👥 Clientes", expanded=False):
-                    self.render_customer_filters()
-            
-            # Apply post-fetch filters if any are set
-            if st.button("Aplicar Filtros Pós-Carregamento", type="secondary"):
-                filter_params = self.collect_filter_parameters()
-                if filter_params:
-                    customers_df = self.apply_remaining_filters(customers_df, filter_params, 'customers')
-                    orders_df = self.apply_remaining_filters(orders_df, filter_params, 'orders')
-                    st.session_state.customers_df = customers_df
-                    st.session_state.orders_df = orders_df
-                    st.success("Filtros aplicados com sucesso!")
-                    st.rerun()
+
         
         # Create tabs
         tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([

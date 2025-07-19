@@ -11,7 +11,7 @@ __author__ = "ChatCPG Team"
 # Import key classes and functions with graceful fallback
 try:
     from .geocommerce_shopify import GeoCommerceShopifyApp
-    from .context import GEOCOMMERCE_CONTEXT
+    from ..context import GEOCOMMERCE_CONTEXT
     
     __all__ = [
         'GeoCommerceShopifyApp',

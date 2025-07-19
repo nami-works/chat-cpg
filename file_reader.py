@@ -111,7 +111,3 @@ def load_input(input_file, filename=None):
         raise ValueError(f'File type ".{extension}" not supported. Use one of: {list(function_map.keys())}')
     
     return function_map[extension](input_file)
-
-url = 'https://www.lovethework.com/work-awards/results/cannes-lions/innovation'
-
-print(web_reader(url))
