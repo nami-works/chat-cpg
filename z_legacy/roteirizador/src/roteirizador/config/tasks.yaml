@@ -1,0 +1,50 @@
+ler_ceps_lista_b: 
+  description: >
+    Ler o arquivo {base_ceps}, que contém a lista de CEPs de entrada e extrair todos os valores válidos da coluna
+    "Default Address Zip".
+  expected_output: >
+    Lista com todos os CEPs contidos na {base_ceps}, prontos para processamento.
+  agent: cep_file_reader
+
+resolver_coordenadas_shoppings: 
+  description: >
+    Converter os {ceps_shoppings} em coordenadas geográficas (latitude e longitude)
+    utilizando geocodificação. A cada 100 linhas analisadas, você deve aguardar 5
+    segundos para iniciar o novo bloco de linhas.
+  expected_output: >
+    Dicionário com os nomes dos shoppings como chaves e suas respectivas coordenadas geográficas como
+    valores.
+  agent: geocode_resolver
+
+resolver_coordenadas_cep_b: 
+  description: >
+    Converter cada CEP da {base_ceps} em coordenadas geográficas, para que possam ser comparados com os
+    shoppings.
+  expected_output: >
+    Tupla com latitude e longitude correspondentes ao CEP atual da lista B.
+  agent: geocode_resolver
+
+calcular_distancia_cep_e_shoppings: 
+  description: >
+    Calcular a distância em quilômetros entre cada coordenada geográfica da base de CEPs e a coordenada
+    geográfica de cada shopping, com base em suas coordenadas.
+  expected_output: >
+    Dicionário com as distâncias em km entre o CEP da base de CEPs e o CEP de cada shopping da lista A.
+  agent: distance_analyzer
+
+avaliar_proximidade_com_shoppings: 
+  description: >
+    Verificar se algum shopping está a até 15 km de um CEP da base de CEPs e identificar o mais
+    próximo caso haja.
+  expected_output: >
+    Tupla com o CEP da base de CEPs, o nome do shopping mais próximo ou 'N/A', e a distância entre eles se
+    dentro do limite.
+  agent: proximity_evaluator
+
+gerar_relatorio_resultados: 
+  description: >
+    Apresentar os resultados finais para cada CEP da base de CEPs, indicando o shopping mais próximo se dentro
+    de 15 km ou N/A caso contrário.
+  expected_output: >
+    Relatório impresso com os dados de proximidade de cada CEP, em linguagem acessível e objetiva.
+  agent: report_generator

@@ -1,0 +1,164 @@
+product:
+  id: "nude-condensado-aveia-330g"
+  name: "Condensado de Aveia Nude 330g"
+  brand: "Nude"
+  canonical_url: "https://heynude.com.br/produto/condensado-de-aveia-330g"
+  slug: "nude-condensado-aveia-330g"
+  # Add web field for URL injection
+  web: "https://heynude.com.br/products/condensado-aveia"
+  category_hierarchy:
+    - "Alimentos & Bebidas"
+    - "Derivados de Aveia"
+    - "Sobremesas Vegetais"
+  tags:
+    - "plant-based"
+    - "sem lactose"
+    - "sem glúten"
+    - "clean label"
+    - "sobremesas"
+    - "substituto do leite condensado"
+  gtin: null
+  sku: null
+  variants:
+    flavor: "Original"
+    size_g: 330
+  package:
+    net_weight_g: 330
+    unit_count: 1
+    package_description: "Condensado vegetal de aveia em embalagem de 330g"
+    storage: "Conservar em local fresco e seco. Após aberto, manter refrigerado e consumir em até 5 dias."
+  availability:
+    status: null
+    last_checked_at: "2025-08-28T00:00:00-03:00"
+  pricing:
+    currency: "BRL"
+    price: null
+    observed_prices:
+      - retailer: "Zona Cerealista"
+        url: "https://www.zonacerealista.com.br/condensado-de-aveia-nude-330g"
+        price: 18.90
+        currency: "BRL"
+        observed_at: "2025-08-28"
+  images:
+    primary: null
+    gallery: []
+  short_description: >
+    Condensado vegetal de aveia, substituto clean label do leite condensado tradicional.
+  long_description: >
+    O Condensado de Aveia Nude 330g é uma alternativa plant-based ao leite condensado tradicional.
+    É clean label, feito com aveia upcycled, sem lactose, sem glúten e sem aditivos artificiais.
+    Mantém a cremosidade e o sabor adocicado característicos, sendo ideal para receitas de doces,
+    sobremesas e coberturas.
+  ingredients:
+    - aveia
+    - açúcar demerara
+    - água
+    - óleo de girassol
+    - sal marinho
+  allergens:
+    contains:
+      - aveia
+    may_contain: []
+    gluten_statement: "Não contém glúten"
+    lactose_statement: "Sem lactose"
+  claims:
+    - "Alternativa ao leite condensado"
+    - "Clean label"
+    - "Sem lactose"
+    - "Sem glúten"
+    - "Plant-based"
+    - "Sem aditivos artificiais"
+  sustainability:
+    upcycled_certified: true
+    upcycled_notes: "Produzido com biomassa reaproveitada da base de aveia"
+    carbon_footprint:
+      notes: "Impacto ambiental inferior ao leite condensado tradicional"
+  nutrition:
+    serving:
+      size_g: 20
+      servings_per_container: 16
+    per_100g:
+      energy_kcal: 290
+      carbohydrates_g: 55
+      sugars_total_g: 45
+      protein_g: 3.0
+      total_fat_g: 5.5
+      saturated_fat_g: 1.0
+      trans_fat_g: 0
+      fiber_g: 2.0
+      sodium_mg: 60
+    per_serving_g: 20
+    per_serving:
+      energy_kcal: 58
+      carbohydrates_g: 11
+      sugars_total_g: 9.0
+      protein_g: 0.6
+      total_fat_g: 1.1
+      saturated_fat_g: 0.2
+      trans_fat_g: 0
+      fiber_g: 0.4
+      sodium_mg: 12
+    notes: "Valores nutricionais aproximados de revendedores; confirmar no rótulo oficial."
+  usage_suggestions:
+    - "Usar em receitas de brigadeiro e beijinho"
+    - "Adicionar a tortas e bolos"
+    - "Cobrir frutas e sobremesas"
+    - "Consumir puro como doce de colher"
+  audience:
+    dietary_preferences:
+      - "vegano"
+      - "plant-based"
+      - "sem lactose"
+      - "sem glúten"
+      - "consumidores que buscam alternativas ao leite condensado"
+    cautions: []
+  seo:
+    title: "Condensado de Aveia Nude 330g | Alternativa Vegetal ao Leite Condensado"
+    meta_description: "Nude Condensado de Aveia 330g: alternativa clean label ao leite condensado. Sem lactose, sem glúten e 100% plant-based."
+    keywords:
+      - "condensado de aveia"
+      - "leite condensado vegano"
+      - "alternativa ao leite condensado"
+      - "vegano"
+      - "sem lactose"
+      - "sem glúten"
+      - "clean label"
+    canonical: "https://heynude.com.br/produto/condensado-de-aveia-330g"
+  schema_org:
+    "@context": "https://schema.org"
+    "@type": "Product"
+    name: "Condensado de Aveia Nude 330g"
+    brand:
+      "@type": "Brand"
+      name: "Nude"
+    description: "Condensado vegetal de aveia, clean label, sem lactose e sem glúten. Alternativa ao leite condensado tradicional."
+    sku: null
+    gtin13: null
+    category: "Cremes vegetais doces"
+    url: "https://heynude.com.br/produto/condensado-de-aveia-330g"
+    offers:
+      "@type": "Offer"
+      priceCurrency: "BRL"
+      price: null
+      availability: null
+      url: "https://heynude.com.br/produto/condensado-de-aveia-330g"
+    nutrition:
+      "@type": "NutritionInformation"
+      servingSize: "20 g"
+      calories: "58 kcal"
+      proteinContent: "0.6 g"
+      carbohydrateContent: "11 g"
+      fiberContent: "0.4 g"
+      fatContent: "1.1 g"
+      saturatedFatContent: "0.2 g"
+      sodiumContent: "12 mg"
+  data_quality:
+    status: "partially_verified"
+    notes:
+      - "Página oficial não carregou; dados obtidos via revendedores."
+      - "Preço e disponibilidade oficiais pendentes."
+    recommended_followups:
+      - "Capturar imagens oficiais da embalagem"
+      - "Confirmar tabela nutricional no rótulo"
+      - "Verificar SKU/GTIN no ERP"
+      - "Checar preço e estoque no site oficial"

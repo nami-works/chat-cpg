@@ -1,0 +1,39 @@
+coletar_ceps:
+  description: >
+    Solicitar ao usuário que forneça um arquivo CSV contendo uma coluna chamada `cep`.
+  expected_output: >
+    O arquivo CSV deve ser carregado corretamente e validado para garantir que contém a coluna `cep` com os CEPs dos clientes.
+  agent: >
+    processador_ceps
+
+validar_ceps_shoppings:
+  description: >
+    Validar o dicionário de shoppings para assegurar que os CEPs estão no formato adequado.
+  expected_output: >
+    Todos os shoppings devem ter CEPs válidos e no formato de 8 dígitos numéricos. Uma mensagem de erro deve ser retornada caso contrário.
+  agent: >
+    processador_ceps
+
+converter_ceps_para_coordenadas:
+  description: >
+    Utilizar uma API externa para converter os CEPs em coordenadas geográficas (latitude, longitude).
+  expected_output: >
+    Um dicionário mapeando cada CEP a suas respectivas coordenadas geográficas.
+  agent: >
+    conversor_geocodificacao
+
+calcular_distancias:
+  description: >
+    Calcular a distância geodésica entre as coordenadas dos CEPs e os shoppings.
+  expected_output: >
+    Um dicionário contendo a distância calculada em quilômetros para cada CEP em relação ao shopping mais próximo.
+  agent: >
+    calculador_distancias
+
+gerar_relatorio:
+  description: >
+    Criar um arquivo CSV com os resultados contendo o CEP, o nome do shopping mais próximo e a distância calculada.
+  expected_output: >
+    Um arquivo CSV (`ceps_distancias.csv`) bem formatado com as colunas necessárias e dados organizados.
+  agent: >
+    gerador_relatorio

@@ -1,0 +1,172 @@
+meta:
+  product_id: "booster-antifrizz"
+  display_name: "Booster Antifrizz"
+  brand: "GE Beauty"
+  slug: "booster-antifrizz"
+  category: "leave-in"
+  subcategory: "heat protectant"
+  version: 1
+  last_update: "2025-07-29"
+  launch_date: null
+  price_range: "R$ 79,00"
+  sizes_available: ["15mL"]
+
+product_description:
+  short: "Fios alinhados, protegidos e livres de frizz com o Booster Antifrizz."
+  detailed: |
+    O Booster Antifrizz GE Beauty é um concentrado inteligente que controla o volume, protege do calor e mantém o cabelo macio e brilhante. Formulado com óleo de coco, chia e trehalose, ele realinha as fibras, reduz o volume e controla o frizz, oferecendo proteção térmica e brilho natural. Ideal para quem busca reduzir frizz e volume sem perder o movimento, mesmo em dias úmidos ou com uso frequente de secador e chapinha.
+  key_differentiators:
+    - "Combina óleo de coco, chia e trehalose para proteção e alinhamento."
+    - "Oferece proteção térmica e controle de frizz em ambientes úmidos."
+    - "Alternativa segura e biodegradável aos silicones e alisantes convencionais."
+  positioning: "Para cabelos alinhados e protegidos, sem frizz e com brilho natural."
+  target_customer: "Pessoas que buscam controle de frizz, redução de volume e proteção térmica."
+
+benefits:
+  immediate_results:
+    - "Cabelos alinhados e com menos frizz."
+    - "Brilho natural e toque macio."
+  short_term:
+    - "Proteção contra a umidade e o calor."
+  long_term:
+    - "Manutenção do alinhamento e proteção contínua."
+  functional:
+    - "Reduz o volume e controla o frizz."
+    - "Protege contra danos térmicos."
+  emotional:
+    - "Confiança em cabelos bem cuidados e protegidos."
+  aesthetic:
+    - "Cabelos com brilho natural e toque suave."
+  protective:
+    - "Escudo contra o calor do secador, chapinha e babyliss."
+
+actives:
+  - id: "allinea"
+    name: "Allinea"
+    concentration: null
+    function: "Realinhamento temporário da fibra capilar."
+    mechanism: "Cria um filme que sela as cutículas e controla o frizz."
+    benefits:
+      - "Oferece brilho, maciez e proteção térmica."
+      - "Mantém os fios alinhados em ambientes úmidos."
+    source: "Vegetal"
+    certifications: ["Biodegradável"]
+
+formulation:
+  texture: "Serum"
+  viscosity: "Light"
+  absorption: "Fast"
+  finish: "Natural"
+  scent_profile: "Neutral"
+  color: "Clear"
+  ph_level: null
+  full_inci: |
+    Aqua, Disodium Edta, Cetearyl Alcohol, Behentrimonium Chloride, Ceteareth-20, Tocopheryl Acetate, Lactic Acid, Ethyl Linoleate, Ethyl Oleate, Trehalose, Polyglyceryl-10 Laurate, Glycolic Acid, Magnesium Aluminum Silicate, Cocos Nucifera Oil, Sodium Lignosulfonate, Benzyl Alcohol, Xylitol, Caprylic Acid, Tocopherol, Glycerin, Salvia Hispanica Seed Extract, Caprylyl/Capryl Glucoside, Sorbitan Oleate, Polyquaternium-37, Sodium Phosphate, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Undecane, Tridecane, Parfum, Citral, Citronellol, Geraniol, Hexyl Cinnamal, Hydroxycitronellal, Limonene, Linalool.
+
+hair_compatibility:
+  hair_types: ["Fine", "Thick", "Coarse"]
+  textures: ["Straight", "Wavy", "Curly", "Coily"]
+  conditions: ["Damaged", "Colored", "Chemically Treated"]
+  porosity_levels: ["Low", "Medium", "High"]
+  scalp_types: ["Oily", "Dry", "Sensitive", "Normal"]
+  excluded_types: []
+
+application:
+  frequency: "As needed"
+  method: |
+    Pingue 5 a 10 gotas na máscara para um tratamento antifrizz intenso e brilho extra. Misture 5 a 10 gotas no leave-in para finalizar com menos volume, frizz controlado e proteção térmica. Use 2 a 5 gotas direto nos fios secos para reforçar a proteção contra o frizz ao longo do dia.
+  amount_guide: "2 to 10 drops depending on use"
+  timing: "Before styling or as a touch-up during the day"
+  layering: ["Compatible with leave-in conditioners and styling products"]
+  styling_compatibility: ["Works with heat tools like dryers and straighteners"]
+  removal_method: "Wash out with regular shampoo"
+
+performance_metrics:
+  clinical_results: []
+  user_study_results: []
+  before_after_claims: ["Cabelos alinhados e protegidos mesmo em ambientes úmidos."]
+  duration_of_effects: "Lasts throughout the day"
+  improvement_timeline: "Immediate results with continued use"
+
+technical_specs:
+  heat_protection_temp: "Up to 232°C"
+  humidity_resistance: "High performance in humid conditions"
+  water_resistance: null
+  uv_protection: null
+  hold_strength: null
+  shine_level: "High shine"
+
+usage_scenarios:
+  daily_routine: |
+    Use as part of your daily styling routine to maintain alignment and protection.
+  special_occasions: |
+    Apply before special events for long-lasting frizz control and shine.
+  professional_use: |
+    Suitable for salon use to enhance styling and protect hair during heat treatments.
+  troubleshooting:
+    - "If hair feels heavy, reduce the amount used."
+    - "For extra frizz control, apply directly to dry hair."
+  seasonal_tips:
+    - "Use more frequently in humid summer months for added protection."
+
+safety_information:
+  contraindications: []
+  precautions: ["Avoid contact with eyes."]
+  storage_requirements: "Store in a cool, dry place."
+  shelf_life: "12 months after opening"
+  pregnancy_safe: null
+  child_safe: null
+
+regulatory_claims:
+  dermatologically_tested: null
+  hypoallergenic: null
+  non_comedogenic: null
+  cruelty_free: true
+  vegan: true
+  sulfate_free: true
+  paraben_free: true
+  silicone_free: true
+  artificial_fragrance_free: null
+
+certifications:
+  organic: []
+  sustainable: []
+  professional: []
+  awards: []
+
+marketing_copy:
+  hero_headline: "Fios Alinhados e Protegidos com o Booster Antifrizz"
+  subheadlines:
+    - "Controle de Frizz e Volume com Proteção Térmica"
+    - "Brilho Natural e Toque Macio"
+  elevator_pitch: "O Booster Antifrizz GE Beauty oferece controle de frizz, proteção térmica e brilho natural, mantendo os cabelos alinhados e protegidos."
+  key_messages:
+    - "Protege contra danos térmicos e umidade."
+    - "Alternativa biodegradável aos silicones."
+  call_to_action:
+    - "Experimente o Booster Antifrizz e transforme seus cabelos."
+  social_proof:
+    - "Clientes satisfeitos relatam cabelos mais alinhados e protegidos."
+  comparison_points:
+    - "Mais eficaz que silicones convencionais sem build-up."
+
+content_hooks:
+  problem_statements:
+    - "Frizz e volume excessivo são desafios diários para muitos."
+  solution_narratives:
+    - "O Booster Antifrizz oferece uma solução eficaz para cabelos alinhados e protegidos."
+  transformation_stories:
+    - "Veja a diferença em cabelos mais brilhantes e macios desde a primeira aplicação."
+  expert_insights:
+    - "Formulado com ingredientes naturais para proteção e alinhamento."
+  ingredient_spotlights:
+    - "Allinea: O ativo inteligente para realinhamento capilar."
+  routine_integration:
+    - "Incorpore o Booster Antifrizz na sua rotina de cuidados para resultados duradouros."
+
+disclaimers:
+  results_variability:
+    - "Os resultados podem variar de acordo com o tipo de cabelo."
+  usage_limitations:
+    - "Use conforme indicado para melhores resultados."
+  regulatory_required: []

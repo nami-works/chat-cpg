@@ -1,0 +1,34 @@
+Criação do arquivo `exemplo_input.csv` com o modelo de dados de entrada para extração semântica para SEO:
+
+```csv
+Campo,Tamanho,Tipe,Exemplo,Observação
+tema,1-255,string,"shampoo detox","A palavra-chave ou frase curta a ser utilizada para a extração semântica."
+estilo,1-50,string,"informativo","Descrição do tom e voz que deve ser utilizado na criação do conteúdo."
+produtos,1-1000,string,"linha completa de shampoos e condicionadores","Lista de produtos disponíveis para melhoria do SEO."
+marca,1-100,string,"Minha Marca","Nome da marca ou empresa a ser referenciada no conteúdo."
+guia_ferramentas,1-2083,url,"https://docs.crewai.com/how-to/create-custom-tools","Link para o guia de ferramentas que pode auxiliar no projeto."
+conceito_de_agents,1-2083,url,"https://docs.crewai.com/concepts/agents","Link para compreender o conceito de agentes que será utilizado na implementação."
+google_autocomplete_api,1-2083,url,"https://developers.google.com/maps/documentation/javascript/get-api-key","URL da documentação para obtter chave da API do Google Autocomplete."
+api_answer_the_public,1-2083,url,"https://answerthepublic.com/","URL da API que requer autorização para gerar dados."
+scraping_tools,1-1000,string,"BeautifulSoup, Requests","Bibliotecas para scraping, que o usuário deve instalar se certas APIs não estiverem acessíveis."
+```
+
+### Como usar o arquivo `exemplo_input.csv`:
+1. **Importação dos dados**: Utilize o Pandas para carregar os dados:
+   ```python
+   import pandas as pd
+
+   dados_input = pd.read_csv('caminho/para/o/exemplo_input.csv')
+   ```
+   
+2. **Uso dos dados em funções**: O conteúdo do CSV pode ser utilizado nas funções de geração de conteúdos:
+   ```python
+   tema = dados_input.loc[0, 'tema']
+   estilo = dados_input.loc[0, 'estilo']
+   produtos = dados_input.loc[0, 'produtos']
+   marca = dados_input.loc[0, 'marca']
+   ```
+
+3. **Validação dos dados**: Garanta que os dados carregados sejam válidos e atendam às expectativas antes de seguir com a implementação das funções de extração semântica.
+
+Este arquivo é um exemplo acessível e reutilizável que orienta o usuário sobre como fornecer os dados necessários para o sucesso da extração semântica para SEO. É um modelo claro e facilita a comunicação entre desenvolvedores e usuários finais, alinhando-se com a proposta de "input que não precisa de explicação".

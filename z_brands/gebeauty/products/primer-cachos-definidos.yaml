@@ -1,0 +1,165 @@
+meta:
+  product_id: "primer-cachos-definidos"
+  display_name: "Primer Cachos Definidos"
+  brand: "GE Beauty"
+  slug: "primer-cachos-definidos"
+  category: "Cuidados Capilares"
+  subcategory: "Definição de Cachos"
+  version: 1
+  last_update: "2025-07-31"
+  launch_date: "2024-01-01"
+  price_range: "R$ 149,00"
+  sizes_available: ["250mL"]
+
+product_description:
+  short: "Cachos definidos e livres de frizz por 24h com proteção térmica."
+  detailed: |
+    "O Primer Cachos Definidos da GE Beauty é formulado com tecnologia vegetal à base de chia e linhaça, que forma um filme flexível ao redor dos fios, garantindo cachos definidos, macios e hidratados por até 24 horas. Protege do calor até 230°C, adiciona brilho e controla o frizz, mesmo em ambientes úmidos."
+  key_differentiators:
+    - "Tecnologia Wavemax® com chia e linhaça"
+    - "Proteção térmica até 230°C"
+    - "Efeito 'umbrella' contra umidade"
+  positioning: "Para quem busca definição leve e natural dos cachos, com proteção e hidratação."
+  target_customer: "Pessoas com cabelos cacheados ou ondulados que desejam definição e controle de frizz."
+
+benefits:
+  immediate_results:
+    - "Diminuição do frizz a partir da primeira aplicação"
+  short_term:
+    - "Manutenção dos cachos por até 24h"
+  long_term:
+    - "Melhora sensorial imediata nos fios"
+  functional:
+    - "Controle de frizz"
+    - "Proteção térmica"
+  emotional:
+    - "Confiança em dias úmidos"
+  aesthetic:
+    - "Cachos definidos e com brilho"
+  protective:
+    - "Proteção contra calor e umidade"
+
+actives:
+  - id: "wavemax"
+    name: "Wavemax®"
+    concentration: "98,63% NOC"
+    function: "Formação de filme flexível e bioadesivo"
+    mechanism: "Interações intermoleculares de ligações hidrogênio"
+    benefits:
+      - "Cachos naturais por mais tempo"
+      - "Diminuição do frizz"
+    source: "Chia e linhaça"
+    certifications: []
+
+formulation:
+  texture: "Gel creme"
+  viscosity: "Média"
+  absorption: "Rápida"
+  finish: "Natural"
+  scent_profile: "Leve e agradável"
+  color: "Transparente"
+  ph_level: "5.5"
+  full_inci: |
+    "Aqua, Hydroxyethylcellulose, Ethylhexylglycerin, Benzyl Alcohol, Helianthus Annuus Seed Oil, Zea Mays Oil, Sesamum Indicum Seed Oil, Macadamia Integrifolia Seed Oil, Olea Europaea Fruit Oil, Tbhq, Lactic Acid, Ethyl Linoleate, Ethyl Oleate, Trehalose, Polyglyceryl-10 Laurate, Glycolic Acid, Magnesium Aluminum Silicate, Cocos Nucifera Oil, Sodium Lignosulfonate, Behentrimonium Chloride, Xylitol, Caprylic Acid, Tocopherol, Parfum, Linum Usitatissimum Seed Extract, Salvia Hispanica Seed Extract, Citral, Citronellol, Geraniol, Hexyl Cinnamal, Hydroxycitronellal, Limonene, Linalool"
+
+hair_compatibility:
+  hair_types: ["Cacheados", "Ondulados"]
+  textures: ["Finos", "Grossos"]
+  conditions: ["Frizz", "Ressecados"]
+  porosity_levels: ["Baixa", "Média", "Alta"]
+  scalp_types: ["Normal", "Seco"]
+  excluded_types: []
+
+application:
+  frequency: "Diária"
+  method: |
+    "Com o cabelo úmido, divida em 4 partes para facilitar a aplicação. Aplique nos fios úmidos, do comprimento às pontas. Seque com difusor ou deixe secar naturalmente. Reaplique pequenas quantidades para reforçar a definição no day after."
+  amount_guide: "Quantidade suficiente para cobrir os fios"
+  timing: "Aplicar após o banho"
+  layering: ["Pode ser usado com outros produtos de styling"]
+  styling_compatibility: ["Compatível com difusor e secador"]
+  removal_method: "Lavagem com shampoo"
+
+performance_metrics:
+  clinical_results: []
+  user_study_results: []
+  before_after_claims: []
+  duration_of_effects: "Até 24 horas"
+  improvement_timeline: "Resultados imediatos"
+
+technical_specs:
+  heat_protection_temp: "230°C"
+  humidity_resistance: "Alta"
+  water_resistance: "Moderada"
+  uv_protection: "Não especificado"
+  hold_strength: "Leve"
+  shine_level: "Alto"
+
+usage_scenarios:
+  daily_routine: |
+    "Use diariamente para manter os cachos definidos e protegidos do frizz."
+  special_occasions: |
+    "Ideal para eventos em ambientes úmidos, garantindo cachos definidos e sem frizz."
+  professional_use: |
+    "Pode ser usado em salões para finalização de cachos com definição e proteção."
+  troubleshooting: ["Reaplicar no day after para reforçar a definição"]
+  seasonal_tips: ["Usar mais em dias úmidos para controle de frizz"]
+
+safety_information:
+  contraindications: []
+  precautions: ["Evitar contato com os olhos"]
+  storage_requirements: "Armazenar em local fresco e seco"
+  shelf_life: "24 meses"
+  pregnancy_safe: true
+  child_safe: true
+
+regulatory_claims:
+  dermatologically_tested: true
+  hypoallergenic: null
+  non_comedogenic: null
+  cruelty_free: true
+  vegan: true
+  sulfate_free: true
+  paraben_free: true
+  silicone_free: true
+  artificial_fragrance_free: null
+
+certifications:
+  organic: []
+  sustainable: ["Embalagens recicláveis"]
+  professional: []
+  awards: []
+
+marketing_copy:
+  hero_headline: "Cachos Definidos e Livres de Frizz por 24h"
+  subheadlines:
+    - "Proteção térmica até 230°C"
+    - "Efeito 'umbrella' contra umidade"
+  elevator_pitch: "Defina seus cachos com proteção e brilho, sem frizz, por até 24 horas."
+  key_messages:
+    - "Tecnologia Wavemax® com chia e linhaça"
+    - "Proteção térmica e controle de frizz"
+  call_to_action:
+    - "Experimente agora e veja a diferença!"
+  social_proof: ["Depoimentos de clientes satisfeitos"]
+  comparison_points: ["Alternativa vegetal aos polímeros sintéticos"]
+
+content_hooks:
+  problem_statements:
+    - "Manter cachos definidos em dias úmidos é um desafio."
+  solution_narratives:
+    - "Com o Primer Cachos Definidos, seus cachos ficam protegidos e definidos por até 24 horas."
+  transformation_stories: []
+  expert_insights: []
+  ingredient_spotlights:
+    - "Chia e linhaça para definição e controle de frizz"
+  routine_integration: ["Pode substituir o leave-in para definição e proteção"]
+
+disclaimers:
+  results_variability: ["Os resultados podem variar de acordo com o tipo de cabelo."]
+  usage_limitations: ["Evitar uso excessivo para não pesar os fios."]
+  regulatory_required: []
+
+CRITICAL: Every extracted piece of information must include proper source references.
+  # arquivo: Ativos e Claims - Primer Cachos.pdf
+  # web: https://gebeauty.com.br/products/primer-cachos-definidos

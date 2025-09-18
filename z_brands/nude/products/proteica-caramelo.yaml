@@ -1,0 +1,169 @@
+product:
+  id: "nude-leite-aveia-proteina-caramelo-flor-sal-250ml"
+  name: "Bebida de Aveia com Proteína & Caramelo Flor de Sal 250ml"
+  brand: "Nude"
+  canonical_url: "https://heynude.com.br/produto/bebida-de-aveia-com-proteina-e-caramelo-flor-de-sal-250-ml"
+  slug: "nude-leite-aveia-proteina-caramelo-flor-sal-250ml"
+  # Add web field for URL injection
+  web: "https://heynude.com.br/products/proteica-caramelo"
+  category_hierarchy:
+    - "Alimentos & Bebidas"
+    - "Bebidas Vegetais"
+    - "Pronto para beber"
+    - "Proteicas"
+  tags:
+    - "plant-based"
+    - "sem lactose"
+    - "sem glúten"
+    - "clean label"
+    - "on the go"
+    - "caramelo"
+    - "rico em proteína"
+  gtin: null
+  sku: null
+  variants:
+    flavor: "Caramelo Flor de Sal"
+    size_ml: 250
+  package:
+    net_volume_ml: 250
+    unit_count: 1
+    package_description: "Bebida vegetal proteica sabor caramelo flor de sal, embalagem 250ml"
+    storage: "Conservar em local fresco e seco. Após aberto, manter refrigerado e consumir imediatamente."
+  availability:
+    status: null
+    last_checked_at: "2025-08-28T00:00:00-03:00"
+  pricing:
+    currency: "BRL"
+    price: null
+    observed_prices:
+      - retailer: "Zona Cerealista"
+        url: "https://www.zonacerealista.com.br/bebida-de-aveia-com-proteina-e-caramelo-flor-de-sal-nude-250ml"
+        price: 9.90
+        currency: "BRL"
+        observed_at: "2025-08-28"
+  images:
+    primary: null
+    gallery: []
+  short_description: >
+    Bebida vegetal de aveia com proteína vegetal, sabor caramelo flor de sal. Clean label, sem glúten e sem lactose.
+  long_description: >
+    A Bebida de Aveia Nude com Proteína & Caramelo Flor de Sal 250ml é uma opção prática e nutritiva,
+    feita com aveia upcycled e proteína vegetal. É clean label, sem lactose, sem glúten e 100% plant-based.
+    Possui alto teor de proteína e sabor indulgente de caramelo com toque de flor de sal, ideal para consumo
+    no dia a dia ou como lanche pós-treino.
+  ingredients:
+    - água
+    - aveia
+    - proteína de ervilha
+    - óleo de girassol
+    - açúcar demerara
+    - aroma natural de caramelo
+    - sal marinho
+  allergens:
+    contains:
+      - aveia
+    may_contain: []
+    gluten_statement: "Não contém glúten"
+    lactose_statement: "Sem lactose"
+  claims:
+    - "Rico em proteína vegetal"
+    - "Sabor caramelo flor de sal"
+    - "Clean label"
+    - "Sem lactose"
+    - "Sem glúten"
+    - "Plant-based"
+    - "Pronto para beber"
+  sustainability:
+    upcycled_certified: true
+    upcycled_notes: "Produzido a partir da biomassa de aveia reaproveitada"
+    carbon_footprint:
+      notes: "Impacto ambiental inferior a bebidas lácteas convencionais"
+  nutrition:
+    serving:
+      size_ml: 250
+      servings_per_container: 1
+    per_100ml:
+      energy_kcal: 65
+      carbohydrates_g: 8.5
+      sugars_total_g: 4.2
+      protein_g: 3.5
+      total_fat_g: 2.1
+      saturated_fat_g: 0.4
+      trans_fat_g: 0
+      fiber_g: 0.9
+      sodium_mg: 45
+    per_serving_ml: 250
+    per_serving:
+      energy_kcal: 163
+      carbohydrates_g: 21
+      sugars_total_g: 10.5
+      protein_g: 8.8
+      total_fat_g: 5.2
+      saturated_fat_g: 1.0
+      trans_fat_g: 0
+      fiber_g: 2.3
+      sodium_mg: 113
+    notes: "Tabela nutricional baseada em informações de revendedores; confirmar no rótulo oficial."
+  usage_suggestions:
+    - "Consumir gelado, pronto para beber"
+    - "Levar como lanche pós-treino"
+    - "Combinar com frutas ou snacks"
+  audience:
+    dietary_preferences:
+      - "vegano"
+      - "plant-based"
+      - "sem lactose"
+      - "sem glúten"
+      - "consumidores ativos"
+      - "quem busca alto teor de proteína"
+    cautions: []
+  seo:
+    title: "Bebida de Aveia com Proteína & Caramelo Flor de Sal 250ml | Nude — Plant-based e Nutritiva"
+    meta_description: "Nude Leite de Aveia com Proteína & Caramelo Flor de Sal 250ml: bebida vegetal proteica, clean label, sem lactose e sem glúten."
+    keywords:
+      - "bebida proteica vegetal"
+      - "aveia caramelo flor de sal"
+      - "vegano"
+      - "sem lactose"
+      - "sem glúten"
+      - "clean label"
+      - "lanche pós-treino"
+    canonical: "https://heynude.com.br/produto/bebida-de-aveia-com-proteina-e-caramelo-flor-de-sal-250-ml"
+  schema_org:
+    "@context": "https://schema.org"
+    "@type": "Product"
+    name: "Bebida de Aveia com Proteína & Caramelo Flor de Sal 250ml"
+    brand:
+      "@type": "Brand"
+      name: "Nude"
+    description: "Bebida vegetal de aveia proteica sabor caramelo flor de sal, clean label, sem lactose e sem glúten."
+    sku: null
+    gtin13: null
+    category: "Bebidas vegetais proteicas"
+    url: "https://heynude.com.br/produto/bebida-de-aveia-com-proteina-e-caramelo-flor-de-sal-250-ml"
+    offers:
+      "@type": "Offer"
+      priceCurrency: "BRL"
+      price: null
+      availability: null
+      url: "https://heynude.com.br/produto/bebida-de-aveia-com-proteina-e-caramelo-flor-de-sal-250-ml"
+    nutrition:
+      "@type": "NutritionInformation"
+      servingSize: "250 ml"
+      calories: "163 kcal"
+      proteinContent: "8.8 g"
+      carbohydrateContent: "21 g"
+      fiberContent: "2.3 g"
+      fatContent: "5.2 g"
+      saturatedFatContent: "1 g"
+      sodiumContent: "113 mg"
+  data_quality:
+    status: "partially_verified"
+    notes:
+      - "Página oficial não carregou; dados confirmados via revendedores."
+      - "Preço e disponibilidade oficiais pendentes."
+    recommended_followups:
+      - "Capturar imagens oficiais da embalagem"
+      - "Confirmar tabela nutricional no rótulo"
+      - "Verificar SKU/GTIN no ERP"
+      - "Checar preço e estoque no site oficial"

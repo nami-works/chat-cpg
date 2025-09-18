@@ -1,0 +1,164 @@
+product:
+  id: "nude-leite-aveia-to-go-cacau-250ml"
+  name: "Bebida de Aveia Nude To Go Cacau 250ml"
+  brand: "Nude"
+  canonical_url: "https://heynude.com.br/produto/nude-bebida-de-aveia-to-go-cacau-250ml"
+  slug: "nude-leite-aveia-to-go-cacau-250ml"
+  # Add web field for URL injection
+  web: "https://heynude.com.br/products/to-go-cacau"
+  category_hierarchy:
+    - "Alimentos & Bebidas"
+    - "Bebidas Vegetais"
+    - "Leite de Aveia"
+    - "Pronto para beber"
+  tags:
+    - "plant-based"
+    - "sem lactose"
+    - "sem glúten"
+    - "clean label"
+    - "on the go"
+    - "cacau"
+  gtin: null
+  sku: null
+  variants:
+    flavor: "Cacau"
+    size_ml: 250
+  package:
+    net_volume_ml: 250
+    unit_count: 1
+    package_description: "Bebida vegetal de aveia sabor cacau, versão To Go (pronto para beber)"
+    storage: "Conservar em local fresco e seco. Após aberto, manter refrigerado e consumir imediatamente."
+  availability:
+    status: null
+    last_checked_at: "2025-08-28T00:00:00-03:00"
+  pricing:
+    currency: "BRL"
+    price: null
+    observed_prices:
+      - retailer: "Mundo Verde"
+        url: "https://www.mundoverde.com.br/leite-de-aveia-to-go-cacau-nude-250ml"
+        price: 6.90
+        currency: "BRL"
+        observed_at: "2025-08-28"
+  images:
+    primary: null
+    gallery: []
+  short_description: >
+    Bebida vegetal de aveia sabor cacau, pronta para beber, clean label, sem glúten e sem lactose.
+  long_description: >
+    O Nude Leite de Aveia To Go Cacau 250ml é a versão prática e portátil do leite de aveia Nude,
+    saborizada naturalmente com cacau. Clean label, sem lactose e sem glúten, é 100% plant-based
+    e ideal para quem busca praticidade no dia a dia. Pode ser consumido em qualquer lugar,
+    puro ou acompanhado de snacks.
+  ingredients:
+    - água
+    - aveia
+    - óleo de girassol
+    - cacau em pó
+    - sal marinho
+  allergens:
+    contains:
+      - aveia
+    may_contain: []
+    gluten_statement: "Não contém glúten"
+    lactose_statement: "Sem lactose"
+  claims:
+    - "Pronto para beber"
+    - "Sabor natural de cacau"
+    - "Clean label"
+    - "Sem lactose"
+    - "Sem glúten"
+    - "Plant-based"
+  sustainability:
+    upcycled_certified: true
+    upcycled_notes: "Produzido com biomassa reaproveitada da base de aveia"
+    carbon_footprint:
+      notes: "Impacto ambiental inferior ao leite de vaca; valor específico não informado"
+  nutrition:
+    serving:
+      size_ml: 250
+      servings_per_container: 1
+    per_100ml:
+      energy_kcal: 62
+      carbohydrates_g: 10
+      sugars_total_g: 5.2
+      protein_g: 1.2
+      total_fat_g: 2.0
+      saturated_fat_g: 0.4
+      trans_fat_g: 0
+      fiber_g: 0.8
+      sodium_mg: 44
+    per_serving_ml: 250
+    per_serving:
+      energy_kcal: 155
+      carbohydrates_g: 25
+      sugars_total_g: 13
+      protein_g: 3.0
+      total_fat_g: 5.0
+      saturated_fat_g: 1.0
+      trans_fat_g: 0
+      fiber_g: 2.0
+      sodium_mg: 110
+    notes: "Valores nutricionais aproximados de revendedores; confirmar no rótulo oficial."
+  usage_suggestions:
+    - "Consumir diretamente da caixinha, gelado ou em temperatura ambiente"
+    - "Levar como lanche rápido no trabalho, escola ou academia"
+    - "Combinar com snacks, frutas ou cereais Nude"
+  audience:
+    dietary_preferences:
+      - "vegano"
+      - "plant-based"
+      - "sem lactose"
+      - "sem glúten"
+      - "consumidores que buscam praticidade"
+    cautions: []
+  seo:
+    title: "Bebida de Aveia To Go Cacau 250ml | Nude — Plant-based, Clean Label e Pronta para Beber"
+    meta_description: "Nude Leite de Aveia To Go Cacau 250ml: bebida vegetal prática e portátil, sabor cacau, clean label, sem lactose e sem glúten."
+    keywords:
+      - "leite de aveia to go"
+      - "bebida vegetal cacau"
+      - "vegano"
+      - "sem lactose"
+      - "sem glúten"
+      - "clean label"
+      - "pronto para beber"
+    canonical: "https://heynude.com.br/produto/nude-bebida-de-aveia-to-go-cacau-250ml"
+  schema_org:
+    "@context": "https://schema.org"
+    "@type": "Product"
+    name: "Bebida de Aveia Nude To Go Cacau 250ml"
+    brand:
+      "@type": "Brand"
+      name: "Nude"
+    description: "Bebida vegetal de aveia sabor cacau, pronta para beber, clean label, sem lactose e sem glúten."
+    sku: null
+    gtin13: null
+    category: "Bebidas vegetais"
+    url: "https://heynude.com.br/produto/nude-bebida-de-aveia-to-go-cacau-250ml"
+    offers:
+      "@type": "Offer"
+      priceCurrency: "BRL"
+      price: null
+      availability: null
+      url: "https://heynude.com.br/produto/nude-bebida-de-aveia-to-go-cacau-250ml"
+    nutrition:
+      "@type": "NutritionInformation"
+      servingSize: "250 ml"
+      calories: "155 kcal"
+      proteinContent: "3 g"
+      carbohydrateContent: "25 g"
+      fiberContent: "2 g"
+      fatContent: "5 g"
+      saturatedFatContent: "1 g"
+      sodiumContent: "110 mg"
+  data_quality:
+    status: "partially_verified"
+    notes:
+      - "Página oficial não carregou; dados baseados em revendedores."
+      - "Preço e disponibilidade oficiais pendentes de verificação."
+    recommended_followups:
+      - "Capturar imagens oficiais da embalagem"
+      - "Confirmar tabela nutricional no rótulo"
+      - "Verificar SKU/GTIN no ERP"
+      - "Checar preço e estoque no site oficial"

@@ -1,0 +1,161 @@
+product:
+  id: "nude-leite-aveia-organico-1l"
+  name: "Bebida de Aveia Orgânico Sem Glúten 1L"
+  brand: "Nude"
+  canonical_url: "https://heynude.com.br/produto/bebida-de-aveia-organico-sem-gluten-nude.-1l"
+  slug: "nude-leite-aveia-organico-1l"
+  # Add web field for URL injection
+  web: "https://heynude.com.br/products/leite-original"
+  category_hierarchy:
+    - "Alimentos & Bebidas"
+    - "Bebidas Vegetais"
+    - "Leite de Aveia"
+  tags:
+    - "plant-based"
+    - "sem lactose"
+    - "sem glúten"
+    - "orgânico"
+    - "clean label"
+  gtin: null
+  sku: null
+  variants:
+    flavor: "Orgânico"
+    size_ml: 1000
+  package:
+    net_volume_ml: 1000
+    unit_count: 1
+    package_description: "Bebida vegetal de aveia orgânica, clean label, embalagem de 1 litro"
+    storage: "Conservar em local fresco e seco. Após aberto, manter refrigerado e consumir em até 5 dias."
+  availability:
+    status: null
+    last_checked_at: "2025-08-28T00:00:00-03:00"
+  pricing:
+    currency: "BRL"
+    price: null
+    observed_prices:
+      - retailer: "Zona Cerealista"
+        url: "https://www.zonacerealista.com.br/leite-de-aveia-organico-nude-1l"
+        price: 15.90
+        currency: "BRL"
+        observed_at: "2025-08-28"
+  images:
+    primary: null
+    gallery: []
+  short_description: >
+    Bebida vegetal de aveia orgânica, sem glúten e sem lactose. Clean label e 100% vegetal.
+  long_description: >
+    O Nude Leite de Aveia Orgânico Sem Glúten é uma bebida vegetal feita apenas com ingredientes
+    orgânicos e clean label. Livre de lactose, glúten e aditivos artificiais, é ideal para consumo
+    diário puro, em cafés, vitaminas, receitas ou com cereais. Produzido a partir de aveia upcycled
+    e certificado orgânico, reforçando o compromisso da Nude com sustentabilidade.
+  ingredients:
+    - água
+    - aveia orgânica sem glúten
+    - óleo de girassol orgânico
+    - sal marinho
+  allergens:
+    contains:
+      - aveia
+    may_contain: []
+    gluten_statement: "Não contém glúten"
+    lactose_statement: "Sem lactose"
+  claims:
+    - "Orgânico certificado"
+    - "100% vegetal"
+    - "Sem lactose"
+    - "Sem glúten"
+    - "Clean label"
+    - "Sem aditivos artificiais"
+  sustainability:
+    upcycled_certified: true
+    upcycled_notes: "Produzido com aveia orgânica e biomassa reaproveitada"
+    carbon_footprint:
+      notes: "Impacto ambiental inferior ao leite de vaca convencional"
+  nutrition:
+    serving:
+      size_ml: 200
+      servings_per_container: 5
+    per_100ml:
+      energy_kcal: 49
+      carbohydrates_g: 9.0
+      sugars_total_g: 4.0
+      protein_g: 1.0
+      total_fat_g: 1.2
+      saturated_fat_g: 0.2
+      trans_fat_g: 0
+      fiber_g: 0.6
+      sodium_mg: 40
+    per_serving_ml: 200
+    per_serving:
+      energy_kcal: 98
+      carbohydrates_g: 18
+      sugars_total_g: 8.0
+      protein_g: 2.0
+      total_fat_g: 2.4
+      saturated_fat_g: 0.4
+      trans_fat_g: 0
+      fiber_g: 1.2
+      sodium_mg: 80
+    notes: "Valores médios obtidos em sites de revendedores; confirmar com o rótulo oficial."
+  usage_suggestions:
+    - "Consumir puro ou com café"
+    - "Adicionar a vitaminas e smoothies"
+    - "Usar em receitas como pães, bolos e molhos"
+    - "Combinar com cereais Nude"
+  audience:
+    dietary_preferences:
+      - "vegano"
+      - "plant-based"
+      - "sem lactose"
+      - "sem glúten"
+      - "orgânico"
+    cautions: []
+  seo:
+    title: "Bebida de Aveia Orgânico Sem Glúten 1L | Nude — Clean Label e 100% Vegetal"
+    meta_description: "Leite de Aveia Orgânico Nude 1L: clean label, sem glúten e sem lactose. 100% vegetal e produzido com aveia orgânica."
+    keywords:
+      - "leite de aveia orgânico"
+      - "bebida vegetal orgânica"
+      - "sem lactose"
+      - "vegano"
+      - "clean label"
+      - "sem glúten"
+    canonical: "https://heynude.com.br/produto/bebida-de-aveia-organico-sem-gluten-nude.-1l"
+  schema_org:
+    "@context": "https://schema.org"
+    "@type": "Product"
+    name: "Bebida de Aveia Orgânico Sem Glúten 1L"
+    brand:
+      "@type": "Brand"
+      name: "Nude"
+    description: "Bebida vegetal de aveia orgânica, clean label, sem lactose, sem glúten e 100% vegetal."
+    sku: null
+    gtin13: null
+    category: "Bebidas vegetais"
+    url: "https://heynude.com.br/produto/bebida-de-aveia-organico-sem-gluten-nude.-1l"
+    offers:
+      "@type": "Offer"
+      priceCurrency: "BRL"
+      price: null
+      availability: null
+      url: "https://heynude.com.br/produto/bebida-de-aveia-organico-sem-gluten-nude.-1l"
+    nutrition:
+      "@type": "NutritionInformation"
+      servingSize: "200 ml"
+      calories: "98 kcal"
+      proteinContent: "2 g"
+      carbohydrateContent: "18 g"
+      fiberContent: "1.2 g"
+      fatContent: "2.4 g"
+      saturatedFatContent: "0.4 g"
+      sodiumContent: "80 mg"
+  data_quality:
+    status: "partially_verified"
+    notes:
+      - "Página oficial não carregou; dados confirmados via revendedores."
+      - "Preço e disponibilidade oficiais pendentes de verificação."
+    recommended_followups:
+      - "Capturar imagens oficiais da embalagem"
+      - "Confirmar tabela nutricional no rótulo"
+      - "Verificar SKU/GTIN no ERP"
+      - "Checar preço e estoque no site oficial"

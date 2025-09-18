@@ -1,0 +1,166 @@
+meta:
+  product_id: "shampoo-a-seco"
+  display_name: "Shampoo a Seco GE Beauty"
+  brand: "GE Beauty"
+  slug: "shampoo-a-seco"
+  category: "shampoo"
+  subcategory: "dry shampoo"
+  version: 1
+  last_update: "2025-07-29"
+  launch_date: null
+  price_range: "R$ 99,00" # web: https://gebeauty.com.br/products/shampoo-a-seco-ge-beauty-150ml
+  sizes_available: ["150ml"] # web: https://gebeauty.com.br/products/shampoo-a-seco-ge-beauty-150ml
+
+product_description:
+  short: "Limpeza instantânea, controle da oleosidade e volume imediato com fragrância incrível." # web: https://gebeauty.com.br/products/shampoo-a-seco-ge-beauty-150ml
+  detailed: |
+    O Shampoo a Seco GE Beauty oferece uma limpeza instantânea, controlando a oleosidade e devolvendo volume sem deixar resíduos pesados. Sua fórmula vegana refresca e cuida do couro cabeludo, sendo ideal para prolongar o tempo entre lavagens sem abrir mão do frescor. Com ingredientes como H-Vit Plus e pantenol, proporciona fios soltos, leves e com aspecto saudável. # web: https://gebeauty.com.br/products/shampoo-a-seco-ge-beauty-150ml
+  key_differentiators:
+    - Fórmula vegana e não testada em animais
+    - Controle da oleosidade sem resíduos visíveis
+    - Adequado para todos os tipos de cabelo
+  positioning: "Para quem busca prolongar o tempo entre lavagens com frescor e volume." # web: https://gebeauty.com.br/products/shampoo-a-seco-ge-beauty-150ml
+  target_customer: "Indivíduos com rotina corrida que desejam manter o cabelo limpo e volumoso entre lavagens." # web: https://gebeauty.com.br/products/shampoo-a-seco-ge-beauty-150ml
+
+benefits:
+  immediate_results:
+    - Absorve a oleosidade em segundos
+    - Proporciona volume imediato
+  short_term:
+    - Mantém o cabelo com aspecto limpo e fresco
+  long_term:
+    - Fortalece a barreira cutânea do couro cabeludo
+  functional:
+    - Controle eficaz da oleosidade
+    - Não deixa resíduos visíveis
+  emotional:
+    - Sensação de frescor e limpeza
+  aesthetic:
+    - Fios soltos e com balanço natural
+  protective:
+    - Protege o couro cabeludo ao fortalecer a barreira cutânea
+
+actives:
+  - id: "pantenol"
+    name: "Pantenol"
+    concentration: null
+    function: "Umectante e hidratante"
+    mechanism: "Penetra na haste capilar, convertendo-se em ácido pantotênico, retendo umidade." # file: Shampoo a Seco - Ge Beauty.pdf
+    benefits:
+      - Melhora das características sensoriais
+      - Retenção de umidade e espessamento
+      - Brilho e maciez
+    source: "Sintético"
+    certifications: []
+
+formulation:
+  texture: "Spray"
+  viscosity: "Light"
+  absorption: "Fast"
+  finish: "Natural"
+  scent_profile: "Fragrância suave e refrescante" # web: https://gebeauty.com.br/products/shampoo-a-seco-ge-beauty-150ml
+  color: "Clear"
+  ph_level: null
+  full_inci: |
+    Alcohol, Aluminum Starch Octenylsuccinate, Aqua, Glycerin, Rose Extract, Glycyrrhiza Glabra Rhizome/Root, Cichorium Intybus Leaf Extract, Hydrolyzed Rhodophyceae Extract, Panthenol, Linoleic Acid, Xylitol, Coprylic Acid, Disodium EDTA, Caprylyl Glycol, Menthol, Biotin, Parfum, Butane, Propane, Citronellol, Hexyl Cinnamal, Hydroxycitronellal, Limonene, Linalool. # web: https://gebeauty.com.br/products/shampoo-a-seco-ge-beauty-150ml
+
+hair_compatibility:
+  hair_types: ["fine", "thick"]
+  textures: ["straight", "wavy", "curly", "coily"]
+  conditions: ["oily", "normal"]
+  porosity_levels: ["medium"]
+  scalp_types: ["oily", "normal"]
+  excluded_types: []
+
+application:
+  frequency: "As needed"
+  method: |
+    Agite bem antes de usar. Aplique nos cabelos secos, a cerca de 20 cm do couro cabeludo, concentrando nas raízes. Deixe agir por 2 a 3 minutos e depois escove ou massageie com as mãos para retirar o excesso. # web: https://gebeauty.com.br/products/shampoo-a-seco-ge-beauty-150ml
+  amount_guide: "Pequenos jatos"
+  timing: "Entre lavagens"
+  layering: []
+  styling_compatibility: ["Compatible with heat tools"]
+  removal_method: "Brush or massage to remove excess"
+
+performance_metrics:
+  clinical_results: []
+  user_study_results: []
+  before_after_claims: []
+  duration_of_effects: "Immediate"
+  improvement_timeline: "Immediate"
+
+technical_specs:
+  heat_protection_temp: null
+  humidity_resistance: null
+  water_resistance: null
+  uv_protection: null
+  hold_strength: null
+  shine_level: "Medium"
+
+usage_scenarios:
+  daily_routine: |
+    Use entre lavagens para manter o cabelo limpo e volumoso.
+  special_occasions: |
+    Ideal para retoques rápidos durante o dia ou em viagens.
+  professional_use: |
+    Pode ser usado em salões para retoques rápidos.
+  troubleshooting:
+    - "Em caso de residual esbranquiçado, utilize o secador frio após aplicação." # file: Shampoo a Seco - Ge Beauty.pdf
+  seasonal_tips: []
+
+safety_information:
+  contraindications: []
+  precautions:
+    - "Aerossol extremamente inflamável. Evite inalação deste produto." # file: Shampoo a Seco - Ge Beauty.pdf
+    - "Não pulverizar perto do fogo."
+  storage_requirements: "Manter ao abrigo da luz solar e temperaturas superiores a 50ºC/122ºF." # file: Shampoo a Seco - Ge Beauty.pdf
+  shelf_life: null
+  pregnancy_safe: null
+  child_safe: null
+
+regulatory_claims:
+  dermatologically_tested: true # file: Shampoo a Seco - Ge Beauty.pdf
+  hypoallergenic: null
+  non_comedogenic: null
+  cruelty_free: true
+  vegan: true
+  sulfate_free: true
+  paraben_free: null
+  silicone_free: null
+  artificial_fragrance_free: null
+
+certifications:
+  organic: []
+  sustainable: []
+  professional: []
+  awards: []
+
+marketing_copy:
+  hero_headline: "Limpeza instantânea e volume imediato com o Shampoo a Seco GE Beauty." # web: https://gebeauty.com.br/products/shampoo-a-seco-ge-beauty-150ml
+  subheadlines:
+    - "Controle da oleosidade sem resíduos visíveis."
+    - "Fórmula vegana que refresca e cuida do couro cabeludo."
+  elevator_pitch: "O Shampoo a Seco GE Beauty absorve a oleosidade, devolve o volume e prolonga o aspecto de cabelo limpo, ideal para quem busca praticidade e frescor." # web: https://gebeauty.com.br/products/shampoo-a-seco-ge-beauty-150ml
+  key_messages:
+    - "Adeus visual pesado, olá frescor imediato."
+    - "Fios soltos, leves e com balanço natural."
+  call_to_action:
+    - "Experimente o frescor e volume do Shampoo a Seco GE Beauty hoje mesmo!"
+  social_proof: []
+  comparison_points: []
+
+content_hooks:
+  problem_statements:
+    - "Cabelos oleosos e sem volume entre lavagens?"
+  solution_narratives:
+    - "O Shampoo a Seco GE Beauty absorve a oleosidade e devolve o volume, mantendo o cabelo limpo e fresco."
+  transformation_stories: []
+  expert_insights: []
+  ingredient_spotlights:
+    - "Pantenol: Umectante que melhora a maciez e brilho dos fios."
+  routine_integration: []
+
+disclaimers:
+  results_variability: []
+  usage_limitations: []
+  regulatory_required: []

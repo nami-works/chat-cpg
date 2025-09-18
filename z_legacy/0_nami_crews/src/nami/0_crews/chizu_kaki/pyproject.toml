@@ -1,0 +1,23 @@
+[project]
+name = "chizu_kaki"
+version = "0.1.0"
+description = "chizu_kaki using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.114.0,<1.0.0"
+]
+
+[project.scripts]
+chizu_kaki = "chizu_kaki.main:run"
+run_crew = "chizu_kaki.main:run"
+train = "chizu_kaki.main:train"
+replay = "chizu_kaki.main:replay"
+test = "chizu_kaki.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

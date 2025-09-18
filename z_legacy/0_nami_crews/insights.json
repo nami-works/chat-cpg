@@ -1,0 +1,67 @@
+
+[
+    {
+    "slug": "copiloto-ai-operacoes-cpg",
+    "fonte": "Startup CPG Podcast – Episódio sobre AI para operações e backoffice",
+    "ideia_central": "Empreendedores de CPG estão usando IA para automatizar tarefas críticas de operações, finanças e jurídicos, transformando IA em um verdadeiro copiloto operacional.",
+    "aplicacoes_em_cpg": [
+        "Geração automatizada de contratos (Creator Agreements)",
+        "Forecast de vendas com base em dados históricos",
+        "Padronização de formulários de onboarding via PDFs",
+        "Análise de rastreabilidade alimentar (ex: Walmart)",
+        "Otimização de planilhas de custo e scaling de receitas"
+    ],
+    "gatilhos_chatcpg": [
+        "AI para contratos jurídicos simples",
+        "Forecast com dados históricos",
+        "Extração e padronização de formulários PDF",
+        "Simuladores de custo-produto em Excel via IA"
+    ],
+    "tendencia_relacionada": "AI como força de trabalho alternativa para fundadores lean",
+    "sugestao_mvp": "Backoffice copiloto com módulos para contratos, simulação de custos e parsing de PDFs de distribuidores",
+    "palavras_chave": [
+        "contratos automatizados",
+        "AI jurídico",
+        "simulação de custo",
+        "forecasting",
+        "rastreabilidade",
+        "scraping de PDFs",
+        "pequenas equipes"
+    ],
+    "comentario_valor": "A maior ajuda foi usar ChatGPT para escalar receitas e simular custos. Isso entrou direto na projeção de 2-3 anos da marca com mais precisão.",
+    "oportunidade_aberta": "Fundadores ainda revisam contratos manualmente. Falta validação jurídica robusta. PDFs de deduções são complexos de tratar automaticamente."
+    },
+    {
+    "slug": "ferramentas-tecnicas-ai-cpg",
+    "fonte": "Startup CPG Podcast – Episódio sobre AI para operações e backoffice",
+    "ideia_central": "Fundadores CPG estão usando ferramentas como ChatGPT, Replit e Contractor AI para manipular dados, padronizar processos e construir sistemas simples sob demanda, sem time técnico.",
+    "aplicacoes_em_cpg": [
+        "Construção de apps internos com Replit para estoque e geração de PDFs",
+        "Extração e transformação de dados de PDFs com ChatGPT",
+        "Remoção automatizada de check digits de UPCs",
+        "Benchmark de rastreabilidade com IA (ex: Walmart)",
+        "Validação de planilhas de custos e projeções com ChatGPT"
+    ],
+    "gatilhos_chatcpg": [
+        "Criação de microapps de gestão via Replit",
+        "Parsing automatizado de PDFs (deduções, contratos)",
+        "Validação de planilhas de custo-produto",
+        "Ferramentas de rastreabilidade comparativa"
+    ],
+    "tendencia_relacionada": "No-code + AI como novo padrão para fundadores técnicos e não técnicos",
+    "sugestao_mvp": "Templates prontos de extração de PDF, planilhas com fórmulas auditadas e integração com Replit para dashboards",
+    "palavras_chave": [
+        "replit",
+        "ai no-code",
+        "formulários pdf",
+        "deduções",
+        "upc check digit",
+        "rastreamento alimentar",
+        "planilhas com IA"
+    ],
+    "comentario_valor": "Mesmo com ótimas habilidades em Excel, usar ChatGPT para remover check digits ou auditar custos foi mais rápido e confiável.",
+    "oportunidade_aberta": "Fundadores lidam com formatos variados e mal estruturados (PDFs, planilhas, emails). Há demanda clara por padronização de entrada e visualização estruturada automatizada."
+    }
+]
+  
+  

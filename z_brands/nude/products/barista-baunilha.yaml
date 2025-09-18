@@ -1,0 +1,164 @@
+product:
+  id: "nude-leite-aveia-barista-baunilha-500ml"
+  name: "Bebida de Aveia Nude Barista Baunilha 500ml"
+  brand: "Nude"
+  canonical_url: "https://heynude.com.br/produto/nude-barista-baunilha-500ml"
+  slug: "nude-leite-aveia-barista-baunilha-500ml"
+  # Add web field for URL injection
+  web: "https://heynude.com.br/products/barista-baunilha"
+  category_hierarchy:
+    - "Alimentos & Bebidas"
+    - "Bebidas Vegetais"
+    - "Leite de Aveia"
+  tags:
+    - "plant-based"
+    - "sem lactose"
+    - "sem glúten"
+    - "clean label"
+    - "barista"
+    - "baunilha"
+    - "saborizado"
+  gtin: null
+  sku: null
+  variants:
+    flavor: "Barista Baunilha"
+    size_ml: 500
+  package:
+    net_volume_ml: 500
+    unit_count: 1
+    package_description: "Bebida vegetal de aveia Barista com sabor natural de baunilha, embalagem de 500ml"
+    storage: "Conservar em local fresco e seco. Após aberto, manter refrigerado e consumir em até 5 dias."
+  availability:
+    status: null
+    last_checked_at: "2025-08-28T00:00:00-03:00"
+  pricing:
+    currency: "BRL"
+    price: null
+    observed_prices:
+      - retailer: "Mundo Verde"
+        url: "https://www.mundoverde.com.br/leite-de-aveia-barista-baunilha-nude-500ml"
+        price: 8.90
+        currency: "BRL"
+        observed_at: "2025-08-28"
+  images:
+    primary: null
+    gallery: []
+  short_description: >
+    Bebida vegetal de aveia Barista com sabor natural de baunilha, desenvolvida para cafés.
+  long_description: >
+    O Nude Leite de Aveia Barista Baunilha 500ml é uma bebida vegetal saborizada naturalmente,
+    criada para uso em cafés e receitas que pedem espuma cremosa. Sem lactose, sem glúten e 100% vegetal,
+    é clean label e traz o sabor suave da baunilha aliado à cremosidade da linha Barista. Ideal para
+    cappuccinos, lattes, cafés gelados e smoothies.
+  ingredients:
+    - água
+    - aveia
+    - óleo de girassol
+    - regulador de acidez (fosfato de potássio)
+    - aroma natural de baunilha
+    - sal marinho
+  allergens:
+    contains:
+      - aveia
+    may_contain: []
+    gluten_statement: "Não contém glúten"
+    lactose_statement: "Sem lactose"
+  claims:
+    - "Espuma cremosa ideal para café"
+    - "Sabor natural de baunilha"
+    - "Clean label"
+    - "Sem lactose"
+    - "Sem glúten"
+    - "Plant-based"
+  sustainability:
+    upcycled_certified: true
+    upcycled_notes: "Produzido a partir da biomassa reaproveitada da base de aveia"
+    carbon_footprint:
+      notes: "Impacto ambiental inferior ao leite de vaca; valor exato não informado"
+  nutrition:
+    serving:
+      size_ml: 200
+      servings_per_container: 2.5
+    per_100ml:
+      energy_kcal: 61
+      carbohydrates_g: 9.8
+      sugars_total_g: 4.8
+      protein_g: 1.1
+      total_fat_g: 2.2
+      saturated_fat_g: 0.4
+      trans_fat_g: 0
+      fiber_g: 0.7
+      sodium_mg: 42
+    per_serving_ml: 200
+    per_serving:
+      energy_kcal: 122
+      carbohydrates_g: 19.6
+      sugars_total_g: 9.6
+      protein_g: 2.2
+      total_fat_g: 4.4
+      saturated_fat_g: 0.8
+      trans_fat_g: 0
+      fiber_g: 1.4
+      sodium_mg: 84
+    notes: "Valores nutricionais aproximados obtidos em revendedores; confirmar com rótulo oficial."
+  usage_suggestions:
+    - "Ideal para cappuccinos, lattes e cafés especiais"
+    - "Adicionar a cafés gelados e drinks cremosos"
+    - "Usar em smoothies e receitas doces"
+  audience:
+    dietary_preferences:
+      - "vegano"
+      - "plant-based"
+      - "sem lactose"
+      - "sem glúten"
+      - "amantes de café"
+    cautions: []
+  seo:
+    title: "Bebida de Aveia Barista Baunilha 500ml | Nude — Plant-based e Cremosa para Café"
+    meta_description: "Nude Leite de Aveia Barista Baunilha 500ml: bebida vegetal sabor baunilha, ideal para cafés. Clean label, sem lactose e sem glúten."
+    keywords:
+      - "leite de aveia barista baunilha"
+      - "bebida vegetal para café"
+      - "alternativa ao leite em café"
+      - "vegano"
+      - "sem lactose"
+      - "clean label"
+    canonical: "https://heynude.com.br/produto/nude-barista-baunilha-500ml"
+  schema_org:
+    "@context": "https://schema.org"
+    "@type": "Product"
+    name: "Bebida de Aveia Nude Barista Baunilha 500ml"
+    brand:
+      "@type": "Brand"
+      name: "Nude"
+    description: "Bebida vegetal de aveia Barista com sabor natural de baunilha, desenvolvida para cafés, espumação e receitas cremosas."
+    sku: null
+    gtin13: null
+    category: "Bebidas vegetais"
+    url: "https://heynude.com.br/produto/nude-barista-baunilha-500ml"
+    offers:
+      "@type": "Offer"
+      priceCurrency: "BRL"
+      price: null
+      availability: null
+      url: "https://heynude.com.br/produto/nude-barista-baunilha-500ml"
+    nutrition:
+      "@type": "NutritionInformation"
+      servingSize: "200 ml"
+      calories: "122 kcal"
+      proteinContent: "2.2 g"
+      carbohydrateContent: "19.6 g"
+      fiberContent: "1.4 g"
+      fatContent: "4.4 g"
+      saturatedFatContent: "0.8 g"
+      sodiumContent: "84 mg"
+  data_quality:
+    status: "partially_verified"
+    notes:
+      - "Página oficial não carregou; dados confirmados via revendedores."
+      - "Preço e disponibilidade oficiais pendentes de verificação."
+    recommended_followups:
+      - "Capturar imagens oficiais da embalagem"
+      - "Confirmar tabela nutricional no rótulo"
+      - "Verificar SKU/GTIN no ERP"
+      - "Checar preço e estoque no site oficial"

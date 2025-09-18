@@ -1,0 +1,186 @@
+meta:
+  product_id: "leite-barista"
+  display_name: "Bebida de Aveia Nude Barista 1L"
+  brand: "Nude"
+  slug: "leite-barista"
+  category: "beverage"
+  subcategory: "oat-milk"
+  version: 1
+  last_update: "2025-08-28"
+  launch_date: null
+  price_range: "R$ 16,90"
+  sizes_available: ["1L"]
+  # Add web field for URL injection
+  web: "https://heynude.com.br/products/leite-barista"
+
+product_description:
+  short: "Bebida vegetal de aveia desenvolvida para cafés, com textura cremosa e fácil vaporização."
+  detailed: |
+    O Nude Leite de Aveia Barista 1L é uma bebida vegetal criada especialmente para uso em cafeterias
+    e receitas que pedem espuma cremosa. Clean label, sem lactose e sem glúten, é ideal para cappuccinos,
+    lattes, cafés gelados e preparos culinários. Produzido com aveia upcycled, mantém o compromisso
+    da Nude com sustentabilidade e saudabilidade.
+  key_differentiators:
+    - "Desenvolvido especificamente para cafés"
+    - "Textura cremosa e fácil vaporização"
+    - "Ideal para latte art e cappuccinos"
+  positioning: "Para baristas e amantes de café que buscam qualidade profissional."
+  target_customer: "Baristas, cafeterias e consumidores que preparam cafés especiais em casa."
+
+benefits:
+  immediate_results:
+    - "Espuma cremosa imediata"
+    - "Textura ideal para café"
+  short_term:
+    - "Fácil vaporização"
+    - "Resultados profissionais"
+  long_term:
+    - "Consistência em preparos"
+  functional:
+    - "Vaporização profissional"
+    - "Espuma cremosa"
+  emotional:
+    - "Confiança para preparar cafés especiais"
+  aesthetic:
+    - "Latte art perfeito"
+  protective:
+    - "Sem ingredientes artificiais"
+
+actives:
+  - id: "aveia"
+    name: "Aveia"
+    concentration: null
+    function: "Base da bebida vegetal"
+    mechanism: "Fornece textura cremosa e nutrientes"
+    benefits:
+      - "Textura cremosa natural"
+      - "Fonte de fibras"
+    source: "Natural"
+    certifications: ["Upcycled"]
+
+  - id: "oleo-girassol"
+    name: "Óleo de Girassol"
+    concentration: null
+    function: "Textura e estabilidade"
+    mechanism: "Melhora a consistência e cremosidade"
+    benefits:
+      - "Textura mais cremosa"
+      - "Estabilidade da espuma"
+    source: "Natural"
+    certifications: ["Clean Label"]
+
+formulation:
+  texture: "Líquido cremoso"
+  viscosity: "Média"
+  absorption: "N/A"
+  finish: "Cremoso"
+  scent_profile: "Neutro"
+  color: "Natural da aveia"
+  ph_level: null
+  full_inci: |
+    Água, aveia, óleo de girassol, regulador de acidez (fosfato de potássio), sal marinho
+  allergens:
+    contains:
+      - aveia
+    may_contain: []
+    gluten_statement: "Não contém glúten"
+    lactose_statement: "Sem lactose"
+  claims:
+    - "Espuma cremosa ideal para café"
+    - "Clean label"
+    - "Sem lactose"
+    - "Sem glúten"
+    - "Plant-based"
+    - "Fácil vaporização"
+  sustainability:
+    upcycled_certified: true
+    upcycled_notes: "Produzido a partir da biomassa reaproveitada da base de aveia"
+    carbon_footprint:
+      notes: "Impacto ambiental inferior ao leite de vaca; dados comparativos divulgados pela Nude"
+  nutrition:
+    serving:
+      size_ml: 200
+      servings_per_container: 5
+    per_100ml:
+      energy_kcal: 60
+      carbohydrates_g: 9.0
+      sugars_total_g: 4.0
+      protein_g: 1.0
+      total_fat_g: 2.5
+      saturated_fat_g: 0.4
+      trans_fat_g: 0
+      fiber_g: 0.6
+      sodium_mg: 45
+    per_serving_ml: 200
+    per_serving:
+      energy_kcal: 120
+      carbohydrates_g: 18
+      sugars_total_g: 8.0
+      protein_g: 2.0
+      total_fat_g: 5.0
+      saturated_fat_g: 0.8
+      trans_fat_g: 0
+      fiber_g: 1.2
+      sodium_mg: 90
+    notes: "Tabela nutricional baseada em informações de revendedores; confirmar no rótulo oficial."
+  usage_suggestions:
+    - "Ideal para cappuccinos e lattes"
+    - "Usar em cafés gelados e receitas de confeitaria"
+    - "Adicionar a smoothies e drinks cremosos"
+  audience:
+    dietary_preferences:
+      - "vegano"
+      - "plant-based"
+      - "sem lactose"
+      - "sem glúten"
+      - "baristas e amantes de café"
+    cautions: []
+  seo:
+    title: "Bebida de Aveia Barista 1L | Nude — Plant-based e Cremosa para Café"
+    meta_description: "Nude Leite de Aveia Barista 1L: bebida vegetal desenvolvida para cafés e espumação. Clean label, sem lactose e sem glúten."
+    keywords:
+      - "leite de aveia barista"
+      - "bebida vegetal para café"
+      - "alternativa ao leite em café"
+      - "vegano"
+      - "sem lactose"
+      - "clean label"
+    canonical: "https://heynude.com.br/produto/bebida-de-aveia-nude.-barista-1l"
+  schema_org:
+    "@context": "https://schema.org"
+    "@type": "Product"
+    name: "Bebida de Aveia Nude Barista 1L"
+    brand:
+      "@type": "Brand"
+      name: "Nude"
+    description: "Bebida vegetal de aveia desenvolvida para baristas, ideal para cafés e receitas com espuma cremosa."
+    sku: null
+    gtin13: null
+    category: "Bebidas vegetais"
+    url: "https://heynude.com.br/produto/bebida-de-aveia-nude.-barista-1l"
+    offers:
+      "@type": "Offer"
+      priceCurrency: "BRL"
+      price: null
+      availability: null
+      url: "https://heynude.com.br/produto/bebida-de-aveia-nude.-barista-1l"
+    nutrition:
+      "@type": "NutritionInformation"
+      servingSize: "200 ml"
+      calories: "120 kcal"
+      proteinContent: "2 g"
+      carbohydrateContent: "18 g"
+      fiberContent: "1.2 g"
+      fatContent: "5 g"
+      saturatedFatContent: "0.8 g"
+      sodiumContent: "90 mg"
+  data_quality:
+    status: "partially_verified"
+    notes:
+      - "Página oficial não carregou; dados confirmados via revendedores."
+      - "Preço e disponibilidade oficiais pendentes de verificação."
+    recommended_followups:
+      - "Capturar imagens oficiais da embalagem"
+      - "Confirmar tabela nutricional no rótulo"
+      - "Verificar SKU/GTIN no ERP"
+      - "Checar preço e estoque no site oficial"

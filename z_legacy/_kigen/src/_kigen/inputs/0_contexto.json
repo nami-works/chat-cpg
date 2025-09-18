@@ -1,0 +1,34 @@
+{
+    "context": "Você está recebendo um código chamado 'frontend.py', desenvolvido originalmente para um projeto de geração de conteúdo com LLMs, mas que deve ser usado como template base para diversos tipos de aplicações em Streamlit, inclusive sem envolvimento de LLMs ou CrewAI.",
+    "objective": [
+      "Identificar e isolar os componentes genéricos e reutilizáveis da estrutura Streamlit.",
+      "Separar claramente o que é específico ao projeto original do que pode ser replicado em qualquer contexto.",
+      "Adaptar o fluxo geral para novos projetos como transcritores de voz, calculadoras ou dashboards.",
+      "Evitar dependências desnecessárias como LangChain ou CrewAI quando não forem requeridas."
+    ],
+    "reusable_components": [
+      "Função menu_lateral() como mecanismo de seleção ou configuração inicial.",
+      "Uso de st.session_state para manter estado e reatividade.",
+      "Estrutura com main(), menu lateral via st.sidebar, e função principal (ex: chat_principal()).",
+      "Uso de st.columns para layout flexível.",
+      "Mensagens visuais com st.warning, st.success, st.info.",
+      "Blocos try/except para tratamento amigável de falhas."
+    ],
+    "specific_components_to_avoid": [
+      "Leitura e uso de orientacoes.md e prompts baseados em temas de blog.",
+      "Uso de LangChain, ChatPromptTemplate, ChatOpenAI, ChatGroq e Chain.",
+      "Extração automática de dicionário de temas.",
+      "Dependência de arquivos estilo.md, produtos.md, cadastro.yaml ligados ao universo GE Beauty."
+    ],
+    "adaptation_guidelines": [
+      "Renomear a função principal (ex: de chat_principal() para transcricao_principal()).",
+      "Substituir interações por gravação de áudio, execução local/API de Whisper e exibição do resultado.",
+      "Usar session_state para armazenar áudios, transcrição e estado da aplicação.",
+      "Remover qualquer dependência de crew, LLMs ou prompting quando não aplicável."
+    ],
+    "example_structure": {
+      "main": "Executa o fluxo principal",
+      "menu_lateral": "Captura parâmetros como seleção de médico, idioma, etc.",
+      "transcricao_principal": "Exibe botão de gravação, transcrição do áudio e botão de copiar resultado"
+    }
+  }

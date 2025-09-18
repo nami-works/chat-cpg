@@ -1,0 +1,162 @@
+product:
+  id: "nude-leite-aveia-baunilha-1l"
+  name: "Bebida de Aveia Nude Baunilha 1L"
+  brand: "Nude"
+  canonical_url: "https://heynude.com.br/produto/bebida-de-aveia-baunilha-nude.-1l"
+  slug: "nude-leite-aveia-baunilha-1l"
+  # Add web field for URL injection
+  web: "https://heynude.com.br/products/leite-baunilha"
+  category_hierarchy:
+    - "Alimentos & Bebidas"
+    - "Bebidas Vegetais"
+    - "Leite de Aveia"
+  tags:
+    - "plant-based"
+    - "sem lactose"
+    - "sem glúten"
+    - "clean label"
+    - "saborizado"
+    - "baunilha"
+  gtin: null
+  sku: null
+  variants:
+    flavor: "Baunilha"
+    size_ml: 1000
+  package:
+    net_volume_ml: 1000
+    unit_count: 1
+    package_description: "Bebida vegetal de aveia com sabor natural de baunilha"
+    storage: "Conservar em local fresco e seco. Após aberto, manter refrigerado e consumir em até 5 dias."
+  availability:
+    status: null
+    last_checked_at: "2025-08-28T00:00:00-03:00"
+  pricing:
+    currency: "BRL"
+    price: null
+    observed_prices:
+      - retailer: "Mundo Verde"
+        url: "https://www.mundoverde.com.br/leite-de-aveia-baunilha-nude-1l"
+        price: 15.90
+        currency: "BRL"
+        observed_at: "2025-08-28"
+  images:
+    primary: null
+    gallery: []
+  short_description: >
+    Bebida vegetal de aveia sabor baunilha, clean label, sem glúten e sem lactose.
+  long_description: >
+    O Nude Leite de Aveia Baunilha 1L é uma bebida vegetal saborizada naturalmente,
+    clean label e sem aditivos artificiais. É sem lactose, sem glúten e 100% plant-based.
+    Traz o sabor suave da baunilha e é ideal para consumo puro, em cafés, smoothies,
+    vitaminas e receitas culinárias.
+  ingredients:
+    - água
+    - aveia
+    - óleo de girassol
+    - aroma natural de baunilha
+    - sal marinho
+  allergens:
+    contains:
+      - aveia
+    may_contain: []
+    gluten_statement: "Não contém glúten"
+    lactose_statement: "Sem lactose"
+  claims:
+    - "Sabor natural de baunilha"
+    - "Clean label"
+    - "Sem lactose"
+    - "Sem glúten"
+    - "Plant-based"
+    - "Sem aditivos artificiais"
+  sustainability:
+    upcycled_certified: true
+    upcycled_notes: "Produzido a partir da biomassa de aveia reaproveitada"
+    carbon_footprint:
+      notes: "Menor impacto ambiental que leite de vaca; valor exato não informado"
+  nutrition:
+    serving:
+      size_ml: 200
+      servings_per_container: 5
+    per_100ml:
+      energy_kcal: 58
+      carbohydrates_g: 9.5
+      sugars_total_g: 4.6
+      protein_g: 1.2
+      total_fat_g: 1.6
+      saturated_fat_g: 0.3
+      trans_fat_g: 0
+      fiber_g: 0.7
+      sodium_mg: 40
+    per_serving_ml: 200
+    per_serving:
+      energy_kcal: 116
+      carbohydrates_g: 19
+      sugars_total_g: 9.2
+      protein_g: 2.4
+      total_fat_g: 3.2
+      saturated_fat_g: 0.6
+      trans_fat_g: 0
+      fiber_g: 1.4
+      sodium_mg: 80
+    notes: "Tabela nutricional aproximada de revendedores; confirmar no rótulo oficial."
+  usage_suggestions:
+    - "Consumir puro, gelado ou quente"
+    - "Adicionar a cafés, chás e smoothies"
+    - "Usar em receitas de bolos, sobremesas e cremes"
+    - "Combinar com cereais Nude"
+  audience:
+    dietary_preferences:
+      - "vegano"
+      - "plant-based"
+      - "sem lactose"
+      - "sem glúten"
+    cautions: []
+  seo:
+    title: "Bebida de Aveia Baunilha 1L | Nude — Plant-based, Clean Label e Sabor Natural"
+    meta_description: "Nude Leite de Aveia Baunilha 1L: bebida vegetal com sabor natural de baunilha, clean label, sem lactose e sem glúten."
+    keywords:
+      - "leite de aveia baunilha"
+      - "bebida vegetal saborizada"
+      - "vegano"
+      - "sem lactose"
+      - "clean label"
+      - "sem glúten"
+    canonical: "https://heynude.com.br/produto/bebida-de-aveia-baunilha-nude.-1l"
+  schema_org:
+    "@context": "https://schema.org"
+    "@type": "Product"
+    name: "Bebida de Aveia Nude Baunilha 1L"
+    brand:
+      "@type": "Brand"
+      name: "Nude"
+    description: "Bebida vegetal de aveia com sabor natural de baunilha, clean label, sem lactose e sem glúten."
+    sku: null
+    gtin13: null
+    category: "Bebidas vegetais"
+    url: "https://heynude.com.br/produto/bebida-de-aveia-baunilha-nude.-1l"
+    offers:
+      "@type": "Offer"
+      priceCurrency: "BRL"
+      price: null
+      availability: null
+      url: "https://heynude.com.br/produto/bebida-de-aveia-baunilha-nude.-1l"
+    nutrition:
+      "@type": "NutritionInformation"
+      servingSize: "200 ml"
+      calories: "116 kcal"
+      proteinContent: "2.4 g"
+      carbohydrateContent: "19 g"
+      fiberContent: "1.4 g"
+      fatContent: "3.2 g"
+      saturatedFatContent: "0.6 g"
+      sodiumContent: "80 mg"
+  data_quality:
+    status: "partially_verified"
+    notes:
+      - "Página oficial não carregou; dados confirmados via revendedores."
+      - "Preço e disponibilidade oficiais ainda pendentes."
+    recommended_followups:
+      - "Capturar imagens oficiais da embalagem"
+      - "Confirmar tabela nutricional no rótulo"
+      - "Verificar SKU/GTIN no ERP"
+      - "Checar preço e estoque no site oficial"

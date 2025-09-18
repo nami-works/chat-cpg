@@ -1,0 +1,43 @@
+Aqui está o arquivo modelo que orienta sobre os dados necessários para a geração automatizada de Alt Text para links de mídia, formatado como um arquivo CSV. O arquivo contém todos os campos esperados, os tipos de dados previstos, valores ilustrativos e observações úteis.
+
+### Nome do arquivo: `exemplo_input.csv`
+
+```csv
+Input, Tipo, Valores Ilustrativos, Observações
+Export_2025-05-21_120208.xlsx, arquivo, "Export_2025-05-21_120208.xlsx", Solicitar upload da planilha que contém a lista de links de mídia.
+link, string, "https://exemplo.com/imagem1.jpg", Coluna `link` da planilha importada será utilizada para o processamento das imagens.
+produtos_base, arquivo, "produtos_classificados.csv", Solicitar um .csv ou .xlsx com informações sobre produtos já classificados.
+google_vision_api_key, string, "AIzaSyCj5Y8L8ddLgMuo2Hy4P-XXXXXXXX", Solicitar ao usuário a chave de API do Google Vision para realizar análises de imagem.
+azure_vision_api_key, string, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", Solicitar ao usuário a chave de assinatura da API do Azure Computer Vision.
+openai_clip_model, string, "ViT-B/32", Acessar a documentação em https://github.com/openai/CLIP para saber como integrar o modelo.
+huggingface_model, string, "blip-image-captioning-base", Acessar o repositório em https://huggingface.co/models para escolher o modelo desejado.
+idioma, string, "pt", Solicitar ao usuário qual idioma utilizar nas descrições geradas.
+formato_saida, string, "Alt Text", Coluna `Alt Text` da planilha que deve ser preenchida com as descrições geradas.
+verificar_link, função, "verificar_link(link)", Função a ser criada para validar links antes do processamento.
+```
+
+### Instruções para Carregar o Configuração no `main.py`:
+
+Para garantir que os dados sejam lidos corretamente dentro do seu código Python, você pode usar o pandas para carregar o arquivo CSV:
+
+```python
+import pandas as pd
+
+# Carrega os dados do arquivo CSV
+config = pd.read_csv('exemplo_input.csv')
+
+# Exemplo de como acessar os campos
+link = config.loc[config['Input'] == 'link', 'Valores Ilustrativos'].values[0]
+print(f'Link para a imagem: {link}')
+```
+
+### Exemplos de Leitura:
+
+Para garantir que a chave da API do Google Vision está acessível, você pode usar o seguinte código:
+
+```python
+google_vision_api_key = config.loc[config['Input'] == 'google_vision_api_key', 'Valores Ilustrativos'].values[0]
+print(f'Chave da API do Google Vision: {google_vision_api_key}')
+```
+
+Este formato de CSV oferece uma estrutura clara, legível e orientada ao usuário final, facilitando a colaboração entre as equipes técnica e não técnica na coleta e validação dos inputs necessários para o projeto de geração automatizada de Alt Text.

@@ -1,0 +1,171 @@
+meta:
+  product_id: "booster-antioxidante"
+  display_name: "Booster Antioxidante"
+  brand: "GE Beauty"
+  slug: "booster-antioxidante"
+  category: "booster"
+  subcategory: "antioxidant treatment"
+  version: 1
+  last_update: "2025-08-01"
+  launch_date: null
+  price_range: "R$ 75,00"
+  sizes_available: ["15mL"]
+
+product_description:
+  short: "Prevenção do desbotamento e vitalidade do fio, proteção solar e da poluição."
+  detailed: |
+    O Booster Antioxidante GE Beauty é um concentrado de ativos que combate os danos diários causados por raios UV, poluição e fatores ambientais. Especialmente formulado para prevenir o desbotamento da cor e preservar a vitalidade dos fios, este booster oferece proteção antioxidante avançada que mantém o cabelo saudável, vibrante e com cor duradoura. Ideal para cabelos coloridos, quimicamente tratados ou expostos a agressões ambientais, proporciona defesa completa contra o envelhecimento precoce dos fios.
+  key_differentiators:
+    - "Concentrado de ativos antioxidantes para máxima eficácia."
+    - "Proteção específica contra desbotamento da cor."
+    - "Defesa completa contra UV, poluição e fatores ambientais."
+  positioning: "Para cabelos protegidos, vibrantes e com cor duradoura."
+  target_customer: "Pessoas com cabelos coloridos ou expostos a fatores ambientais que buscam proteção antioxidante."
+
+benefits:
+  immediate_results:
+    - "Proteção imediata contra fatores ambientais."
+    - "Cabelos com mais vitalidade e brilho."
+  short_term:
+    - "Preservação da cor e redução do desbotamento."
+  long_term:
+    - "Prevenção do envelhecimento precoce dos fios e manutenção da saúde capilar."
+  functional:
+    - "Combate radicais livres e danos oxidativos."
+    - "Preserva a cor e vitalidade dos fios."
+  emotional:
+    - "Confiança em cabelos sempre protegidos e vibrantes."
+  aesthetic:
+    - "Cabelos com cor mais duradoura e brilho intenso."
+  protective:
+    - "Escudo antioxidante contra agressões diárias."
+
+actives:
+  - id: "antioxidant_complex"
+    name: "Complexo Antioxidante"
+    concentration: null
+    function: "Proteção contra radicais livres e danos oxidativos."
+    mechanism: "Neutraliza radicais livres e forma barreira protetora."
+    benefits:
+      - "Previne desbotamento e perda de vitalidade."
+      - "Protege contra UV e poluição."
+    source: "Vegetal"
+    certifications: ["Antioxidant Protection"]
+
+formulation:
+  texture: "Concentrated serum"
+  viscosity: "Light"
+  absorption: "Fast"
+  finish: "Invisible protection"
+  scent_profile: "Neutral"
+  color: "Clear"
+  ph_level: null
+  full_inci: null
+
+hair_compatibility:
+  hair_types: ["Fine", "Thick", "Normal"]
+  textures: ["Straight", "Wavy", "Curly", "Coily"]
+  conditions: ["Colored", "Chemically Treated", "Sun-damaged", "Environmentally stressed"]
+  porosity_levels: ["Low", "Medium", "High"]
+  scalp_types: ["All scalp types"]
+  excluded_types: []
+
+application:
+  frequency: "Daily or as needed"
+  method: |
+    Misture 3-5 gotas com seu leave-in, óleo capilar ou protetor térmico antes da aplicação. Pode ser usado em cabelos úmidos ou secos. Para proteção intensiva, aplique diretamente nos fios antes da exposição solar ou ambiental.
+  amount_guide: "3-5 drops mixed with other products"
+  timing: "Before sun exposure or daily as prevention"
+  layering: ["Mix with leave-in conditioners, oils, or heat protectants"]
+  styling_compatibility: ["Compatible with all styling products"]
+  removal_method: "No need to rinse - leave-in formula"
+
+performance_metrics:
+  clinical_results: []
+  user_study_results: ["5.0/5 estrelas baseado em 1 avaliação"]
+  before_after_claims: ["Cabelos com cor mais duradoura e protegidos contra desbotamento."]
+  duration_of_effects: "All-day protection"
+  improvement_timeline: "Immediate protection with cumulative benefits over time"
+
+technical_specs:
+  heat_protection_temp: null
+  humidity_resistance: null
+  water_resistance: null
+  uv_protection: "High UV protection"
+  hold_strength: null
+  shine_level: "Enhanced natural shine"
+
+usage_scenarios:
+  daily_routine: |
+    Use diariamente misturado com outros produtos para proteção contínua.
+  special_occasions: |
+    Aplique antes de exposição solar intensa ou ambientes poluídos.
+  professional_use: |
+    Ideal para uso profissional em tratamentos de coloração e proteção.
+  troubleshooting:
+    - "Para cabelos muito finos, use apenas 2-3 gotas."
+    - "Misture sempre com outros produtos para melhor distribuição."
+  seasonal_tips:
+    - "Use mais frequentemente no verão para proteção solar intensiva."
+
+safety_information:
+  contraindications: []
+  precautions: ["Evite contato com os olhos.", "Mantenha fora do alcance de crianças."]
+  storage_requirements: "Armazene em local fresco e seco, protegido da luz solar direta."
+  shelf_life: "12 meses após abertura"
+  pregnancy_safe: true
+  child_safe: true
+
+regulatory_claims:
+  dermatologically_tested: null
+  hypoallergenic: null
+  non_comedogenic: null
+  cruelty_free: true
+  vegan: true
+  sulfate_free: true
+  paraben_free: true
+  silicone_free: true
+  artificial_fragrance_free: true
+
+certifications:
+  organic: []
+  sustainable: []
+  professional: []
+  awards: []
+
+marketing_copy:
+  hero_headline: "Proteção Antioxidante e Cor Duradoura"
+  subheadlines:
+    - "Concentrado de Ativos Contra Desbotamento"
+    - "Proteção Solar e Antipoluição"
+  elevator_pitch: "O Booster Antioxidante GE Beauty oferece proteção avançada contra desbotamento, UV e poluição, mantendo cabelos coloridos vibrantes e saudáveis."
+  key_messages:
+    - "Previne desbotamento e preserva a cor por mais tempo."
+    - "Proteção completa contra fatores ambientais."
+  call_to_action:
+    - "Proteja sua cor com o Booster Antioxidante GE Beauty."
+  social_proof:
+    - "5.0/5 estrelas - 'A salvação do loiro' - Alessandra"
+  comparison_points:
+    - "Mais concentrado que protetores convencionais."
+
+content_hooks:
+  problem_statements:
+    - "Cabelos coloridos perdem vitalidade e desbotam rapidamente."
+  solution_narratives:
+    - "O Booster Antioxidante oferece proteção concentrada contra desbotamento."
+  transformation_stories:
+    - "'Fez a total diferença na saúde do meu cabelo' - Alessandra Castelli"
+  expert_insights:
+    - "Formulado com concentrado de ativos antioxidantes para máxima proteção."
+  ingredient_spotlights:
+    - "Complexo antioxidante: tecnologia avançada contra radicais livres."
+  routine_integration:
+    - "Misture com seus produtos favoritos para proteção potencializada."
+
+disclaimers:
+  results_variability:
+    - "Os resultados podem variar de acordo com o tipo de cabelo e exposição ambiental."
+  usage_limitations:
+    - "Sempre misture com outros produtos para melhor distribuição e eficácia."
+  regulatory_required: []

@@ -1,0 +1,174 @@
+market_research_task:
+  description: >
+    Conduct comprehensive market research on {topic} including:
+    - Market size and growth analysis (current and projected)
+    - Key market trends and drivers
+    - Market segmentation analysis
+    - Geographic market variations
+    - Regulatory environment assessment
+    - Technology trends and innovations
+    
+    Focus on providing quantitative data and qualitative insights that will inform strategic decision-making.
+    Use multiple data sources including industry reports, government data, academic research, and market intelligence.
+  expected_output: >
+    A comprehensive market research report covering:
+    - Executive summary with key market insights
+    - Market size analysis with growth projections
+    - Market trends and drivers analysis
+    - Market segmentation breakdown
+    - Geographic market analysis
+    - Regulatory and technology landscape
+    - Key market opportunities and threats
+    
+    Format as markdown with clear sections, data visualizations where appropriate, and actionable insights.
+  agent: market_researcher
+
+competitive_analysis_task:
+  description: >
+    Analyze the competitive landscape for {topic} including:
+    - Identification of key competitors and market players
+    - Competitive positioning analysis
+    - Market share distribution
+    - Competitive advantages and differentiators
+    - Strategic analysis using Porter's Five Forces
+    - Blue Ocean opportunities identification
+    - Competitive benchmarking
+    
+    Focus on understanding how competitors operate, their strengths and weaknesses, and opportunities for differentiation.
+  expected_output: >
+    A detailed competitive analysis report including:
+    - Competitive landscape overview
+    - Key competitor profiles and positioning
+    - Market share analysis
+    - Porter's Five Forces analysis
+    - Competitive advantage assessment
+    - Blue Ocean opportunities
+    - Competitive positioning recommendations
+    
+    Format as markdown with competitor matrices, positioning maps, and strategic insights.
+  agent: competitive_analyst
+
+customer_insights_task:
+  description: >
+    Conduct deep customer research and behavioral analysis for {topic} including:
+    - Customer segmentation and persona development
+    - Pain point identification and analysis
+    - Customer journey mapping
+    - Behavioral pattern analysis
+    - Voice of customer analysis
+    - Unmet needs identification
+    - Customer satisfaction and loyalty analysis
+    
+    Focus on understanding the customer perspective, their challenges, motivations, and decision-making processes.
+  expected_output: >
+    A comprehensive customer insights report including:
+    - Customer personas and segmentation
+    - Pain point analysis with impact assessment
+    - Customer journey maps
+    - Behavioral analysis and patterns
+    - Voice of customer insights
+    - Unmet needs identification
+    - Customer experience recommendations
+    
+    Format as markdown with persona profiles, journey maps, and actionable customer insights.
+  agent: customer_insights_analyst
+
+data_analysis_task:
+  description: >
+    Analyze quantitative data and provide predictive insights for {topic} including:
+    - Statistical analysis of market data
+    - Trend analysis and forecasting
+    - Predictive modeling for market behavior
+    - Data visualization and pattern recognition
+    - Performance metrics analysis
+    - Risk assessment through data analysis
+    
+    Focus on providing data-driven insights that support strategic decision-making.
+  expected_output: >
+    A data analysis report including:
+    - Statistical analysis results
+    - Trend analysis and forecasts
+    - Predictive insights and models
+    - Data visualizations and charts
+    - Performance metrics analysis
+    - Risk assessment based on data
+    - Data-driven recommendations
+    
+    Format as markdown with charts, graphs, and quantitative insights.
+  agent: data_scientist
+
+industry_expertise_task:
+  description: >
+    Provide deep industry expertise and domain knowledge for {topic} including:
+    - Industry dynamics and challenges
+    - Regulatory environment and compliance
+    - Innovation trends and opportunities
+    - Industry best practices and benchmarks
+    - Future industry outlook and predictions
+    - Expert perspective on market developments
+    
+    Focus on providing the context and nuance that only comes from deep industry experience.
+  expected_output: >
+    An industry expertise report including:
+    - Industry dynamics and challenges analysis
+    - Regulatory environment overview
+    - Innovation trends and opportunities
+    - Industry best practices
+    - Future outlook and predictions
+    - Expert insights and recommendations
+    
+    Format as markdown with expert insights and industry context.
+  agent: industry_expert
+
+strategic_synthesis_task:
+  description: >
+    Synthesize all research findings and provide comprehensive strategic analysis for {topic} including:
+    - SWOT analysis (Strengths, Weaknesses, Opportunities, Threats)
+    - PESTEL analysis (Political, Economic, Social, Technological, Environmental, Legal)
+    - Strategic opportunity assessment
+    - Risk analysis and mitigation strategies
+    - Growth strategy recommendations
+    - Implementation roadmap and action plan
+    
+    Focus on providing actionable strategic recommendations based on all the research conducted.
+  expected_output: >
+    A comprehensive strategic analysis report including:
+    - Executive summary with key strategic insights
+    - SWOT analysis with detailed assessment
+    - PESTEL analysis with environmental factors
+    - Strategic opportunity assessment
+    - Risk analysis and mitigation strategies
+    - Growth strategy recommendations
+    - Implementation roadmap with timelines
+    - Action plan with next steps
+    
+    Format as markdown with clear strategic frameworks and actionable recommendations.
+  agent: strategic_analyst
+
+final_report_task:
+  description: >
+    Compile all research findings into a comprehensive final report for {topic} that includes:
+    - Executive summary with key findings and recommendations
+    - Market research insights and analysis
+    - Competitive landscape assessment
+    - Customer insights and behavioral analysis
+    - Data-driven insights and predictions
+    - Industry expert perspective
+    - Strategic recommendations and action plan
+    - Appendices with detailed data and methodology
+    
+    Focus on creating a professional, comprehensive report that provides actionable insights for strategic decision-making.
+  expected_output: >
+    A comprehensive final report including:
+    - Executive summary with key insights and recommendations
+    - Detailed market analysis with supporting data
+    - Competitive intelligence and positioning analysis
+    - Customer insights and journey mapping
+    - Data analysis and predictive insights
+    - Industry expert perspective and context
+    - Strategic analysis with frameworks (SWOT, PESTEL, etc.)
+    - Implementation roadmap and action plan
+    - Appendices with methodology and detailed data
+    
+    Format as a professional markdown report suitable for executive presentation and strategic planning.
+  agent: strategic_analyst

@@ -1,3 +1,0 @@
-meta_title: Transforme seus Fios com Antioxidantes Naturais  
-meta_description: Descubra como os antioxidantes podem transformar a saúde dos seus cabelos, protegendo e revitalizando seus fios de forma eficaz.  
-produtos_relacionados: [Booster Antioxidante](https://gebeauty.com.br/products/booster-antioxidante-ge-beauty-15ml), [Leave-in com Proteção Térmica](https://gebeauty.com.br/products/leave-in-com-protecao-termica-ge-beauty-150ml), [Máscara Condicionadora](https://gebeauty.com.br/products/mascara-condicionadora-ge-beauty-200ml), [Shampoo Sem Sulfato](https://gebeauty.com.br/products/shampoo-sem-sulfato-ge-beauty-250ml)

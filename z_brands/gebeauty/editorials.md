@@ -1,0 +1,1 @@
+GE Beauty tem apenas um editorial geral

@@ -1,0 +1,76 @@
+sintetizar_conteudo:
+  description: >
+    Busque na web conteúdos confiáveis sobre o {tema}, que sejam também relevantes e atuais,
+    Considerando que estamos no ano {current_year}. Leia os resultados encontrados
+    (artigos, sites, estudos, publicações) e sintetize os principais pontos, categorizando-os
+    de forma lógica para embasar a estrutura do post.
+  expected_output: >
+    Resumo temático sobre {tema} baseado em fontes online, com tópicos agrupados e links das fontes utilizadas.
+    Formatado como markdown sem '```'
+  agent: curador_conteudo
+
+planejar_post:
+  description: >
+    Com base no resumo sobre o tema, crie uma estrutura narrativa coerente com proposta de título,
+    subtítulos e ordem de apresentação das ideias.
+  expected_output: >
+    Roteiro editorial com proposta de título, introdução sugerida, tópicos principais e estrutura
+    de desenvolvimento para o redator seguir.
+    Formatado como markdown sem '```'
+  agent: analista_estrutura
+
+coletar_casos:
+  description: >
+    Pesquise casos reais que exemplifiquem o tema em empresas, iniciativas ou contextos verificados.
+    Priorize fontes nacionais e confiáveis. Contextualize e justifique sua escolha.
+  expected_output: >
+    Até 3 casos reais com nome da iniciativa, breve descrição, link para fonte e justificativa de
+    relevância.
+    Formatado como markdown sem '```'
+  agent: pesquisador_casos
+
+coletar_dados:
+  description: >
+    Identifique dados públicos, pesquisas, índices ou estatísticas que sustentem ou exemplifiquem
+    os argumentos do texto.
+  expected_output: >
+    Tabela com 3 a 5 dados úteis (número + contexto), fonte e sugestão de onde utilizar no post.
+    Formatado como markdown sem '```'
+  agent: analista_dados
+
+escrever_post:
+  description: >
+    Com base na estrutura, resumo, casos e dados, escreva o post completo. Use linguagem fluida,
+    lógica sequencial, CTA (quando cabível) e aplique técnicas de SEO de forma natural. Ao citar,
+    estudos e artigos, você deve fazer uma breve síntese parafraseando tais textos, e os incluindo
+    de forma conversacional na estrutura do blog post sendo escrito. Se atenha ao {estilo} designado,
+    garantindo que ele seja respeitado ao longo de toda a escrita.
+  expected_output: >
+    Blog post contendo entre 3500 e 4000 palavras, com título, subtópicos, parágrafos coesos e exemplos bem
+    incorporados ao fluxo narrativo, se aprofundando em alguns tópicos mais engajantes para trazer
+    densidade ao conteúdo como um todo, mas sem pesar a leitura. As citações a outros textos
+    devem ser integradas ao texto através de frases e momentos de conexão, como por exemplo:
+    "A matéria publicada pelo [veículo] destaca o quanto esse tema tem ganhado relevância [...]"
+    Formatado como markdown sem '```'
+  agent: redator_criativo
+
+refinar_narrativa:
+  description: >
+    Faça uma leitura crítica e reestruture o texto quando necessário, cortando repetições,
+    reforçando a fluidez entre seções e buscando sempre uma percepção conversacional pelo
+    leitor, e observando que o texto está refletindo o estilo de escrita {estilo}.
+  expected_output: >
+    Versão intermediária com melhorias de ritmo, organização e leitura escaneável, além de
+    texto cativante e envolvente.
+    Formatado como markdown sem '```'
+  agent: editor_coesao
+
+revisar_final:
+  description: >
+    Revise o texto em sua versão final. Corrija erros de ortografia, gramática, pontuação,
+    concordância e ajuste o estilo quando necessário.
+  expected_output: >
+    Texto final limpo, claro e uniforme, pronto para publicação sem necessidade de nova revisão.
+    Formatado como markdown sem '```'
+  agent: revisor_gramatical
+

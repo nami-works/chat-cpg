@@ -1,0 +1,236 @@
+meta:
+  product_id: "proteica-cacau"
+  display_name: "Bebida de Aveia com Proteína & Cacau 250ml"
+  brand: "Nude"
+  slug: "proteica-cacau"
+  category: "beverage"
+  subcategory: "protein-drink"
+  version: 1
+  last_update: "2025-08-28"
+  launch_date: null
+  price_range: "R$ 9,90"
+  sizes_available: ["250ml"]
+  # Add web field for URL injection
+  web: "https://heynude.com.br/products/proteica-cacau"
+
+product_description:
+  short: "Bebida vegetal de aveia com proteína vegetal, sabor cacau. Clean label, sem glúten e sem lactose."
+  detailed: |
+    A Bebida de Aveia Nude com Proteína & Cacau 250ml é uma opção prática, nutritiva e saborosa.
+    Produzida com aveia upcycled e proteína vegetal, é clean label, sem lactose, sem glúten e 100% plant-based.
+    Possui alto teor de proteína, sabor intenso de cacau e é ideal para consumo imediato, como lanche funcional
+    ou pós-treino.
+  key_differentiators:
+    - "Alto teor de proteína vegetal"
+    - "Sabor natural de cacau"
+    - "Pronto para beber"
+  positioning: "Para quem busca uma bebida proteica prática e saborosa."
+  target_customer: "Atletas, fitness enthusiasts e consumidores que buscam proteína vegetal."
+
+benefits:
+  immediate_results:
+    - "Sabor imediato de cacau"
+    - "Saciedade proteica"
+  short_term:
+    - "Recuperação muscular"
+    - "Energia sustentada"
+  long_term:
+    - "Contribui para o desenvolvimento muscular"
+  functional:
+    - "Fonte de proteína vegetal"
+    - "Recuperação pós-treino"
+  emotional:
+    - "Satisfação com escolha saudável"
+  aesthetic:
+    - "Sabor natural de cacau"
+  protective:
+    - "Sem ingredientes artificiais"
+
+actives:
+  - id: "aveia"
+    name: "Aveia"
+    concentration: null
+    function: "Base da bebida vegetal"
+    mechanism: "Fornece carboidratos e fibras"
+    benefits:
+      - "Energia sustentada"
+      - "Fonte de fibras"
+    source: "Natural"
+    certifications: ["Upcycled"]
+
+  - id: "proteina-ervilha"
+    name: "Proteína de Ervilha"
+    concentration: null
+    function: "Suplementação proteica"
+    mechanism: "Fornece aminoácidos essenciais"
+    benefits:
+      - "Alto teor proteico"
+      - "Recuperação muscular"
+    source: "Vegetal"
+    certifications: ["Plant-based"]
+
+  - id: "cacau"
+    name: "Cacau em Pó"
+    concentration: null
+    function: "Sabor e antioxidantes"
+    mechanism: "Fornece sabor natural e compostos bioativos"
+    benefits:
+      - "Sabor natural de chocolate"
+      - "Rico em antioxidantes"
+    source: "Natural"
+    certifications: ["Clean Label"]
+
+formulation:
+  texture: "Líquido"
+  viscosity: "Média"
+  absorption: "N/A"
+  finish: "Natural"
+  scent_profile: "Cacau natural"
+  color: "Natural do cacau"
+  ph_level: null
+  full_inci: |
+    Água, aveia, proteína de ervilha, óleo de girassol, cacau em pó, açúcar demerara, sal marinho
+  package:
+    net_volume_ml: 250
+    unit_count: 1
+    package_description: "Bebida vegetal proteica sabor cacau, embalagem 250ml"
+    storage: "Conservar em local fresco e seco. Após aberto, manter refrigerado e consumir imediatamente."
+  availability:
+    status: null
+    last_checked_at: "2025-08-28T00:00:00-03:00"
+  pricing:
+    currency: "BRL"
+    price: null
+    observed_prices:
+      - retailer: "Zona Cerealista"
+        url: "https://www.zonacerealista.com.br/bebida-de-aveia-com-proteina-e-cacau-nude-250ml"
+        price: 9.90
+        currency: "BRL"
+        observed_at: "2025-08-28"
+  images:
+    primary: null
+    gallery: []
+  short_description: >
+    Bebida vegetal de aveia com proteína vegetal, sabor cacau. Clean label, sem glúten e sem lactose.
+  long_description: >
+    A Bebida de Aveia Nude com Proteína & Cacau 250ml é uma opção prática, nutritiva e saborosa.
+    Produzida com aveia upcycled e proteína vegetal, é clean label, sem lactose, sem glúten e 100% plant-based.
+    Possui alto teor de proteína, sabor intenso de cacau e é ideal para consumo imediato, como lanche funcional
+    ou pós-treino.
+  ingredients:
+    - água
+    - aveia
+    - proteína de ervilha
+    - óleo de girassol
+    - cacau em pó
+    - açúcar demerara
+    - sal marinho
+  allergens:
+    contains:
+      - aveia
+    may_contain: []
+    gluten_statement: "Não contém glúten"
+    lactose_statement: "Sem lactose"
+  claims:
+    - "Rico em proteína vegetal"
+    - "Sabor natural de cacau"
+    - "Fonte de energia"
+    - "Clean label"
+    - "Sem lactose"
+    - "Sem glúten"
+    - "Plant-based"
+    - "Pronto para beber"
+  sustainability:
+    upcycled_certified: true
+    upcycled_notes: "Produzido com biomassa reaproveitada da aveia"
+    carbon_footprint:
+      notes: "Impacto ambiental inferior a bebidas lácteas tradicionais"
+  nutrition:
+    serving:
+      size_ml: 250
+      servings_per_container: 1
+    per_100ml:
+      energy_kcal: 66
+      carbohydrates_g: 8.6
+      sugars_total_g: 4.3
+      protein_g: 3.6
+      total_fat_g: 2.2
+      saturated_fat_g: 0.5
+      trans_fat_g: 0
+      fiber_g: 1.0
+      sodium_mg: 46
+    per_serving_ml: 250
+    per_serving:
+      energy_kcal: 165
+      carbohydrates_g: 21.5
+      sugars_total_g: 10.8
+      protein_g: 9.0
+      total_fat_g: 5.5
+      saturated_fat_g: 1.2
+      trans_fat_g: 0
+      fiber_g: 2.5
+      sodium_mg: 115
+    notes: "Valores nutricionais baseados em dados de revendedores; confirmar no rótulo oficial."
+  usage_suggestions:
+    - "Consumir pronto para beber, gelado ou em temperatura ambiente"
+    - "Levar como lanche pós-treino"
+    - "Combinar com frutas ou snacks"
+  audience:
+    dietary_preferences:
+      - "vegano"
+      - "plant-based"
+      - "sem lactose"
+      - "sem glúten"
+      - "consumidores ativos"
+      - "quem busca bebidas proteicas"
+    cautions: []
+  seo:
+    title: "Bebida de Aveia com Proteína & Cacau 250ml | Nude — Plant-based e Funcional"
+    meta_description: "Nude Leite de Aveia com Proteína & Cacau 250ml: bebida vegetal proteica, sabor cacau, clean label, sem lactose e sem glúten."
+    keywords:
+      - "bebida proteica vegetal"
+      - "aveia cacau"
+      - "vegano"
+      - "sem lactose"
+      - "sem glúten"
+      - "clean label"
+      - "pós-treino"
+    canonical: "https://heynude.com.br/produto/bebida-de-aveia-com-proteina-e-cacau-250-ml"
+  schema_org:
+    "@context": "https://schema.org"
+    "@type": "Product"
+    name: "Bebida de Aveia com Proteína & Cacau 250ml"
+    brand:
+      "@type": "Brand"
+      name: "Nude"
+    description: "Bebida vegetal proteica de aveia sabor cacau, clean label, sem lactose e sem glúten."
+    sku: null
+    gtin13: null
+    category: "Bebidas vegetais proteicas"
+    url: "https://heynude.com.br/produto/bebida-de-aveia-com-proteina-e-cacau-250-ml"
+    offers:
+      "@type": "Offer"
+      priceCurrency: "BRL"
+      price: null
+      availability: null
+      url: "https://heynude.com.br/produto/bebida-de-aveia-com-proteina-e-cacau-250-ml"
+    nutrition:
+      "@type": "NutritionInformation"
+      servingSize: "250 ml"
+      calories: "165 kcal"
+      proteinContent: "9 g"
+      carbohydrateContent: "21.5 g"
+      fiberContent: "2.5 g"
+      fatContent: "5.5 g"
+      saturatedFatContent: "1.2 g"
+      sodiumContent: "115 mg"
+  data_quality:
+    status: "partially_verified"
+    notes:
+      - "Página oficial não carregou; dados obtidos via revendedores."
+      - "Preço e disponibilidade oficiais ainda pendentes."
+    recommended_followups:
+      - "Capturar imagens oficiais da embalagem"
+      - "Confirmar tabela nutricional no rótulo"
+      - "Verificar SKU/GTIN no ERP"
+      - "Checar preço e estoque no site oficial"

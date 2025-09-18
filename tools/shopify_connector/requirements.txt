@@ -1,0 +1,21 @@
+# Shopify Connector Module
+# Core dependencies for Shopify API integration
+
+# HTTP client for API requests
+aiohttp>=3.8.0
+
+# Environment variable management
+python-dotenv>=0.19.0
+
+# Async support
+asyncio-compat>=0.1.0
+
+# Additional utilities
+requests>=2.28.0
+urllib3>=1.26.0
+
+# Development and testing
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+black>=22.0.0
+flake8>=5.0.0

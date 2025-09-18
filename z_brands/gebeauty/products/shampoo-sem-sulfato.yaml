@@ -1,0 +1,171 @@
+meta:
+  product_id: "shampoo-sem-sulfato"
+  display_name: "Shampoo Sem Sulfato"
+  brand: "GE Beauty"
+  slug: "shampoo-sem-sulfato"
+  category: "shampoo"
+  subcategory: "sulfate-free"
+  version: 1
+  last_update: "2025-08-01"
+  launch_date: null
+  price_range: "R$ 95,00"
+  sizes_available: ["250mL"]
+
+product_description:
+  short: "Limpeza profunda que mantém a leveza e o equilíbrio do couro cabeludo."
+  detailed: |
+    O Shampoo Sem Sulfato GE Beauty oferece limpeza profunda sem ressecar, mantendo o equilíbrio natural do couro cabeludo. Sua fórmula livre de sulfatos purifica delicadamente, deixando os fios soltos, leves e com brilho natural. Ideal para uso diário, proporciona limpeza eficaz sem agredir o cabelo ou couro cabeludo, sendo adequado para todos os tipos de cabelo, incluindo cabelos coloridos, cacheados, crespos e quimicamente tratados.
+  key_differentiators:
+    - "Fórmula 100% livre de sulfatos para limpeza suave."
+    - "Mantém o equilíbrio natural do couro cabeludo."
+    - "Adequado para todos os tipos de cabelo, inclusive coloridos e tratados."
+  positioning: "Para cabelos limpos, leves e equilibrados sem agressão."
+  target_customer: "Pessoas que buscam limpeza eficaz sem ressecamento, especialmente com cabelos sensíveis, coloridos ou tratados."
+
+benefits:
+  immediate_results:
+    - "Cabelos limpos e livres de oleosidade."
+    - "Sensação de leveza e frescor no couro cabeludo."
+  short_term:
+    - "Manutenção do equilíbrio natural dos fios."
+  long_term:
+    - "Preservação da saúde capilar e do couro cabeludo."
+  functional:
+    - "Limpa profundamente sem ressecar."
+    - "Remove impurezas e oleosidade excessiva."
+  emotional:
+    - "Confiança em cabelos sempre limpos e saudáveis."
+  aesthetic:
+    - "Cabelos soltos, leves e com brilho natural."
+  protective:
+    - "Preserva a cor e tratamentos químicos."
+
+actives:
+  - id: "sulfate_free_formula"
+    name: "Fórmula Livre de Sulfatos"
+    concentration: null
+    function: "Limpeza suave sem agressão."
+    mechanism: "Remove impurezas sem retirar a oleosidade natural."
+    benefits:
+      - "Mantém o equilíbrio do couro cabeludo."
+      - "Preserva a hidratação natural dos fios."
+    source: "Sintético"
+    certifications: ["Sulfate-free"]
+
+formulation:
+  texture: "Gel"
+  viscosity: "Medium"
+  absorption: "Fast"
+  finish: "Clean"
+  scent_profile: "Fresh"
+  color: "Clear"
+  ph_level: null
+  full_inci: null
+
+hair_compatibility:
+  hair_types: ["Fine", "Thick", "Normal"]
+  textures: ["Straight", "Wavy", "Curly", "Coily"]
+  conditions: ["Damaged", "Colored", "Chemically Treated", "Oily", "Sensitive"]
+  porosity_levels: ["Low", "Medium", "High"]
+  scalp_types: ["Oily", "Dry", "Sensitive", "Normal"]
+  excluded_types: []
+
+application:
+  frequency: "Daily use"
+  method: |
+    Aplique nos cabelos molhados, massageie suavemente o couro cabeludo até formar espuma. Enxágue abundantemente com água morna. Repita se necessário.
+  amount_guide: "Quantidade suficiente para formar espuma"
+  timing: "Durante o banho"
+  layering: ["Use antes do condicionador ou máscara"]
+  styling_compatibility: ["Compatible with all styling products"]
+  removal_method: "Rinse thoroughly with water"
+
+performance_metrics:
+  clinical_results: []
+  user_study_results: ["4.55/5 estrelas baseado em 11 avaliações"]
+  before_after_claims: ["Cabelos mais limpos e equilibrados desde o primeiro uso."]
+  duration_of_effects: "Lasts until next wash"
+  improvement_timeline: "Immediate cleansing with continued scalp health benefits"
+
+technical_specs:
+  heat_protection_temp: null
+  humidity_resistance: null
+  water_resistance: null
+  uv_protection: null
+  hold_strength: null
+  shine_level: "Natural shine"
+
+usage_scenarios:
+  daily_routine: |
+    Use diariamente para manter cabelos limpos e equilibrados.
+  special_occasions: |
+    Ideal para preparar os cabelos antes de tratamentos ou penteados especiais.
+  professional_use: |
+    Adequado para uso profissional em salões de beleza.
+  troubleshooting:
+    - "Se o cabelo ficar ressecado, reduza a frequência de uso."
+    - "Para cabelos muito oleosos, pode ser usado duas vezes na mesma lavagem."
+  seasonal_tips:
+    - "No verão, pode ser necessário lavar com mais frequência devido ao suor."
+
+safety_information:
+  contraindications: []
+  precautions: ["Evite contato com os olhos.", "Em caso de irritação, suspenda o uso."]
+  storage_requirements: "Armazene em local fresco e seco."
+  shelf_life: "12 meses após abertura"
+  pregnancy_safe: true
+  child_safe: true
+
+regulatory_claims:
+  dermatologically_tested: null
+  hypoallergenic: null
+  non_comedogenic: null
+  cruelty_free: true
+  vegan: true
+  sulfate_free: true
+  paraben_free: true
+  silicone_free: true
+  artificial_fragrance_free: null
+
+certifications:
+  organic: []
+  sustainable: []
+  professional: []
+  awards: []
+
+marketing_copy:
+  hero_headline: "Limpeza Profunda com Leveza e Equilíbrio"
+  subheadlines:
+    - "Fórmula Livre de Sulfatos para Todos os Tipos de Cabelo"
+    - "Mantém o Equilíbrio Natural do Couro Cabeludo"
+  elevator_pitch: "O Shampoo Sem Sulfato GE Beauty oferece limpeza profunda sem agressão, mantendo cabelos limpos, leves e equilibrados."
+  key_messages:
+    - "Limpa profundamente sem ressecar."
+    - "Adequado para cabelos coloridos e tratados."
+  call_to_action:
+    - "Experimente a limpeza suave do Shampoo Sem Sulfato GE Beauty."
+  social_proof:
+    - "Avaliado com 4.55 estrelas por clientes satisfeitos."
+  comparison_points:
+    - "Mais suave que shampoos convencionais com sulfato."
+
+content_hooks:
+  problem_statements:
+    - "Shampoos convencionais podem ressecar e agredir o cabelo."
+  solution_narratives:
+    - "O Shampoo Sem Sulfato oferece limpeza eficaz sem agressão."
+  transformation_stories:
+    - "Veja a diferença em cabelos mais equilibrados e saudáveis."
+  expert_insights:
+    - "Formulado sem sulfatos para preservar a saúde capilar."
+  ingredient_spotlights:
+    - "Fórmula livre de sulfatos: limpeza suave e eficaz."
+  routine_integration:
+    - "Incorpore na sua rotina diária para cabelos sempre equilibrados."
+
+disclaimers:
+  results_variability:
+    - "Os resultados podem variar de acordo com o tipo de cabelo."
+  usage_limitations:
+    - "Use conforme indicado para melhores resultados."
+  regulatory_required: []

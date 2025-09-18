@@ -1,0 +1,1 @@
+Com a decisão de criar funções Python baseadas em bibliotecas existentes, conseguimos garantir uma solução eficiente e simples para o problema de proximidade entre CEPs e shoppings. O próximo passo deve incluir a implementação dessas funções, seguido por testes e validações, assegurando que o sistema final seja robusto e escalável.

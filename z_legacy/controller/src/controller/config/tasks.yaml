@@ -1,0 +1,69 @@
+#Task 1 - Mapear Regime Tributário e Simular Economias Fiscais
+mapear_regime_tributario:
+  description: >
+    Realizar um diagnóstico completo do regime tributário atual, incluindo análise dos regimes Simples Nacional,
+    Lucro Presumido e Lucro Real, e elaborar simulações de carga tributária para otimização fiscal.
+    Avaliar incentivos aplicáveis ao setor de cosméticos (ex: ICMS-ST, redução de base de cálculo).
+  expected_output: >
+    Relatório com o diagnóstico tributário e simulações de regimes com recomendação estratégica.
+  agent: contadora_tributaria_senior
+
+#Task 2 - Apurar e Registrar Tributos Mensais com Validação Cruzada
+apurar_e_registrar_tributos:
+  description: >
+    Calcular todos os tributos mensais (ICMS, PIS, COFINS, IRPJ, CSLL), com validação cruzada entre
+    escrituração contábil, fiscal e notas fiscais. Emitir guias, registrar no sistema contábil e preparar memória de cálculo.
+  expected_output: >
+    Dossiê mensal com tributos apurados, guias geradas e registros contábeis conciliados.
+  agent: contadora_tributaria_senior
+
+#Task 3 - Gerenciar e Automatizar o Calendário de Obrigações Acessórias
+gerenciar_e_automar_obg_acessorias:
+  description: >
+    Criar e manter um calendário digital integrado ao sistema da empresa para controle de entregas obrigatórias
+    (SPED Fiscal, Contribuições, ECD, ECF, Reinf, eSocial, DCTFWeb etc.).
+    Gerar alertas automáticos para prazos e validar cada entrega antes do envio.
+  expected_output: >
+    Calendário automatizado e relatório de conformidade 100% entregue e validado.
+  agent: especialista_obg_acessorias_compliance
+
+#Task 4 - Integrar ERP de Vendas e Estoque com Sistema Contábil
+integrar_erp_e_contabil:
+  description: >
+    Configurar integração entre o sistema ERP (ex: Bling ou Omie) e o sistema contábil.
+    Automatizar importação de NF-es, conciliação bancária,
+    baixa de estoque e geração de lançamentos contábeis via API.
+  expected_output: >
+    Sistema integrado com rotinas automatizadas de importação e lançamento contábil diário.
+  agent: analista_integracao_erp_contabil
+
+#Task 5 - Validar Confiabilidade das Demonstrações Contábeis
+validar_demonstracoes_contabeis:
+  description: >
+    Realizar auditoria interna mensal nas demonstrações financeiras (DRE, Balanço, Fluxo de Caixa),
+    confrontando lançamentos com documentos fiscais, integrações e memórias de cálculo.
+    Identificar inconsistências, sugerir ajustes e elaborar parecer de auditoria.
+  expected_output: >
+    Parecer de auditoria com matriz de conformidade e plano de ação para ajustes.
+  agent: auditor_interno_espec_contabilidade_digital
+
+#Task 6.1 - Consolidar Informações Contábeis e Indicadores
+consolidar_indicadores:
+  description: >
+    Compilar todos os dados contábeis mensais (lançamentos, tributos, apurações),
+    realizar análises básicas de lucratividade, margem e capital de giro.
+    Organizar as informações em estrutura lógica para uso gerencial.
+  expected_output: >
+    Documento estruturado com dados contábeis resumidos, planilhas e indicadores financeiros.
+  agent: contadora_tributaria_senior
+  
+#Task 6.2 - Auditar Dados e Gerar Relatório Gerencial Estratégico
+auditar_e_gerar_relatorio:
+  description: >
+    Validar os dados fornecidos pela Contadora, conferir integridade das informações
+    e transformá-las em um relatório visual com análises gerenciais para
+    tomada de decisão (gráficos, comparativos, comentários).
+  expected_output: >
+    Relatório mensal finalizado com insights visuais e pareceres estratégicos para os sócios.
+  agent: auditor_interno_espec_contabilidade_digital
+

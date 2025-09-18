@@ -1,0 +1,214 @@
+meta:
+  product_id: "leave-in-pluma"
+  display_name: "Leave-in Pluma"
+  brand: "GE Beauty"
+  slug: "leave-in-pluma"
+  category: "leave-in"
+  subcategory: "heat protectant"
+  version: 1
+  last_update: "2025-07-29"
+  launch_date: null
+  price_range: "R$ 149,00" # web: https://gebeauty.com.br/products/leave-in-pluma
+  sizes_available: ["200ml"] # web: https://gebeauty.com.br/products/leave-in-pluma
+
+product_description:
+  short: "Fluido multifuncional que hidrata, nutre, repara e protege sem pesar."
+  detailed: |
+    O Leave-in Pluma GE Beauty combina pantenol, arginina e óleo de girassol para fortalecer a fibra capilar, selar as cutículas e nutrir sem deixar resíduos. Oferece proteção térmica até 230°C, realinhamento temporário das fibras capilares e controle de frizz, mantendo os fios disciplinados mesmo em ambientes úmidos. # web: https://gebeauty.com.br/products/leave-in-pluma
+  key_differentiators: 
+    - "Proteção térmica até 230°C"
+    - "Realinhamento temporário das fibras capilares"
+    - "Controle de frizz em ambientes úmidos"
+  positioning: "Para quem busca leveza, praticidade e liberdade no cuidado com o cabelo."
+  target_customer: "Consumidores que desejam hidratação e proteção sem peso nos fios."
+
+benefits:
+  immediate_results: 
+    - "Brilho imediato"
+    - "Maciez e alinhamento imediato"
+  short_term: 
+    - "Hidratação duradoura"
+    - "Nutrição que devolve vitalidade aos fios"
+  long_term: 
+    - "Fortalecimento e reparação sem rigidez"
+  functional: 
+    - "Proteção térmica até 230°C"
+    - "Realinhamento das cutículas"
+  emotional: 
+    - "Sensação de leveza e liberdade"
+  aesthetic: 
+    - "Visual saudável e luminoso"
+  protective: 
+    - "Criação de um escudo contra o calor"
+
+actives:
+  - id: "pantenol"
+    name: "Pantenol"
+    concentration: null
+    function: "Fortalece a fibra capilar e mantém a maleabilidade"
+    mechanism: "Promove hidratação profunda e aumenta a resistência"
+    benefits: 
+      - "Hidratação profunda"
+      - "Aumento da resistência capilar"
+    source: "Pró-vitamina"
+    certifications: []
+
+  - id: "arginina"
+    name: "Arginina"
+    concentration: null
+    function: "Sela as cutículas e aumenta o brilho"
+    mechanism: "Aminoácido essencial que promove brilho e maciez"
+    benefits: 
+      - "Brilho imediato"
+      - "Proteção contra agressões externas"
+    source: "Aminoácido essencial"
+    certifications: []
+
+  - id: "oleo-girassol"
+    name: "Óleo de Girassol"
+    concentration: null
+    function: "Nutre sem deixar resíduos"
+    mechanism: "Fonte natural de ômegas e vitamina E"
+    benefits: 
+      - "Nutrição leve"
+      - "Ação condicionante"
+    source: "Natural"
+    certifications: []
+
+  - id: "allinea"
+    name: "Allinea™"
+    concentration: null
+    function: "Realinhamento temporário da fibra capilar"
+    mechanism: "Cria um filme leve que sela as cutículas"
+    benefits: 
+      - "Controle de frizz"
+      - "Manutenção dos fios disciplinados"
+    source: "Origem vegetal"
+    certifications: []
+
+  - id: "thermoshield-premium"
+    name: "ThermoShield Premium"
+    concentration: null
+    function: "Proteção térmica avançada"
+    mechanism: "Envolve o fio, preservando a umidade interna"
+    benefits: 
+      - "Proteção contra danos térmicos"
+      - "Preservação da umidade interna"
+    source: "Tecnologia avançada"
+    certifications: []
+
+formulation:
+  texture: "Fluido"
+  viscosity: "Leve"
+  absorption: "Rápida"
+  finish: "Natural"
+  scent_profile: "Fragrância leve"
+  color: "Transparente"
+  ph_level: null
+  full_inci: |
+    Aqua, Disodium EDTA, Cetearyl Alcohol, Behentrimonium Chloride, Ethyl Linoleate, Ethyl Oleate, Crambe Abyssinica Seed Oil, Helianthus Annuus Seed Oil, Persea Gratissima Oil, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Tocopherol, Ceteareth-20, Tocopheryl Acetate, Lactic Acid, Trehalose, Polyglyceryl-10 Laurate, Glycolic Acid, Magnesium Aluminum Silicate, Cocos Nucifera Oil, Sodium Lignosulfonate, Benzyl Alcohol, Xylitol, Caprylic Acid, Glycerin, Salvia Hispanica Seed Extract, Caprylyl/Capryl Glucoside, Sorbitan Oleate, Polyquaternium-37, Sodium Phosphate, Undecane, Tridecane, Itaconic Acid, Arginine, Panthenol, Linum Usitatissimum Seed Extract, Parfum, Citral, Citronellol, Geraniol, Hexyl Cinnamal, Hydroxycitronellal, Limonene, Linalool. # web: https://gebeauty.com.br/products/leave-in-pluma
+
+hair_compatibility:
+  hair_types: ["Fino", "Normal"]
+  textures: ["Liso", "Ondulado"]
+  conditions: ["Danificado", "Colorido"]
+  porosity_levels: ["Média", "Alta"]
+  scalp_types: ["Normal", "Seco"]
+  excluded_types: []
+
+application:
+  frequency: "Diariamente"
+  method: |
+    Borrife no cabelo limpo e úmido, da raiz às pontas. Desembarace com pente largo. Finalize como preferir: antes de ir para a academia, na praia para um beach hair natural, para desembaraçar após o banho, no day after como revitalizante, ou como leave-in na finalização. # web: https://gebeauty.com.br/products/leave-in-pluma
+  amount_guide: "Quantidade suficiente para cobrir os fios"
+  timing: "Após lavar o cabelo"
+  layering: ["Óleo finalizador para cabelos espessos"]
+  styling_compatibility: ["Compatível com ferramentas térmicas até 230°C"]
+  removal_method: "Lavar com shampoo"
+
+performance_metrics:
+  clinical_results: []
+  user_study_results: []
+  before_after_claims: []
+  duration_of_effects: "Até 24 horas"
+  improvement_timeline: "Resultados imediatos"
+
+technical_specs:
+  heat_protection_temp: "230°C"
+  humidity_resistance: "Alta"
+  water_resistance: null
+  uv_protection: null
+  hold_strength: null
+  shine_level: "Alto"
+
+usage_scenarios:
+  daily_routine: |
+    Use diariamente após lavar o cabelo para proteção e hidratação contínua.
+  special_occasions: |
+    Ideal para eventos onde o cabelo precisa estar alinhado e protegido do calor.
+  professional_use: |
+    Pode ser usado em salões para finalização de penteados com proteção térmica.
+  troubleshooting: 
+    - "Se o cabelo parecer pesado, use menos produto."
+  seasonal_tips: 
+    - "No verão, use para proteger contra o calor e umidade."
+
+safety_information:
+  contraindications: []
+  precautions: ["Evitar contato com os olhos"]
+  storage_requirements: "Armazenar em local fresco e seco"
+  shelf_life: "12 meses após aberto"
+  pregnancy_safe: null
+  child_safe: null
+
+regulatory_claims:
+  dermatologically_tested: null
+  hypoallergenic: null
+  non_comedogenic: null
+  cruelty_free: true # web: https://gebeauty.com.br/products/leave-in-pluma
+  vegan: true # web: https://gebeauty.com.br/products/leave-in-pluma
+  sulfate_free: null
+  paraben_free: null
+  silicone_free: true # web: https://gebeauty.com.br/products/leave-in-pluma
+  artificial_fragrance_free: null
+
+certifications:
+  organic: []
+  sustainable: []
+  professional: []
+  awards: []
+
+marketing_copy:
+  hero_headline: "Leveza e proteção para seus cabelos"
+  subheadlines: 
+    - "Proteção térmica até 230°C"
+    - "Realinhamento e controle de frizz"
+  elevator_pitch: "Fluido multifuncional que hidrata, nutre, repara e protege sem pesar."
+  key_messages: 
+    - "Hidratação e proteção sem peso"
+    - "Ideal para todos os tipos de cabelo"
+  call_to_action: 
+    - "Experimente agora e sinta a diferença"
+  social_proof: []
+  comparison_points: 
+    - "Alternativa segura aos silicones tradicionais"
+
+content_hooks:
+  problem_statements: 
+    - "Dificuldade em encontrar um leave-in que não pese nos fios"
+  solution_narratives: 
+    - "Combina ingredientes que fortalecem e protegem sem deixar resíduos"
+  transformation_stories: 
+    - "De cabelos opacos a fios brilhantes e protegidos"
+  expert_insights: []
+  ingredient_spotlights: 
+    - "Pantenol para hidratação profunda"
+  routine_integration: 
+    - "Perfeito para uso diário após a lavagem"
+
+disclaimers:
+  results_variability: 
+    - "Os resultados podem variar de acordo com o tipo de cabelo"
+  usage_limitations: 
+    - "Evitar uso excessivo para não pesar os fios"
+  regulatory_required: []

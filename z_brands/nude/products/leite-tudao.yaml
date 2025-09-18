@@ -1,0 +1,165 @@
+product:
+  id: "nude-leite-aveia-tudao-1l"
+  name: "Leite de Aveia Tudão 1L"
+  brand: "Nude"
+  canonical_url: "https://heynude.com.br/produto/nude-leite-de-aveia-tudao-1l"
+  slug: "nude-leite-de-aveia-tudao-1l"
+  # Add web field for URL injection
+  web: "https://heynude.com.br/products/leite-tudao"
+  category_hierarchy:
+    - "Alimentos & Bebidas"
+    - "Bebidas Vegetais"
+    - "Leite de Aveia"
+  tags:
+    - "plant-based"
+    - "sem lactose"
+    - "sem glúten"
+    - "clean label"
+    - "fortificado"
+    - "cálcio"
+  gtin: null
+  sku: null
+  variants:
+    flavor: "Original Tudão"
+    size_ml: 1000
+  package:
+    net_volume_ml: 1000
+    unit_count: 1
+    package_description: "Bebida vegetal de aveia, clean label, embalagem de 1 litro"
+    storage: "Conservar em local fresco e seco. Após aberto, manter refrigerado e consumir em até 5 dias."
+  availability:
+    status: null
+    last_checked_at: "2025-08-28T00:00:00-03:00"
+  pricing:
+    currency: "BRL"
+    price: null
+    observed_prices:
+      - retailer: "Mundo Verde"
+        url: "https://www.mundoverde.com.br/leite-de-aveia-tudao-nude-1l"
+        price: 13.90
+        currency: "BRL"
+        observed_at: "2025-08-28"
+  images:
+    primary: null
+    gallery: []
+  short_description: >
+    Bebida vegetal de aveia clean label, sem glúten e sem lactose, enriquecida com cálcio e vitamina B12.
+  long_description: >
+    O Nude Leite de Aveia Tudão 1L é uma bebida vegetal clean label, feita com aveia upcycled.
+    Sem glúten e sem lactose, é enriquecido com cálcio e vitamina B12 para auxiliar na nutrição diária.
+    Ideal para substituir o leite de vaca no café, receitas, vitaminas e consumo puro.
+  ingredients:
+    - água
+    - aveia
+    - óleo de girassol
+    - sal marinho
+    - carbonato de cálcio
+    - vitamina B12
+  allergens:
+    contains:
+      - aveia
+    may_contain: []
+    gluten_statement: "Não contém glúten"
+    lactose_statement: "Sem lactose"
+  claims:
+    - "Fonte de cálcio"
+    - "Enriquecido com vitamina B12"
+    - "Clean label"
+    - "Sem glúten"
+    - "Sem lactose"
+    - "Plant-based"
+  sustainability:
+    upcycled_certified: true
+    upcycled_notes: "Feito a partir da biomassa resultante da base de aveia"
+    carbon_footprint:
+      notes: "Nude divulga menor impacto ambiental que leite de vaca; valor exato não informado"
+  nutrition:
+    serving:
+      size_ml: 200
+      servings_per_container: 5
+    per_100ml:
+      energy_kcal: 55
+      carbohydrates_g: 9.5
+      sugars_total_g: 4.0
+      protein_g: 1.0
+      total_fat_g: 1.5
+      saturated_fat_g: 0.3
+      trans_fat_g: 0
+      fiber_g: 0.6
+      sodium_mg: 40
+      calcium_mg: 240
+    per_serving_ml: 200
+    per_serving:
+      energy_kcal: 110
+      carbohydrates_g: 19
+      sugars_total_g: 8.0
+      protein_g: 2.0
+      total_fat_g: 3.0
+      saturated_fat_g: 0.6
+      trans_fat_g: 0
+      fiber_g: 1.2
+      sodium_mg: 80
+      calcium_mg: 480
+    notes: "Tabela nutricional baseada em revendedores; confirmar com rótulo oficial."
+  usage_suggestions:
+    - "Consumir puro, gelado ou quente"
+    - "Adicionar a cafés, chás e vitaminas"
+    - "Usar em receitas como bolos, pães e molhos"
+    - "Misturar com cereais Nude"
+  audience:
+    dietary_preferences:
+      - "vegano"
+      - "plant-based"
+      - "sem lactose"
+      - "sem glúten"
+    cautions: []
+  seo:
+    title: "Leite de Aveia Tudão 1L | Nude — Plant-based, Clean Label e Fortificado"
+    meta_description: "Nude Leite de Aveia Tudão 1L: bebida vegetal clean label, sem lactose e sem glúten, enriquecida com cálcio e B12. Ideal para o dia a dia."
+    keywords:
+      - "leite de aveia"
+      - "bebida vegetal"
+      - "leite vegano"
+      - "sem lactose"
+      - "clean label"
+      - "fortificado com cálcio"
+    canonical: "https://heynude.com.br/produto/nude-leite-de-aveia-tudao-1l"
+  schema_org:
+    "@context": "https://schema.org"
+    "@type": "Product"
+    name: "Leite de Aveia Tudão 1L"
+    brand:
+      "@type": "Brand"
+      name: "Nude"
+    description: "Bebida vegetal de aveia clean label, sem lactose, sem glúten, enriquecida com cálcio e vitamina B12."
+    sku: null
+    gtin13: null
+    category: "Bebidas vegetais"
+    url: "https://heynude.com.br/produto/nude-leite-de-aveia-tudao-1l"
+    offers:
+      "@type": "Offer"
+      priceCurrency: "BRL"
+      price: null
+      availability: null
+      url: "https://heynude.com.br/produto/nude-leite-de-aveia-tudao-1l"
+    nutrition:
+      "@type": "NutritionInformation"
+      servingSize: "200 ml"
+      calories: "110 kcal"
+      proteinContent: "2 g"
+      carbohydrateContent: "19 g"
+      fiberContent: "1.2 g"
+      fatContent: "3 g"
+      saturatedFatContent: "0.6 g"
+      sodiumContent: "80 mg"
+      calciumContent: "480 mg"
+  data_quality:
+    status: "partially_verified"
+    notes:
+      - "Página oficial não carregou; dados confirmados por revendedores."
+      - "Preço e disponibilidade oficiais pendentes de verificação."
+    recommended_followups:
+      - "Capturar imagens oficiais da embalagem"
+      - "Confirmar tabela nutricional no rótulo"
+      - "Verificar SKU/GTIN no ERP"
+      - "Checar preço e estoque no site oficial"

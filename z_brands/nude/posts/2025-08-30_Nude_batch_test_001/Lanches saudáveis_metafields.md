@@ -1,0 +1,4 @@
+meta_title: "Lanches Saudáveis e Práticos com Nude: Descubra Aqui!"  
+meta_description: "Explore ideias de lanches saudáveis e práticos com os produtos Nude. Descubra receitas e dicas para um dia a dia nutritivo e saboroso!"  
+summary_html: "Descubra ideias de lanches saudáveis com Nude: receitas práticas e dicas para um dia a dia nutritivo e saboroso. Experimente agora!"  
+related_products: nude-leite-de-aveia-tudao-1l, nude-cereal-de-aveia-baunilha-180g, nude-bebida-de-aveia-to-go-baunilha-250ml, nude-bebida-de-aveia-to-go-cacau-250ml, nude-creme-de-aveia-sem-gluten-200g, nude-bebida-de-aveia-nudinho-chocolate-180ml, nude-bebida-proteica-baunilha-cafe-250ml, nude-cereal-de-aveia-cacau-180g

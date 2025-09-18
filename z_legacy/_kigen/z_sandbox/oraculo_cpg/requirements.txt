@@ -1,0 +1,38 @@
+```plaintext
+docling[full]==0.2.0  # Necessário para garantir a instalação completa da biblioteca Docling.
+pdfplumber==0.7.6 
+unstructured[all]==0.4.0  # Necessário para garantir o uso de todos os parsers disponíveis.
+spacy[transformers]==3.4.0  # Necessário para usar modelos de linguagem transformers com spaCy.
+langchain[all]==0.16.1  # Inclui todas as funcionalidade da biblioteca LangChain, essencial para integração.
+streamlit[extra]==1.13.0  # Opcional para funcionalidades extras do Streamlit.
+```
+
+### Relatório de Extras Detectados
+
+#### 1. **Docling**
+- **Nome do pacote original**: `docling`
+- **Nome do extra adicionado**: `full`
+- **Justificativa técnica ou referência**: O extra `full` é necessário para garantir que todos os componentes da biblioteca Docling sejam instalados, assegurando a funcionalidade completa, especialmente a extração de texto.
+
+#### 2. **Unstructured**
+- **Nome do pacote original**: `unstructured`
+- **Nome do extra adicionado**: `all`
+- **Justificativa técnica ou referência**: O extra `all` é essencial para habilitar todos os parsers adicionais como PDF, Word, etc., garantindo que a biblioteca possa lidar com todos os tipos de documento.
+
+#### 3. **spaCy**
+- **Nome do pacote original**: `spacy`
+- **Nome do extra adicionado**: `transformers`
+- **Justificativa técnica ou referência**: O extra `transformers` é necessário para usar modelos de linguagem que utilizam a arquitetura Transformers, potencializando a funcionalidade do spaCy.
+
+#### 4. **LangChain**
+- **Nome do pacote original**: `langchain`
+- **Nome do extra adicionado**: `all`
+- **Justificativa técnica ou referência**: O extra `all` garante que todas as features e integrações do LangChain estejam disponíveis, especialmente úteis para conjunções de diferentes embeddings e técnicas de recuperação.
+
+#### 5. **Streamlit**
+- **Nome do pacote original**: `streamlit`
+- **Nome do extra adicionado**: `extra`
+- **Justificativa técnica ou referência**: O extra `extra` é opcional, mas pode ser útil para utilizar funcionalidades adicionais do Streamlit que não estão disponíveis na instalação padrão.
+
+### Resumo
+O `requirements.txt` foi atualizado para incluir todos os extras conhecidos, garantindo que o ambiente de desenvolvimento atenda a todas as necessidades para uma execução bem-sucedida do código. Um relatório detalhado foi gerado para esclarecer as razões das inclusões, assegurando transparência e facilidade na manutenção das dependências.

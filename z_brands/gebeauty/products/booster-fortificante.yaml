@@ -1,0 +1,171 @@
+meta:
+  product_id: "booster-fortificante"
+  display_name: "Booster Fortificante"
+  brand: "GE Beauty"
+  slug: "booster-fortificante"
+  category: "booster"
+  subcategory: "strengthening treatment"
+  version: 1
+  last_update: "2025-08-01"
+  launch_date: null
+  price_range: "R$ 75,00"
+  sizes_available: ["15mL"]
+
+product_description:
+  short: "Fios mais fortes, couro cabeludo saudável e menos queda."
+  detailed: |
+    O Booster Fortificante GE Beauty é um concentrado poderoso que nutre profundamente, controla a oleosidade do couro cabeludo e combate a quebra dos fios. Especialmente formulado para fortalecer a estrutura capilar, este booster oferece nutrição intensiva que resulta em cabelos mais resistentes, saudáveis e cheios de vida. Ideal para cabelos fracos, quebradiços, oleosos na raiz ou com tendência à queda, proporciona equilíbrio ao couro cabeludo enquanto fortalece os fios desde a raiz até as pontas.
+  key_differentiators:
+    - "Concentrado fortificante para máxima eficácia."
+    - "Controla oleosidade do couro cabeludo enquanto nutre os fios."
+    - "Combate quebra e fortalece a estrutura capilar."
+  positioning: "Para cabelos mais fortes, resistentes e com couro cabeludo equilibrado."
+  target_customer: "Pessoas com cabelos fracos, quebradiços, oleosos na raiz ou com tendência à queda."
+
+benefits:
+  immediate_results:
+    - "Cabelos com sensação de força e vitalidade."
+    - "Couro cabeludo mais equilibrado e menos oleoso."
+  short_term:
+    - "Redução visível da quebra e queda dos fios."
+  long_term:
+    - "Fortalecimento da estrutura capilar e crescimento saudável."
+  functional:
+    - "Fortalece os fios e previne quebra."
+    - "Equilibra a oleosidade do couro cabeludo."
+  emotional:
+    - "Confiança em cabelos mais fortes e resistentes."
+  aesthetic:
+    - "Cabelos com mais volume, força e vitalidade."
+  protective:
+    - "Proteção contra quebra e danos estruturais."
+
+actives:
+  - id: "strengthening_complex"
+    name: "Complexo Fortificante"
+    concentration: null
+    function: "Fortalecimento da estrutura capilar e controle de oleosidade."
+    mechanism: "Nutre a fibra capilar e equilibra a produção sebácea."
+    benefits:
+      - "Reduz quebra e fortalece os fios."
+      - "Controla oleosidade sem ressecar."
+    source: "Vegetal"
+    certifications: ["Strengthening Formula"]
+
+formulation:
+  texture: "Concentrated serum"
+  viscosity: "Light"
+  absorption: "Fast"
+  finish: "Non-greasy strengthening"
+  scent_profile: "Fresh and clean"
+  color: "Clear"
+  ph_level: null
+  full_inci: null
+
+hair_compatibility:
+  hair_types: ["Fine", "Thick", "Weak", "Oily roots"]
+  textures: ["Straight", "Wavy", "Curly", "Coily"]
+  conditions: ["Damaged", "Brittle", "Hair loss prone", "Oily scalp", "Weak"]
+  porosity_levels: ["Low", "Medium", "High"]
+  scalp_types: ["Oily", "Sensitive", "Normal"]
+  excluded_types: []
+
+application:
+  frequency: "2-3 times per week or as needed"
+  method: |
+    Misture 3-5 gotas com seu shampoo, máscara ou leave-in antes da aplicação. Para tratamento intensivo do couro cabeludo, aplique algumas gotas diretamente na raiz limpa e massageie suavemente. Não enxágue quando usado como leave-in.
+  amount_guide: "3-5 drops mixed with other products"
+  timing: "During wash routine or as leave-in treatment"
+  layering: ["Mix with shampoo, mask, or leave-in products"]
+  styling_compatibility: ["Compatible with all hair care products"]
+  removal_method: "Rinse when mixed with wash products, leave-in when used as treatment"
+
+performance_metrics:
+  clinical_results: []
+  user_study_results: []
+  before_after_claims: ["Cabelos visivelmente mais fortes e resistentes à quebra."]
+  duration_of_effects: "Progressive strengthening with continued use"
+  improvement_timeline: "Visible results after 2-4 weeks of regular use"
+
+technical_specs:
+  heat_protection_temp: null
+  humidity_resistance: null
+  water_resistance: null
+  uv_protection: null
+  hold_strength: null
+  shine_level: "Natural healthy shine"
+
+usage_scenarios:
+  daily_routine: |
+    Use 2-3 vezes por semana misturado com produtos de rotina para fortalecimento contínuo.
+  special_occasions: |
+    Aplique como tratamento intensivo antes de procedimentos químicos.
+  professional_use: |
+    Ideal para uso profissional em tratamentos de fortalecimento e reconstrução.
+  troubleshooting:
+    - "Para couro cabeludo muito oleoso, use apenas na raiz 1-2 vezes por semana."
+    - "Para cabelos muito finos, misture sempre com outros produtos."
+  seasonal_tips:
+    - "Use mais frequentemente em períodos de maior queda sazonal."
+
+safety_information:
+  contraindications: []
+  precautions: ["Evite contato com os olhos.", "Mantenha fora do alcance de crianças."]
+  storage_requirements: "Armazene em local fresco e seco."
+  shelf_life: "12 meses após abertura"
+  pregnancy_safe: true
+  child_safe: true
+
+regulatory_claims:
+  dermatologically_tested: null
+  hypoallergenic: null
+  non_comedogenic: null
+  cruelty_free: true
+  vegan: true
+  sulfate_free: true
+  paraben_free: true
+  silicone_free: true
+  artificial_fragrance_free: true
+
+certifications:
+  organic: []
+  sustainable: []
+  professional: []
+  awards: []
+
+marketing_copy:
+  hero_headline: "Fios Mais Fortes e Couro Cabeludo Saudável"
+  subheadlines:
+    - "Concentrado Fortificante Contra Quebra"
+    - "Controla Oleosidade e Nutre Profundamente"
+  elevator_pitch: "O Booster Fortificante GE Beauty fortalece os fios, controla a oleosidade do couro cabeludo e combate a quebra para cabelos mais resistentes e saudáveis."
+  key_messages:
+    - "Fortalece a estrutura capilar e previne quebra."
+    - "Equilibra o couro cabeludo sem ressecar os fios."
+  call_to_action:
+    - "Fortaleça seus cabelos com o Booster Fortificante GE Beauty."
+  social_proof:
+    - "Concentrado poderoso para cabelos mais fortes e resistentes."
+  comparison_points:
+    - "Mais concentrado que tratamentos convencionais de fortalecimento."
+
+content_hooks:
+  problem_statements:
+    - "Cabelos fracos e quebradiços precisam de fortalecimento intensivo."
+  solution_narratives:
+    - "O Booster Fortificante oferece nutrição concentrada para fios mais fortes."
+  transformation_stories:
+    - "Veja a diferença em cabelos mais resistentes e com menos quebra."
+  expert_insights:
+    - "Formulado para fortalecer a estrutura capilar desde a raiz."
+  ingredient_spotlights:
+    - "Complexo fortificante: tecnologia avançada para cabelos mais fortes."
+  routine_integration:
+    - "Misture com seus produtos favoritos para potencializar o fortalecimento."
+
+disclaimers:
+  results_variability:
+    - "Os resultados podem variar de acordo com o tipo de cabelo e condição inicial."
+  usage_limitations:
+    - "Para melhores resultados, use consistentemente por pelo menos 4 semanas."
+  regulatory_required: []

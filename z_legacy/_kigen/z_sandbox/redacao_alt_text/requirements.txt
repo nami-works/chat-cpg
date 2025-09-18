@@ -1,0 +1,12 @@
+```plaintext
+requests==2.28.1
+pandas==1.5.3
+google-cloud-vision==3.0.0
+openpyxl==3.0.10
+git+https://github.com/openai/clip.git
+# Dependências externas do sistema:
+# - ffmpeg (necessário para whisper local)
+# - git (necessário para instalação via git+https)
+``` 
+
+This `requirements.txt` contains essential libraries for executing the solution for generating Alt Text automatically, adhering to the specified format and ensuring compatibility across environments.

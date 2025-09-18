@@ -1,0 +1,166 @@
+meta:
+  product_id: "primer-liso-intacto"
+  display_name: "Primer Liso Intacto"
+  brand: "GE Beauty"
+  slug: "primer-liso-intacto"
+  category: "leave-in"
+  subcategory: "heat protectant"
+  version: 1
+  last_update: "2025-07-29"
+  launch_date: null
+  price_range: "R$ 139,00"
+  sizes_available: ["150ml"]
+
+product_description:
+  short: "Prolonga o efeito da escova, controla o volume e blinda o cabelo da umidade por até 24h."
+  detailed: |
+    O Primer Liso Intacto GE Beauty é formulado para prolongar o efeito da escova, controlar o volume e proteger o cabelo da umidade por até 24 horas. Com ingredientes como óleo de girassol, crambe e abacate, ele garante fios alinhados, macios e com brilho, sem rigidez ou peso. Oferece proteção térmica até 230°C e é ideal para quem deseja manter o cabelo liso e sem frizz por mais tempo.
+  key_differentiators:
+    - "Proteção térmica até 230°C"
+    - "Blindagem contra umidade por 24h"
+    - "Ingredientes naturais e biodegradáveis"
+  positioning: "Para quem deseja prolongar o efeito da escova e manter o cabelo sem frizz."
+  target_customer: "Consumidores que buscam prolongar o efeito liso e proteger o cabelo da umidade."
+
+benefits:
+  immediate_results:
+    - "Cabelo alinhado e sem frizz"
+    - "Brilho intenso"
+  short_term:
+    - "Proteção contra umidade por 24h"
+    - "Volume controlado"
+  long_term:
+    - "Manutenção do alinhamento e brilho"
+  functional:
+    - "Proteção térmica até 230°C"
+    - "Blindagem contra umidade"
+  emotional:
+    - "Confiança em manter o cabelo liso e alinhado"
+  aesthetic:
+    - "Cabelo com brilho e toque sedoso"
+  protective:
+    - "Proteção contra danos térmicos e umidade"
+
+actives:
+  - id: "ethyl-linoleate"
+    name: "Ethyl Linoleate"
+    concentration: null
+    function: "Reposição lipídica e ativador de brilho"
+    mechanism: "Forma um filme uniforme nos cabelos, promovendo saúde e sensorial agradável."
+    benefits:
+      - "Brilho intenso"
+      - "Reposição lipídica"
+    source: "Vegetal"
+    certifications: []
+
+formulation:
+  texture: "Cream"
+  viscosity: "Medium"
+  absorption: "Medium"
+  finish: "Natural"
+  scent_profile: "Fragrância suave"
+  color: "Transparente"
+  ph_level: null
+  full_inci: |
+    Aqua, Disodium Edta, Lactic Acid, Cetearyl Alcohol, Behentrimonium Chloride, Ethyl Linoleate, Ethyl Oleate, Crambe Abyssinica Seed Oil, Helianthus Annuus Seed Oil, Persea Gratissima Oil, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Tocopherol, Castor Oil Propanediol Esters, Stearamidopropyl Dimethylamine, Tocopheryl Acetate, Undecane, Tridecane, Trehalose, Polyglyceryl-10 Laurate, Glycolic Acid, Magnesium Aluminum Silicate, Cocos Nucifera Oil, Sodium Lignosulfonate, Benzyl Alcohol, Xylitol, Caprylic Acid, Parfum, Crital, Citronellol, Geraniol, Hexyl Cinnamal, Hydroxycitronellal, Limonene, Linalool.
+
+hair_compatibility:
+  hair_types: ["Fine", "Thick"]
+  textures: ["Straight", "Wavy", "Curly"]
+  conditions: ["Colored", "Chemically treated"]
+  porosity_levels: ["Medium", "High"]
+  scalp_types: ["Normal", "Dry"]
+  excluded_types: []
+
+application:
+  frequency: "As needed"
+  method: |
+    Aplique nos cabelos úmidos, do comprimento às pontas, antes de secar ou modelar. Seque com secador e finalize como preferir. Reaplique pequenas quantidades nos dias seguintes para manter o alinhamento.
+  amount_guide: "Quantidade suficiente para cobrir o comprimento e pontas"
+  timing: "Antes de secar ou modelar"
+  layering: ["Compatible with other styling products"]
+  styling_compatibility: ["Works with heat tools"]
+  removal_method: "Wash with shampoo"
+
+performance_metrics:
+  clinical_results: []
+  user_study_results: []
+  before_after_claims: ["Escova prolongada, sem frizz"]
+  duration_of_effects: "Up to 24 hours"
+  improvement_timeline: "Immediate and maintained with regular use"
+
+technical_specs:
+  heat_protection_temp: "230°C"
+  humidity_resistance: "24 hours"
+  water_resistance: null
+  uv_protection: null
+  hold_strength: null
+  shine_level: "High"
+
+usage_scenarios:
+  daily_routine: |
+    Use diariamente para manter o cabelo alinhado e protegido.
+  special_occasions: |
+    Ideal para eventos onde o cabelo precisa estar impecável por longos períodos.
+  professional_use: |
+    Pode ser usado em salões para prolongar o efeito de escovas e modelagens.
+  troubleshooting: ["Reaplique pequenas quantidades para manter o alinhamento."]
+  seasonal_tips: ["Use em climas úmidos para proteção extra."]
+
+safety_information:
+  contraindications: []
+  precautions: ["Evitar contato com os olhos."]
+  storage_requirements: "Armazenar em local fresco e seco."
+  shelf_life: "12 meses após aberto"
+  pregnancy_safe: null
+  child_safe: null
+
+regulatory_claims:
+  dermatologically_tested: null
+  hypoallergenic: null
+  non_comedogenic: null
+  cruelty_free: true
+  vegan: true
+  sulfate_free: null
+  paraben_free: null
+  silicone_free: null
+  artificial_fragrance_free: null
+
+certifications:
+  organic: []
+  sustainable: []
+  professional: []
+  awards: []
+
+marketing_copy:
+  hero_headline: "Escova prolongada e sem frizz com proteção térmica."
+  subheadlines:
+    - "Proteção contra umidade por 24h"
+    - "Brilho intenso e toque sedoso"
+  elevator_pitch: "Prolongue o efeito da escova e mantenha o cabelo sem frizz com o Primer Liso Intacto."
+  key_messages:
+    - "Proteção térmica até 230°C"
+    - "Blindagem contra umidade"
+    - "Ingredientes naturais e biodegradáveis"
+  call_to_action:
+    - "Compre agora e mantenha seu cabelo liso por mais tempo!"
+  social_proof: []
+  comparison_points: ["Alternativa sustentável aos silicones"]
+
+content_hooks:
+  problem_statements:
+    - "Cabelo perde o efeito liso rapidamente em ambientes úmidos."
+  solution_narratives:
+    - "O Primer Liso Intacto blinda o cabelo contra a umidade, mantendo o alinhamento por 24h."
+  transformation_stories:
+    - "De cabelo com frizz a fios alinhados e brilhantes."
+  expert_insights: []
+  ingredient_spotlights:
+    - "Óleo de girassol para prevenir o enfraquecimento do fio."
+  routine_integration:
+    - "Use antes de secar ou modelar para proteção e alinhamento."
+
+disclaimers:
+  results_variability: ["Os resultados podem variar de acordo com o tipo de cabelo."]
+  usage_limitations: ["Somente para uso externo."]
+  regulatory_required: []

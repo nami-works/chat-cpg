@@ -1,0 +1,190 @@
+meta:
+  product_id: "leite-cremoso"
+  display_name: "Bebida de Aveia Orgânico Integral 1L"
+  brand: "Nude"
+  slug: "leite-cremoso"
+  category: "beverage"
+  subcategory: "oat-milk"
+  version: 1
+  last_update: "2025-08-28"
+  launch_date: null
+  price_range: "R$ 16,90"
+  sizes_available: ["1L"]
+  # Add web field for URL injection
+  web: "https://heynude.com.br/products/leite-cremoso"
+
+product_description:
+  short: "Bebida vegetal de aveia orgânica integral, clean label, sem glúten e sem lactose."
+  detailed: |
+    O Nude Leite de Aveia Orgânico Integral 1L é uma bebida vegetal feita com aveia
+    100% orgânica e integral, sem aditivos artificiais. É clean label, sem glúten,
+    sem lactose e 100% plant-based. Ideal para consumo diário puro, em cafés, vitaminas,
+    receitas culinárias ou com cereais. Mantém todos os nutrientes do grão integral,
+    trazendo mais fibras e sabor.
+  key_differentiators:
+    - "Orgânico certificado"
+    - "Integral (100% do grão)"
+    - "Clean label sem aditivos"
+  positioning: "Para quem busca uma bebida vegetal orgânica e integral de qualidade."
+  target_customer: "Consumidores que valorizam produtos orgânicos e integrais."
+
+benefits:
+  immediate_results:
+    - "Sabor natural e cremoso"
+    - "Textura integral"
+  short_term:
+    - "Hidratação natural"
+    - "Nutrição completa"
+  long_term:
+    - "Contribui para uma alimentação equilibrada"
+  functional:
+    - "Substituto do leite tradicional"
+    - "Fonte de fibras integrais"
+  emotional:
+    - "Satisfação com escolha orgânica"
+  aesthetic:
+    - "Sabor natural e cremoso"
+  protective:
+    - "Sem ingredientes artificiais"
+
+actives:
+  - id: "aveia-organica"
+    name: "Aveia Orgânica Integral"
+    concentration: null
+    function: "Base da bebida vegetal"
+    mechanism: "Fornece nutrientes integrais e fibras"
+    benefits:
+      - "100% integral"
+      - "Rico em fibras"
+    source: "Orgânico"
+    certifications: ["Orgânico", "Integral"]
+
+  - id: "oleo-girassol-organico"
+    name: "Óleo de Girassol Orgânico"
+    concentration: null
+    function: "Textura e estabilidade"
+    mechanism: "Melhora a consistência e cremosidade"
+    benefits:
+      - "Textura mais cremosa"
+      - "Estabilidade natural"
+    source: "Orgânico"
+    certifications: ["Orgânico"]
+
+formulation:
+  texture: "Líquido cremoso"
+  viscosity: "Média"
+  absorption: "N/A"
+  finish: "Cremoso"
+  scent_profile: "Neutro"
+  color: "Natural da aveia"
+  ph_level: null
+  full_inci: |
+    Água, aveia orgânica integral, óleo de girassol orgânico, sal marinho
+  allergens:
+    contains:
+      - aveia
+    may_contain: []
+    gluten_statement: "Não contém glúten"
+    lactose_statement: "Sem lactose"
+  claims:
+    - "Orgânico certificado"
+    - "Integral"
+    - "100% vegetal"
+    - "Sem lactose"
+    - "Sem glúten"
+    - "Clean label"
+  sustainability:
+    upcycled_certified: true
+    upcycled_notes: "Produzido a partir da biomassa da aveia orgânica integral reaproveitada"
+    carbon_footprint:
+      notes: "Menor impacto ambiental que leite de vaca; valor específico não informado"
+  nutrition:
+    serving:
+      size_ml: 200
+      servings_per_container: 5
+    per_100ml:
+      energy_kcal: 52
+      carbohydrates_g: 9.2
+      sugars_total_g: 4.1
+      protein_g: 1.4
+      total_fat_g: 1.4
+      saturated_fat_g: 0.3
+      trans_fat_g: 0
+      fiber_g: 1.0
+      sodium_mg: 38
+    per_serving_ml: 200
+    per_serving:
+      energy_kcal: 104
+      carbohydrates_g: 18.4
+      sugars_total_g: 8.2
+      protein_g: 2.8
+      total_fat_g: 2.8
+      saturated_fat_g: 0.6
+      trans_fat_g: 0
+      fiber_g: 2.0
+      sodium_mg: 76
+    notes: "Tabela nutricional baseada em revendedores; confirmar no rótulo oficial."
+  usage_suggestions:
+    - "Consumir puro ou com café"
+    - "Adicionar a smoothies, vitaminas e sucos"
+    - "Usar em receitas de pães, bolos e molhos"
+    - "Combinar com cereais Nude"
+  audience:
+    dietary_preferences:
+      - "vegano"
+      - "plant-based"
+      - "sem lactose"
+      - "sem glúten"
+      - "orgânico"
+      - "integral"
+    cautions: []
+  seo:
+    title: "Bebida de Aveia Orgânico Integral 1L | Nude — Plant-based, Integral e Clean Label"
+    meta_description: "Nude Leite de Aveia Orgânico Integral 1L: bebida vegetal orgânica e integral, clean label, sem lactose e sem glúten. 100% vegetal."
+    keywords:
+      - "leite de aveia integral"
+      - "leite de aveia orgânico"
+      - "bebida vegetal integral"
+      - "vegano"
+      - "sem lactose"
+      - "clean label"
+      - "sem glúten"
+    canonical: "https://heynude.com.br/produto/bebida-de-aveia-organico-integral-nude.-1l"
+  schema_org:
+    "@context": "https://schema.org"
+    "@type": "Product"
+    name: "Bebida de Aveia Orgânico Integral 1L"
+    brand:
+      "@type": "Brand"
+      name: "Nude"
+    description: "Bebida vegetal de aveia integral orgânica, clean label, sem lactose e sem glúten."
+    sku: null
+    gtin13: null
+    category: "Bebidas vegetais"
+    url: "https://heynude.com.br/produto/bebida-de-aveia-organico-integral-nude.-1l"
+    offers:
+      "@type": "Offer"
+      priceCurrency: "BRL"
+      price: null
+      availability: null
+      url: "https://heynude.com.br/produto/bebida-de-aveia-organico-integral-nude.-1l"
+    nutrition:
+      "@type": "NutritionInformation"
+      servingSize: "200 ml"
+      calories: "104 kcal"
+      proteinContent: "2.8 g"
+      carbohydrateContent: "18.4 g"
+      fiberContent: "2.0 g"
+      fatContent: "2.8 g"
+      saturatedFatContent: "0.6 g"
+      sodiumContent: "76 mg"
+  data_quality:
+    status: "partially_verified"
+    notes:
+      - "Página oficial não carregou; dados confirmados via revendedores."
+      - "Preço e disponibilidade oficiais ainda pendentes."
+    recommended_followups:
+      - "Capturar imagens oficiais da embalagem"
+      - "Confirmar tabela nutricional no rótulo"
+      - "Verificar SKU/GTIN no ERP"
+      - "Checar preço e estoque no site oficial"

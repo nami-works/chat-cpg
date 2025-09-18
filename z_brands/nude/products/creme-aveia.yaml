@@ -1,0 +1,191 @@
+meta:
+  product_id: "creme-aveia"
+  display_name: "Creme de Aveia Nude 200g"
+  brand: "Nude"
+  slug: "creme-aveia"
+  category: "culinary"
+  subcategory: "cream-substitute"
+  version: 1
+  last_update: "2025-08-28"
+  launch_date: null
+  price_range: "R$ 14,90"
+  sizes_available: ["200g"]
+  # Add web field for URL injection
+  web: "https://heynude.com.br/products/creme-aveia"
+
+product_description:
+  short: "Creme vegetal de aveia, clean label, sem glúten e sem lactose. Versátil para receitas doces e salgadas."
+  detailed: |
+    O Creme de Aveia Nude 200g é um produto clean label, feito a partir de aveia upcycled, sem lactose e sem glúten.
+    É 100% plant-based e versátil para uso culinário, podendo substituir cremes tradicionais em molhos, sopas,
+    sobremesas e preparos diversos. Não contém aditivos artificiais e mantém a textura cremosa da aveia.
+  key_differentiators:
+    - "Substituto vegetal do creme de leite"
+    - "Versátil para receitas doces e salgadas"
+    - "Clean label sem aditivos"
+  positioning: "Para quem busca alternativas vegetais ao creme de leite tradicional."
+  target_customer: "Veganos, intolerantes à lactose e consumidores que buscam alternativas vegetais."
+
+benefits:
+  immediate_results:
+    - "Textura cremosa imediata"
+    - "Sabor neutro e versátil"
+  short_term:
+    - "Substituição eficaz em receitas"
+    - "Consistência cremosa"
+  long_term:
+    - "Contribui para uma alimentação plant-based"
+  functional:
+    - "Substituto do creme de leite"
+    - "Versátil para culinária"
+  emotional:
+    - "Satisfação com escolha vegetal"
+  aesthetic:
+    - "Textura cremosa natural"
+  protective:
+    - "Sem ingredientes artificiais"
+
+actives:
+  - id: "aveia"
+    name: "Aveia"
+    concentration: null
+    function: "Base do creme vegetal"
+    mechanism: "Fornece textura cremosa e nutrientes"
+    benefits:
+      - "Textura cremosa natural"
+      - "Fonte de fibras"
+    source: "Natural"
+    certifications: ["Upcycled"]
+
+  - id: "oleo-girassol"
+    name: "Óleo de Girassol"
+    concentration: null
+    function: "Textura e estabilidade"
+    mechanism: "Melhora a consistência e cremosidade"
+    benefits:
+      - "Textura mais cremosa"
+      - "Estabilidade da emulsão"
+    source: "Natural"
+    certifications: ["Clean Label"]
+
+formulation:
+  texture: "Cremoso"
+  viscosity: "Alta"
+  absorption: "N/A"
+  finish: "Cremoso"
+  scent_profile: "Neutro"
+  color: "Natural da aveia"
+  ph_level: null
+  full_inci: |
+    Aveia, água, óleo de girassol, sal marinho
+  ingredients:
+    - aveia
+    - água
+    - óleo de girassol
+    - sal marinho
+  allergens:
+    contains:
+      - aveia
+    may_contain: []
+    gluten_statement: "Não contém glúten"
+    lactose_statement: "Sem lactose"
+  claims:
+    - "Clean label"
+    - "Versátil para receitas doces e salgadas"
+    - "Plant-based"
+    - "Sem lactose"
+    - "Sem glúten"
+    - "Sem aditivos artificiais"
+  sustainability:
+    upcycled_certified: true
+    upcycled_notes: "Produzido a partir da biomassa da base de aveia reaproveitada"
+    carbon_footprint:
+      notes: "Impacto ambiental inferior a cremes de origem animal; valor específico não informado"
+  nutrition:
+    serving:
+      size_g: 20
+      servings_per_container: 10
+    per_100g:
+      energy_kcal: 120
+      carbohydrates_g: 15
+      sugars_total_g: 3.0
+      protein_g: 2.0
+      total_fat_g: 5.0
+      saturated_fat_g: 0.9
+      trans_fat_g: 0
+      fiber_g: 2.0
+      sodium_mg: 50
+    per_serving_g: 20
+    per_serving:
+      energy_kcal: 24
+      carbohydrates_g: 3.0
+      sugars_total_g: 0.6
+      protein_g: 0.4
+      total_fat_g: 1.0
+      saturated_fat_g: 0.2
+      trans_fat_g: 0
+      fiber_g: 0.4
+      sodium_mg: 10
+    notes: "Valores nutricionais estimados com base em revendedores; confirmar no rótulo oficial."
+  usage_suggestions:
+    - "Usar em molhos e cremes salgados"
+    - "Adicionar a sopas para dar cremosidade"
+    - "Usar em sobremesas e doces"
+    - "Substituir creme de leite em receitas"
+  audience:
+    dietary_preferences:
+      - "vegano"
+      - "plant-based"
+      - "sem lactose"
+      - "sem glúten"
+      - "consumidores que buscam alternativas culinárias"
+    cautions: []
+  seo:
+    title: "Creme de Aveia Nude 200g | Plant-based, Versátil e Clean Label"
+    meta_description: "Nude Creme de Aveia 200g: creme vegetal sem lactose, sem glúten e clean label. Versátil para receitas doces e salgadas."
+    keywords:
+      - "creme de aveia"
+      - "creme vegetal"
+      - "alternativa ao creme de leite"
+      - "vegano"
+      - "sem lactose"
+      - "clean label"
+    canonical: "https://heynude.com.br/produto/creme-de-aveia-nude.-200g"
+  schema_org:
+    "@context": "https://schema.org"
+    "@type": "Product"
+    name: "Creme de Aveia Nude 200g"
+    brand:
+      "@type": "Brand"
+      name: "Nude"
+    description: "Creme vegetal de aveia, versátil para receitas doces e salgadas. Sem lactose, sem glúten e clean label."
+    sku: null
+    gtin13: null
+    category: "Cremes vegetais"
+    url: "https://heynude.com.br/produto/creme-de-aveia-nude.-200g"
+    offers:
+      "@type": "Offer"
+      priceCurrency: "BRL"
+      price: null
+      availability: null
+      url: "https://heynude.com.br/produto/creme-de-aveia-nude.-200g"
+    nutrition:
+      "@type": "NutritionInformation"
+      servingSize: "20 g"
+      calories: "24 kcal"
+      proteinContent: "0.4 g"
+      carbohydrateContent: "3 g"
+      fiberContent: "0.4 g"
+      fatContent: "1 g"
+      saturatedFatContent: "0.2 g"
+      sodiumContent: "10 mg"
+  data_quality:
+    status: "partially_verified"
+    notes:
+      - "Página oficial não carregou; dados baseados em revendedores."
+      - "Preço e disponibilidade oficiais pendentes de verificação."
+    recommended_followups:
+      - "Capturar imagens oficiais da embalagem"
+      - "Confirmar tabela nutricional no rótulo"
+      - "Verificar SKU/GTIN no ERP"
+      - "Checar preço e estoque no site oficial"

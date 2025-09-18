@@ -95,6 +95,33 @@ A proposta é simples e inovadora: um sistema de cuidado capilar **personalizáv
 
 ---
 
+
+### Produto de Ativos e Claims - Leave in Liquido Ge Beauty (2).pdf (https://gebeauty.com.br/products/leave-in-pluma)
+- **Finalidade:** Informações extraídas do arquivo carregado
+- **Indicação:** Não especificado
+- **Como usar:** Ver conteúdo original
+
+**Informações técnicas:**
+CARTADE CLAIMS
+Leave-In Líquido
+
+Leave-In Líquido (BTGEB005A24)
+ALINHAMENTO CAPILAR
+RECUPERAÇÃO DE DANOS
+Aumento da
+hidrofobicidade dos fios
+Alinhamento dos fios
+Melhora na penteabilidade 
+e cabelos mais sedosos, macios. 
+Proteção Térmica 
+Modo de uso: Aplicação nos cabelos limpos e úmidos.
+O que esperar deste produto: Excelente penteabilidade, reposição lipídica e recuperação de danos, além de conferir proteção 
+térmica e alinhamento temporário do frizz e volume.
+Consequentemente cabelos 
+mais ...
+
+*Fonte: Ativos e Claims - Leave in Liquido Ge Beauty (2).pdf*
+
 ## 7. Claims e Certificações
 
 - Vegano
@@ -109,4 +136,3 @@ A proposta é simples e inovadora: um sistema de cuidado capilar **personalizáv
 
 ---
 
-**GE Beauty: no seu tempo, do seu jeito.**

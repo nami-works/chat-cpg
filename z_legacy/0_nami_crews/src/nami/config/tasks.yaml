@@ -1,0 +1,653 @@
+identificar_inputs:
+  description: >
+    Analisar os objetivos e etapas da {crew} para identificar todas as informações externas
+    necessárias para seu funcionamento correto e eficiente. Classificar os inputs como:
+    - internos (produzidos por outras tasks),
+    - externos acessíveis na internet (ex: documentações, repositórios),
+    - externos fornecidos pelo usuário (ex: arquivos .md, links, listas, etc.).
+    Para cada input externo necessário, indicar onde obtê-lo ou que tipo de input
+    deve ser solicitado ao usuário. Basear-se em {input_humano}, {como_fazer}, {memoria},
+    {planejamento}, {conhecimento}, {treinamento}, {testes}, {colaboracao}, {eventos},
+    {documentacao}, {conceitos}, {comunidade}, {bibliotecas}, {github}, {stack_overflow}
+    para ampliar o repertório de formatos e padrões comumente utilizados.
+  expected_output: >
+    Documento markdown com tabela contendo nome do input, tipo (string, arquivo, URL),
+    origem (interno, externo web, externo usuário), e instruções para coleta e uso.
+    ```md
+    | Input                  | Tipo     | Origem         | Instrução de Coleta                             |
+    |------------------------|----------|----------------|-------------------------------------------------|
+    | estilo                 | arquivo  | externo usuário| Solicitar .md com guia de tom e voz da marca   |
+    | produtos               | arquivo  | externo usuário| Solicitar .md com portfólio de produtos         |
+    | marca                  | string   | externo usuário| Informar o domínio do site da marca             |
+    | guia_ferramentas       | url      | externo web    | Acessar https://docs.crewai.com/how-to/create-custom-tools |
+    | conceito de agents     | url      | externo web    | https://docs.crewai.com/concepts/agents        |
+    ```
+  agent: especialista_inputs
+
+validar_inputs:
+  description: >
+    Conferir se todos os inputs identificados na etapa anterior como necessários para a {crew} 
+    foram providos. Em caso de ausência, notificar o usuário ou marcar como pendência para
+    coleta futura. Validar os formatos e a completude com base em {input_humano}, {como_fazer},
+    {memoria}, {planejamento}, {conhecimento}, {treinamento}, {testes}, {colaboracao},
+    {eventos}, {documentacao}, {conceitos}, {comunidade}, além de consultar soluções e
+    práticasdisponíveis em {bibliotecas}, {github} e {stack_overflow}.
+  expected_output: >
+    Checklist validado de inputs obrigatórios com status (presente / ausente),
+    anotações sobre formato, consistência e recomendações de ajustes quando necessário.
+  agent: validador_inputs
+
+ler_arquivos_usuario:
+  description: >
+    Carregar e validar arquivos externos fornecidos pelo usuário (.md, .csv, .txt),
+    verificando se os formatos estão adequados e se o conteúdo pode ser corretamente
+    utilizado pelas tasks e agents da {crew}. Basear-se em {input_humano}, {como_fazer}, {memoria},
+    {planejamento}, {conhecimento}, {treinamento}, {testes}, {colaboracao}, {eventos},
+    {documentacao}, {conceitos}, {comunidade}, {bibliotecas}, {github}, {stack_overflow}
+    para identificar padrões de entrada comuns, boas práticas de formatação e tratamento de exceções.
+  expected_output: >
+    Estrutura de dados com os textos extraídos, padronizados e prontos para uso
+    interno, com anotações sobre possíveis inconsistências ou ausência de conteúdo.
+  agent: especialista_inputs
+
+coletar_briefing:
+  description: >
+    Reunir e estruturar as informações essenciais ao projeto (exemplos: missão, valores, tom de voz,
+    canais de comunicação, benchmarks), criando uma base contextual sólida para todas as decisões da {crew}.
+    Basear-se em {input_humano}, {como_fazer}, {memoria}, {planejamento}, {conhecimento},
+    {treinamento}, {testes}, {colaboracao}, {eventos}, {documentacao}, {conceitos}, {comunidade},
+    complementando com insights de benchmarks externos em {github}, exemplos técnicos em {bibliotecas}
+    e sugestões de estruturação vistas em {stack_overflow}.
+  expected_output: >
+    Documento markdown com resumo da identidade da marca, referências, tom e benchmarks relevantes.
+  agent: analista_processos
+
+modelar_processos:
+  description: >
+    Analisar o objetivo da automação proposto pelo usuário, identificar processos humanos
+    envolvidos e convertê-los em etapas modulares e estruturadas. Utilizar as diretrizes
+    de {processos}, {fluxos}, {colaboracao}, {planejamento} e {conhecimento} para garantir
+    uma visão sistêmica, testável e escalável dos fluxos de trabalho envolvidos na {crew}.
+    Para enriquecer o mapeamento, consultar referências práticas em {github}, bibliotecas
+    especializadas em {bibliotecas} e modelos de decomposição e abstração de tarefas discutidos em {stack_overflow}.
+  expected_output: >
+    Documento estruturado com subprocessos, decisões e interações, contendo agrupamentos lógicos,
+    dependências explícitas, fluxos sugeridos e oportunidades de modularização aplicáveis a agentes.
+  agent: analista_processos
+
+escolher_llm:
+  description: >
+    Considerando os processos identificados anteriormente, avaliar a carga cognitiva e o tipo
+    de raciocínio exigido pela {crew}. Selecionar o modelo de linguagem (LLM) mais adequado com base
+    nos critérios de performance, custo e compatibilidade com {llms}, {guia_llms}, {memoria},
+    {eventos}, {agentes_multimodais} e os dados de entrada definidos. Fundamentar a escolha com base
+    em benchmarks documentados em {bibliotecas}, repositórios públicos de avaliação em {github}
+    e discussões técnicas comparativas encontradas no {stack_overflow}.
+  expected_output: >
+    Nome do LLM selecionado, acompanhado de justificativa técnica, análise comparativa e recomendações
+    para uso com memória, ferramentas, eventos e entradas humanas complexas.
+  agent: selecionador_llm
+
+definir_agentes:
+  description: >
+    Com base nos subprocessos mapeados e no LLM selecionado, criar agentes especializados para a
+    perfeita execução da {crew}, em formato padronizado YAML. Garantir que cada agente seja nomeado em português(BR)
+    e posteriormente ter seu nome convertido para em snake_case com duas palavras. O nome do agente em snake_case
+    deve obrigatoriamente ser em português(BR). Cada agente deve ter [role] clara, [goal] objetivo, e [backstory]
+    expandida com mínimo de 500 caracteres e quebra de linha a cada 180 caracteres. Utilizar referências de {agentes},
+    {guia_agentes}, {customizacao_agentes}, {treinamento}, {colaboracao}, {memoria}, {bibliotecas},
+    {github} e {stack_overflow} para garantir consistência, especialização e sinergia entre os agentes,
+    com base em boas práticas de projetos reais e padrões documentados pela comunidade.
+    IMPORTANTE: evitar termos e nomes em outra língua que não o português.
+  expected_output: >
+    Arquivo agents.yaml formatado com nomes padronizados, seções completas e alinhadas com o padrão
+    de clareza, modularidade e integração com o restante da {crew}.
+    O arquivo deve ter a seguinte formatação:
+      ```yaml
+      agente:
+        role: >
+          [role aqui]
+        goal: >
+          [goal aqui]
+        backstory: >
+          [backstory aqui]
+      ```
+  agent: definidor_agentes
+
+revisar_agentes:
+  description: >
+    Revisar a estrutura criada para os agentes da {crew}. Verificar aderência aos
+    princípios de {conceitos}, {documentacao}, {memoria}, {testes}, {planejamento}, eventos,
+    {agentes_multimodais}, e complementar a revisão com padrões observados em {github},
+    estratégias bem-sucedidas disponíveis em {bibliotecas}, e insights da comunidade documentados em {stack_overflow}.
+    IMPORTANTE: é terminantemente proibida qualquer alteração no nome snake_case de agentes ou tarefas.
+  expected_output: >
+    Versão enriquecida e validada do arquivo agents.yaml com ajustes estruturais,
+    semânticos e estratégicos aplicados.
+    O arquivo deve ter a seguinte formatação:
+    ```yaml
+    agente:
+      role: >
+        [role aqui]
+      goal: >
+        [goal aqui]
+      backstory: >
+        [backstory aqui]
+    ```
+  agent: definidor_agentes
+
+criar_tarefas:
+  description: >
+    Traduzir os processos da {crew} em tarefas claras, com objetivos bem definidos, ordens lógicas
+    de execução e resultados esperados. Garantir que cada agente seja nomeado em português(BR)
+    e posteriormente ter seu nome convertido para em snake_case com duas palavras. O nome do agente em snake_case
+    deve obrigatoriamente ser em português(BR). Devem ser seguidos também os padrões para os campos
+    description, expected_output e agent, e que utilize quebra de linha a cada 180 caracteres para
+    legibilidade no VS Code. Basear-se em {tasks}, {tarefas_condicionais}, {conhecimento}, {testes},
+    {planejamento}, {bibliotecas}, {github} e {stack_overflow}, explorando exemplos de workflows e
+    estruturas bem-sucedidas na comunidade.
+    IMPORTANTE: evitar termos e nomes em outra língua que não o português.
+  expected_output: >
+    Arquivo tasks.yaml estruturado conforme padrão com nome em snake_case, campos completos e organizados,
+    descrições claras e vinculação coerente aos agentes definidos anteriormente.
+    IMPORTANTE:O agent deve ser escolhido dentre os agents criados na tarefa anterior, e apenas o seu nome
+    em snake_case deve constar no campo agent.
+    O arquivo deve ter a seguinte formatação:
+      ```yaml
+      nome_tarefa:
+        description: >
+          [description aqui]
+        expected_output: >
+          [expected_output aqui]
+        agent: >
+          [agent aqui]
+      ```
+  agent: criador_tarefas
+
+revisar_tarefas:
+  description: >
+    Revisar a estrutura criada para as tarefas designadas à {crew}. Verificar aderência aos
+    princípios de {conceitos}, {documentacao}, {memoria}, {testes}, {planejamento}, {eventos},
+    {agentes_multimodais}, utilizando como base também boas práticas extraídas de {bibliotecas},
+    estruturas públicas em {github} e orientações de clareza e padrão debatidas em {stack_overflow}.
+    IMPORTANTE: é terminantemente proibida qualquer alteração no nome snake_case de agentes ou tarefas.
+  expected_output: >
+    Versão enriquecida e validada dos arquivos agents.yaml e tasks.yaml com ajustes estruturais,
+    semânticos e estratégicos aplicados.
+    O arquivo deve ter a seguinte formatação:
+      ```yaml
+      nome_tarefa:
+        description: >
+          [description aqui]
+        expected_output: >
+          [expected_output aqui]
+        agent: >
+          [agent aqui]
+      ```
+  agent: criador_tarefas
+
+estruturar_dados:
+  description: >
+    A partir das tarefas definidas, identificar os dados necessários à execução da {crew}.
+    Propor formatos ideais (dicionários, CSV, JSON) e estruturar arquivos conforme as diretrizes de
+    {ferramentas}, {guia_ferramentas}, {tool_output}, {memoria} e {input_humano}, assegurando compatibilidade
+    e legibilidade. Para fundamentar as escolhas, consultar estruturas adotadas em {bibliotecas},
+    modelos organizacionais extraídos de {github}, e práticas comuns de manipulação de dados
+    discutidas em {stack_overflow}.
+  expected_output: >
+    Estrutura de dados organizada e validada, contendo arquivos nomeados, colunas padronizadas,
+    formatos consistentes e instruções de uso detalhadas para os agentes.
+    Cada dado necessário para a execução da crew deve ser acompanhado de uma explicação lógica para
+    facilitar o entendimento e a preparação pelo usuário.
+  agent: separador_dados
+
+mapear_bibliotecas:
+  description: >
+    Com base nas ferramentas selecionadas e nos agentes definidos, identificar todas as bibliotecas Python
+    necessárias para a execução da crew. Utilizar {bibliotecas}, {github} e {stack_overflow}
+    para confirmar compatibilidade, utilidade e confiabilidade de cada biblioteca incluída.
+  expected_output: >
+    Arquivo requirements.txt contendo as bibliotecas essenciais para a execução da {crew},
+    com nome, versão (se aplicável), propósito e links de referência técnica para cada item.
+    O arquivo deve ter a seguinte formatação:
+      ```txt
+      nome-da-biblioteca==versão
+      ```
+    Abaixo, um exemplo para facilitar o entendimento:
+      ```txt
+      pandas==2.2.1
+      openai==1.14.2
+      crewai==0.20.5
+      pyyaml>=6.0
+      ```
+  agent: especialista_ferramentas
+
+revisar_bibliotecas:
+  description: >
+    Revisar a lista de bibliotecas sugeridas para a execução da {crew}. Verificar se todas são realmente
+    necessárias, seguras, compatíveis e bem documentadas. Basear-se em {bibliotecas}, {github}
+    e {stack_overflow} para confirmar a relevância, qualidade e comunidade de suporte das dependências.
+  expected_output: >
+    Lista refinada e justificada das bibliotecas incluídas no arquivo requirements.txt, com comentários
+    explicando o uso de cada biblioteca, sugestões de substituição quando aplicável,
+    e remoção de dependências desnecessárias.
+    O arquivo deve ter a seguinte formatação:
+  agent: especialista_ferramentas
+
+sugerir_ferramentas:
+  description: >
+    Avaliar as ferramentas nativas da CrewAI descritas em {ferramentas}, {guia_ferramentas}, {tool_output},
+    mapeando suas funcionalidades em relação às necessidades da {crew}. Identificar limitações e sugerir
+    criações personalizadas apenas quando necessário. Apoiar-se em referências práticas em {bibliotecas},
+    {github} e {stack_overflow} para evitar redundâncias e promover reuso inteligente.
+  expected_output: >
+    Documento com ferramentas selecionadas, justificativa técnica de uso, funcionalidades abordadas,
+    e lacunas identificadas que demandem a criação de ferramentas customizadas, incluindo sugestões de design.
+  agent: especialista_ferramentas
+
+revisar_sugestao:
+  description: >
+    Realizar primeira rodada de refinamento sobre as ferramentas escolhidas. Verificar
+    aderência aos princípios de {conceitos}, {documentacao}, {ferramentas},
+    {guia_ferramentas}, {tool_output}, validando se são apropriadas para o projeto da {crew}
+    e se o design técnico proposto atende aos critérios de clareza, modularidade e reutilização.
+    Apoiar-se em exemplos de uso encontrados em {github}, pacotes similares em {bibliotecas}
+    e orientações validadas pela comunidade em {stack_overflow}.
+  expected_output: >
+    Versão enriquecida e validada do documento com ferramentas selecionadas e sugestões de customização,
+    incluindo ajustes conceituais, técnicos e estruturais para garantir sua utilidade, clareza
+    e alinhamento com os objetivos da {crew}.
+  agent: especialista_ferramentas
+
+criar_ferramentas:
+  description: >
+    Criar ferramentas personalizadas para cobrir funcionalidades necessárias para a execução satisfatória
+    da {crew} que não poderão ser atendidas pelas opções nativas selecionadas na etapa anterior.
+    Utilizar os padrões técnicos descritos em {guia_ferramentas}, {documentacao}, {tool_output}, {eventos},
+    {testes}, {memoria} e {input_humano}, garantindo eficiência, clareza, modularidade e reusabilidade.
+    Apoiar-se também em soluções similares documentadas em {bibliotecas}, repositórios de referência no {github},
+    e estratégias replicáveis encontradas no {stack_overflow}.
+  expected_output: >
+    Arquivo custom_tools.py contendo código funcional, parametrizável e documentado
+    da ferramenta, acompanhado de exemplos de uso, dependências declaradas e instruções de integração.
+    Incluir comentários e estrutura compatíveis com ferramentas de testes, controle de eventos e padrões
+    técnicos amplamente utilizados e validados pela comunidade. Abaixo, uma descrição de como funciona um
+    arquivo do tipo custom_tools.py para CrewAI:
+
+    O arquivo define **ferramentas personalizadas reutilizáveis** por agentes de uma crew. Cada ferramenta é uma classe Python que herda de `BaseTool` e implementa o método `_run(self, query: str)`.
+    ---
+
+    ### 🔧 Estrutura Padrão Esperada
+
+    1. **Importações Necessárias**
+      - `requests`: para chamadas HTTP.
+      - `Any`: tipo genérico para compatibilidade com retornos variados.
+      - `BaseTool`: classe base do sistema CrewAI para criação de ferramentas.
+
+    2. **Definição das Ferramentas**
+      - Cada classe representa uma ferramenta.
+      - Possui os atributos `name` e `description`.
+      - O método `_run` implementa a lógica principal, sempre recebendo um `query: str`.
+
+    3. **Exemplo: `CepLookupTool`**
+      - Consulta CEP via API pública (ViaCEP).
+      - Retorna o endereço formatado ou mensagem de erro.
+
+    4. **Exemplo: `MathTool`**
+      - Calcula expressões matemáticas simples.
+      - Usa `eval` de forma segura (`__builtins__` esvaziado).
+
+    5. **Função `get_custom_tools()`**
+      - Retorna uma lista com instâncias das ferramentas disponíveis.
+      - Usada no `crew.py` para registrar quais ferramentas os agentes podem utilizar.
+
+    ---
+
+    ### ✅ Boas Práticas
+
+    - **Comentário explicativo** acima de cada classe e bloco ajuda no entendimento do propósito.
+    - A **descrição (`description`)** deve ser clara e descritiva para facilitar o uso por LLMs.
+    - O código deve ser **formatado para legibilidade**, com quebras de linha de até 100 caracteres.
+
+    ---
+
+    ### ⚠️ Requisitos de Segurança
+
+    - **Evitar `eval`** com contexto inseguro.
+    - **Tratar exceções** em chamadas HTTP ou lógicas sensíveis.
+    - Garantir que o **nome e a descrição da ferramenta orientem corretamente** o agente sobre o uso adequado.
+    ---
+    
+    Com base na explicação acima, o agent deve gerar um arquivo, que deve seguir o seguinte formato:
+    
+    ```py
+    import requests
+    from typing import Any
+    from crewai_tools import BaseTool
+
+
+    class CepLookupTool(BaseTool):
+        name = "consulta_cep"
+        description = (
+            "Recebe um CEP no formato 00000000 e retorna o endereço completo "
+            "usando a API pública ViaCEP."
+        )
+
+        def _run(self, query: str) -> str:
+            try:
+                response = requests.get(f"https://viacep.com.br/ws/<<query>>/json/")
+                response.raise_for_status()
+                data = response.json()
+                if "erro" in data:
+                    return "CEP não encontrado."
+                return (
+                    f"<<data['logradouro']>>, <<data['bairro']>>, "
+                    f"<<data['localidade']>>-<<data['uf']>>"
+                )
+            except Exception as e:
+                return f"Erro ao consultar CEP: <<e>>"
+
+
+    class MathTool(BaseTool):
+        name = "calculadora"
+        description = (
+            "Resolve expressões matemáticas simples, como '2 + 3 * 4'. "
+            "Retorna o resultado como string."
+        )
+
+        def _run(self, query: str) -> str:
+            try:
+                resultado = eval(query, {"__builtins__": <<>>})
+                return str(resultado)
+            except Exception as e:
+                return f"Erro de cálculo: <<e>>"
+
+
+    def get_custom_tools():
+        return [
+            CepLookupTool(),
+            MathTool(),
+        ]
+
+    ```
+    
+  agent: especialista_ferramentas
+
+revisar_ferramentas:
+  description: >
+    Revisar a estrutura criada para as ferramentas escolhidas e as criadas para a {crew}.
+    Verificar aderência aos princípios de {conceitos}, {documentacao}, {ferramentas},
+    {guia_ferramentas}, {tool_output}, além de validar compatibilidade com {eventos}, {testes},
+    e {memoria}. Utilizar como referência práticas técnicas reconhecidas em {github},
+    estrutura de pacotes em {bibliotecas}, e abordagens recomendadas no {stack_overflow}.
+  expected_output: >
+    Versão enriquecida e validada do documento com ferramentas selecionadas, justificativa técnica
+    de uso, funcionalidades abordadas, pontos de melhoria e documentação compatível com reuso técnico.
+    Incluir observações sobre clareza do código, exemplos de aplicação e padronização da interface.
+  agent: especialista_ferramentas
+
+integrar_ferramentas:
+  description: >
+    Integrar as ferramentas escolhidas e criadas nas etapas anteriores, disponíveis no fluxo de execução,
+    conectando-as aos agentes e tasks de maneira fluida e eficiente para o funcionamento correto da {crew}.
+    Aplicar diretrizes de {guia_ferramentas}, {fluxos}, {eventos}, {tool_output}, {planejamento},
+    e validar padrões de integração utilizando exemplos extraídos de {github}, componentes similares
+    encontrados em {bibliotecas}, e soluções técnicas compartilhadas em {stack_overflow}.
+  expected_output: >
+    Trecho de código atualizado com chamadas às ferramentas, funções associadas aos agentes,
+    parâmetros corretamente configurados, retorno validado e comentários explicativos.
+    Sempre que possível, seguir padrões reconhecidos em integrações disponíveis em {github} e
+    documentações populares, garantindo clareza, reutilização e compatibilidade com os modelos
+    de execução da {crew}.
+  agent: integrador_ferramentas
+
+modularizar_codigo:
+  description: >
+    Estruturar a arquitetura da {crew} com foco em clareza, escalabilidade e reuso, segmentando
+    logicamente os arquivos (agents.py, crew.py, main.py, dados). Seguir padrões sugeridos por
+    {como_fazer}, {documentacao}, {memoria}, {treinamento}, {planejamento}, complementando com
+    práticas consolidadas observadas em repositórios de código como {github}, bibliotecas bem
+    organizadas em {bibliotecas}, e soluções estruturais compartilhadas no {stack_overflow}.
+  expected_output: >
+    Estrutura de diretórios e arquivos padronizada, com scripts bem nomeados, funções separadas,
+    dados organizados, documentação mínima incluída, exemplos comentados, e organização compatível
+    com ambientes colaborativos e práticas de versionamento. Sempre que possível, adotar convenções
+    encontradas em projetos públicos exemplares hospedados no {github}.
+  agent: estrategista_codigo
+
+montar_crew:
+  description: >
+    Criar o script crew.py, conectando agentes, tarefas, ferramentas e dados no fluxo lógico apropriado
+    (sequencial, hierárquico, condicional) para o funcionamento correto da {crew}. Utilizar referências
+    de {crews}, {guia_crews}, {input_humano}, {guia_fluxos}, {processos_sequenciais}, {processos_hierarquicos},
+    {planejamento}, {documentacao}, além de exemplos robustos de arquitetura observados em {github},
+    {bibliotecas} e recomendações do {stack_overflow}.
+  expected_output: >
+    Arquivo crew.py funcional, legível e validado, com:
+    - ordem correta de execução das tasks,
+    - agentes conectados às ferramentas definidas,
+    - imports adequados e instâncias corretamente posicionadas,
+    - parâmetros integrados e settings configurados,
+    - pronto para execução local ou em ambientes cloud.
+    Estrutura esperada (baseada em boas práticas):
+      ```python
+      from crewai import Agent, Crew, Process, Task
+      from crewai.project import CrewBase, agent, crew, task
+
+      @CrewBase
+      class NomeDaCrew():
+          \"\"\"Descrição da crew aqui\"\"\"
+
+          agents_config = 'config/agents.yaml'
+          tasks_config = 'config/tasks.yaml'
+
+          @agent
+          def nome_agente(self) -> Agent:
+              return Agent(config=self.agents_config['nome_agente'], verbose=True)
+
+          @task
+          def nome_tarefa(self) -> Task:
+              return Task(config=self.tasks_config['nome_tarefa'])
+
+          @crew
+          def crew(self) -> Crew:
+              return Crew(
+                  agents=self.agents,
+                  tasks=self.tasks,
+                  process=Process.sequential,
+                  verbose=True
+              )
+      ```
+    Ainda, quando a {crew} exigir planejamento formal, a estrutura do método @crew deve conter:
+      ```python
+      @crew
+      def crew(self) -> Crew:
+          return Crew(
+              agents=self.agents,
+              tasks=self.tasks,
+              process=Process.sequential,
+              planning=True,
+              planning_llm='gpt-4o',
+              verbose=True
+          )
+      ```
+    Caso o planejamento não seja necessário, utilizar o formato padrão.
+  agent: orquestrador_crew
+
+revisar_crew:
+  description: >
+    Analisar o script crew.py validando sua estrutura, lógica de execução, conexão entre agentes,
+    tarefas e ferramentas, aderência ao fluxo definido (sequencial, hierárquico ou híbrido),
+    e uso correto dos parâmetros. Basear-se em {crews}, {guia_crews}, {guia_fluxos},
+    {testes}, {planejamento}, {github}, {bibliotecas} e {stack_overflow} para garantir que a estruturação
+    esteja correta para o funcionamento perfeito da {crew}.
+  expected_output: >
+    Versão revisada do arquivo crew.py, com comentários técnicos, sugestões de ajustes e
+    reestruturações de blocos, mantendo clareza e funcionalidade.
+  agent: verificador_qualidade
+
+montar_main:
+  description: >
+    Criar a estrutura base do arquivo main.py, centralizando a execução da {crew}.
+    Incluir carregamento de variáveis, leitura de arquivos externos, definição do dicionário de inputs,
+    chamada da crew e estrutura mínima de documentação para facilitar reuso.
+    Basear-se em exemplos de {como_fazer}, {documentacao}, {planejamento}, complementando com
+    boas práticas de organização e execução encontradas em {github}, pacotes técnicos de {bibliotecas}
+    e padrões amplamente discutidos no {stack_overflow}.
+  expected_output: >
+    Arquivo main.py estruturado com:
+    - imports principais (dotenv, pathlib, sys, etc),
+    - estrutura padrão com funções run, train, replay, test,
+    - docstrings orientativas e comentários explicativos,
+    - estrutura mínima para futura inclusão dos inputs e integração com a crew.
+    Estrutura esperada, com nomes de arquivos e variáveis fictícias.
+      ```python
+      from crew import NomeDaCrew
+      from dotenv import load_dotenv
+      import sys
+
+      def run():
+          inputs = {}  # será preenchido na task integrar_inputs
+          NomeDaCrew().crew().kickoff(inputs=inputs)
+
+      def train():
+          NomeDaCrew().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs={})
+
+      def replay():
+          NomeDaCrew().crew().replay(task_id=sys.argv[1])
+
+      def test():
+          NomeDaCrew().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs={})
+
+      if __name__ == '__main__':
+          load_dotenv()
+          run()
+      ```
+  agent: estrategista_codigo
+
+integrar_inputs:
+  description: >
+    Integrar os inputs externos identificados (strings, arquivos .md, listas, URLs) no código principal
+    da {crew}, organizando as variáveis de forma clara e reutilizável no arquivo main.py.
+    Aplicar boas práticas de leitura, formatação e estruturação de variáveis, com base em
+    {input_humano}, {como_fazer}, {memoria}, {planejamento}, {documentacao}, e também em
+    exemplos encontrados em {github}, padrões observados em {bibliotecas}, e soluções debatidas
+    na comunidade do {stack_overflow}.
+  expected_output: >
+    Código atualizado do arquivo main.py com todas as variáveis de input corretamente integradas:
+    - leitura de arquivos externos (ex: estilo.md, produtos.md),
+    - variáveis tipo string (ex: URLs, textos temáticos, listas),
+    - dicionário `inputs` preenchido corretamente,
+    - uso de `datetime` e comentários explicativos,
+    - estrutura compatível com execução local e futura automação.
+    Estrutura esperada:
+      ```python
+      base_dir = Path(__file__).resolve().parent
+      file_estilo = base_dir / 'estilo.md'
+      file_produtos = base_dir / 'produtos.md'
+
+      with open(file_estilo, 'r', encoding='utf-8') as file:
+          estilo = file.read()
+
+      with open(file_produtos, 'r', encoding='utf-8') as file:
+          produtos = file.read()
+
+      marca = 'https://gebeauty.com.br'
+      tema = 'A importância de produtos de fórmula limpa no cuidado com cabelos quimicamente tratados'
+      produtos_relacionados = 'Shampoo sem sulfato, máscara condicionadora, booster fortificante'
+      blog = 'https://gebeauty.com.br/blogs/gebeauty'
+      benchmarks = 'Rhode, Glossier, Crown Affair'
+
+      inputs = {
+          'estilo': estilo,
+          'marca': marca,
+          'tema': tema,
+          'produtos': produtos,
+          'produtos_relacionados': produtos_relacionados,
+          'blog': blog,
+          'benchmarks': benchmarks,
+          'current_year': str(datetime.now().year)
+      }
+      ```
+    As inputs e variáveis acima (estilo, produtos, marca, tema, produtos_relacionados, blog,
+    benchmarks, current_year) são meros exemplos. Novas inputs e variáveis devem ser determinadas
+    de forma lógica e compreensível para o usuário.
+  agent: especialista_inputs
+
+revisar_main:
+  description: >
+    Verificar a estrutura do arquivo main.py após integração dos inputs. Validar se as variáveis
+    estão corretas, os dados são lidos adequadamente, a {crew} é chamada corretamente, e o código
+    segue organização clara. Utilizar como referência {como_fazer}, {documentacao}, {testes},
+    {github}, {bibliotecas}, {stack_overflow}.
+  expected_output: >
+    Versão revisada do arquivo main.py com anotações de melhoria, correções de possíveis inconsistências
+    e preparação para refinamento final. A estrutura esperada deve seguir o exemplo abaixo:
+      ```python
+      from crew import NomeDaCrew
+      from dotenv import load_dotenv
+      from pathlib import Path
+      import warnings, sys
+      from datetime import datetime
+
+      warnings.filterwarnings("ignore")
+
+      base_dir = Path(__file__).resolve().parent
+      file_estilo = base_dir / 'estilo.md'
+      file_produtos = base_dir / 'produtos.md'
+
+      with open(file_estilo, 'r', encoding='utf-8') as file:
+          estilo = file.read()
+
+      with open(file_produtos, 'r', encoding='utf-8') as file:
+          produtos = file.read()
+
+      marca = 'https://gebeauty.com.br'
+      tema = 'A importância de produtos de fórmula limpa no cuidado com cabelos quimicamente tratados'
+      produtos_relacionados = 'Shampoo sem sulfato, máscara condicionadora, booster fortificante'
+      blog = 'https://gebeauty.com.br/blogs/gebeauty'
+      benchmarks = 'Rhode, Glossier, Crown Affair'
+
+      def run():
+          inputs = {
+              'estilo': estilo,
+              'marca': marca,
+              'tema': tema,
+              'produtos': produtos,
+              'produtos_relacionados': produtos_relacionados,
+              'blog': blog,
+              'benchmarks': benchmarks,
+              'current_year': str(datetime.now().year)
+          }
+          NomeDaCrew().crew().kickoff(inputs=inputs)
+
+      def train():
+          NomeDaCrew().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
+
+      def replay():
+          NomeDaCrew().crew().replay(task_id=sys.argv[1])
+
+      def test():
+          NomeDaCrew().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
+
+      if __name__ == '__main__':
+          load_dotenv()
+          run()
+      ```
+  agent: verificador_qualidade
+
+auditar_conceitos:
+  description: >
+    Realizar auditoria conceitual e metodológica da {crew} finalizada. Avaliar alinhamento com os
+    princípios de {conceitos}, {documentacao}, {comunidade}, {memoria}, {agentes_multimodais},
+    {ferramentas} e {planejamento}, assegurando sofisticação e excelência técnica.
+    Complementar a auditoria com comparações a modelos exemplares encontrados em {github},
+    bibliotecas técnicas de referência em {bibliotecas}, e abordagens sugeridas por especialistas
+    e desenvolvedores no {stack_overflow}.
+  expected_output: >
+    Diagnóstico completo de aderência conceitual, com recomendações finais para fortalecimento
+    técnico, refinamento arquitetural e otimização de práticas utilizadas. O relatório deve
+    apontar desvios em relação às boas práticas da CrewAI e sugerir melhorias baseadas em
+    evidências extraídas de implementações reais do {github}, padrões formais encontrados em {bibliotecas},
+    e estratégias validadas na comunidade técnica do {stack_overflow}.
+  agent: especialista_crewai

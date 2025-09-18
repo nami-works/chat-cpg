@@ -1,0 +1,13 @@
+```plaintext
+watchdog==3.0.0
+docling==0.4.2
+pdfplumber==0.7.4
+unstructured==0.5.1
+langchain==0.0.199
+faiss-cpu==1.7.4
+markdown==3.4.1
+git+https://github.com/openai/whisper.git
+# Dependências externas do sistema:
+# - ffmpeg (necessário para whisper local)
+# - git (necessário para instalação via git+https)
+```

@@ -1,0 +1,55 @@
+### Arquivo: exemplo_input.md
+
+```markdown
+# Exemplo de Input para Cálculo de Política Comercial
+
+Este documento fornece orientações sobre os dados necessários para a automação do cálculo da política comercial de vendas. Cada campo listado inclui o nome, tipo esperado, um exemplo ilustrativo e observações para garantir clareza e precisão no fornecimento das informações.
+
+## Campos Requeridos
+
+| Nome do Campo                         | Tipo Esperado | Exemplo                         | Observações                                                                                      |
+|---------------------------------------|---------------|---------------------------------|-------------------------------------------------------------------------------------------------|
+| `desconto`                            | float         | 15.0                            | Percentual de desconto aplicado sobre a receita bruta. Deve ser um número entre 0 e 100.       |
+| `frete_vendas`                       | float         | 0.1                             | Custo do frete estimado como percentual da receita. Exemplo: 0.1 equivale a 10%.               |
+| `influencia`                         | float         | 0.05                            | Percentual que indica a influência de fatores externos sobre as vendas (5% neste exemplo).    |
+| `novas_linhas_despesa`               | List[str]     | ["3% de comissão de marketplace", "5% de marketing"] | Despesas que precisam ser classificadas e que podem ser adicionadas dinamicamente.             |
+| `chave_api_openai`                   | string        | "sua-chave-aqui"               | Chave de acesso à API OpenAI para classificação automática. Deve ser mantida em sigilo.        |
+
+## Observações Adicionais
+
+- **Formato dos Dados**: Todos os números devem ser fornecidos em formato decimal, e as listas devem ser separadas por vírgulas.
+- **Documentação da Chave da API**: A chave da API deve ser armazenada em um arquivo `.env` com a variável `OPENAI_API_KEY`.
+- **Validação dos Inputs**: É recomendável implementar funções de validação para verificar se os dados fornecidos estão no formato correto antes da execução dos cálculos.
+
+## Exemplo de Implementação em Python
+
+Aqui está um exemplo de como carregar esses dados em um programa Python:
+
+```python
+import os
+import json
+
+# Carregar a chave da API do ambiente
+chave_api_openai = os.getenv('OPENAI_API_KEY')
+
+# Exemplo de dicionário de premissas
+premissas = {
+    "desconto": 15.0,
+    "frete_vendas": 0.1,
+    "influencia": 0.05,
+    "novas_linhas_despesa": ["3% de comissão de marketplace", "5% de marketing"]
+}
+
+# Exibir os dados
+print(f"Desconto: {premissas['desconto']}%")
+print(f"Frete Vendas: {premissas['frete_vendas']*100}%")
+print(f"Influência: {premissas['influencia']*100}%")
+print(f"Novas Linhas de Despesa: {', '.join(premissas['novas_linhas_despesa'])}")
+```
+
+---
+
+Espero que este documento ajude a facilitar o entendimento sobre os dados que devem ser fornecidos para a execução correta do cálculo da política comercial. Não hesite em perguntar se houver dúvidas sobre os formatos ou valores esperados.
+``` 
+
+Esta estrutura em Markdown traz clareza aos requisitos de input, assegurando que o usuário final compreenda facilmente o que deve ser fornecido, além de prever exemplos práticos e documentar um exemplo de implementação no código.

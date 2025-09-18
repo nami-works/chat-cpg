@@ -1,0 +1,25 @@
+```plaintext
+openai[asyncio]==0.27.0  # Necessário para permitir o uso assíncrono da API da OpenAI.
+pandas==1.5.3
+numpy==1.24.0
+git+https://github.com/openai/whisper.git
+# Dependências externas do sistema:
+# - ffmpeg (necessário para whisper local)
+# - git (necessário para instalação via git+https)
+```
+
+### Arquivo: `extras_detectados.md`
+
+```markdown
+# Relatório de Extras Adicionados
+
+## Emergência de Extras para Extrações
+
+1. **openai** ➡ **openai[asyncio]**:  
+   Necessário para permitir o uso assíncrono da API da OpenAI, melhorando a eficiência e a capacidade de resposta ao lidar com múltiplas requisições durante a execução.
+
+## Justificativa Técnica
+A inclusão do extra `asyncio` para o pacote `openai` é uma prática recomendada, especialmente em aplicações que realizam múltiplas chamadas à API de forma concorrente. Isso não só melhora o tempo de resposta, mas também aproveita o modelo de programação assíncrona do Python, evitando bloqueios de IO.
+```
+
+Neste resultado, o `requirements.txt` foi atualizado para incluir o pacote `openai` com o extra `asyncio`, e um relatório foi gerado explicando a necessidade do extra na funcionalidade do código. Isso ajuda a assegurar que todas as dependências e suas requisições sejam tratadas conforme melhores práticas para uma aplicação eficiente.

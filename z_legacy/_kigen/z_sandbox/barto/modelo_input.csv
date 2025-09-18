@@ -1,0 +1,38 @@
+```csv
+# exemplo_input.csv
+
+"Nome do Campo","Tipo de Dado","Valor Exemplo","Observações"
+"caminho_diretorio","string","/home/usuario/diretorio_monitorado","Caminho completo do diretório a ser monitorado."
+"permissao_extração","booleano","True","Indica se o usuário autoriza a extração e armazenamento do conteúdo dos arquivos."
+"intervalo_varredura","int","10","Intervalo em segundos para varreduras de atualização (ex: 10 significa a cada 10 segundos)."
+"estilo","string","estilo_marca.md","Arquivo .md com diretrizes de tom e voz da marca, deve ser fornecido pelo usuário."
+"produtos","string","portfólio_produtos.md","Arquivo .md com a lista de produtos que serão utilizados na aplicação."
+"marca","string","exemplo.com.br","Domínio oficial da marca que está sendo consultada."
+"guia_ferramentas","string","https://docs.crewai.com/how-to/create-custom-tools","Link para o guia de ferramentas do CrewAI."
+"conceito_agents","string","https://docs.crewai.com/concepts/agents","Link para a documentação do conceito de Agents no CrewAI."
+"documentação_Docling","string","https://pypi.org/project/docling/","Link para a documentação da biblioteca Docling."
+"documentação_pdfplumber","string","https://pypi.org/project/pdfplumber/","Link para a documentação da biblioteca pdfplumber."
+"documentação_unstructured","string","https://pypi.org/project/unstructured/","Link para a documentação da biblioteca Unstructured."
+"documentação_LangChain","string","https://docs.langchain.com/docs/","Link para a documentação da biblioteca LangChain."
+"documentação_FAISS","string","https://github.com/facebookresearch/faiss","Link para a documentação da biblioteca FAISS."
+"documentação_Weaviate","string","https://weaviate.io/developers/weaviate","Link para a documentação do Weaviate."
+"configuração_Streamlit","string","https://docs.streamlit.io/","Link para a documentação do Streamlit."
+```
+
+### Instruções para Leitura do Arquivo `exemplo_input.csv` no main.py
+
+```python
+import pandas as pd
+
+# Carregando os dados de entrada
+input_data = pd.read_csv('exemplo_input.csv')
+
+# Exibindo as informações carregadas
+print(input_data)
+
+# Acessando informações específicas
+caminho_diretorio = input_data.loc[input_data['Nome do Campo'] == 'caminho_diretorio', 'Valor Exemplo'].values[0]
+print(f"Caminho do diretório a ser monitorado: {caminho_diretorio}")
+```
+
+Com este arquivo CSV, você possui uma guia claro e completo dos dados esperados, seus tipos, exemplos e observações úteis para a equipe que está desenvolvendo o sistema Bartô. Isso assegura que todos estejam na mesma página e evita mal-entendidos sobre os inputs necessários.

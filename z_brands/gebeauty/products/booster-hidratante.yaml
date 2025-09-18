@@ -1,0 +1,171 @@
+meta:
+  product_id: "booster-hidratante"
+  display_name: "Booster Hidratante"
+  brand: "GE Beauty"
+  slug: "booster-hidratante"
+  category: "booster"
+  subcategory: "hydrating treatment"
+  version: 1
+  last_update: "2025-08-01"
+  launch_date: null
+  price_range: "R$ 69,00"
+  sizes_available: ["15mL"]
+
+product_description:
+  short: "Hidratação intensa, maciez e brilho sem pesar."
+  detailed: |
+    O Booster Hidratante GE Beauty é um concentrado que restaura a saúde dos fios, melhora a penteabilidade e acalma o couro cabeludo. Especialmente formulado para potencializar hidratação, brilho e maciez, este booster oferece nutrição intensiva sem pesar nos fios. Ideal para cabelos secos, porosos, finos, quimicamente tratados ou que precisam de hidratação extra, proporciona maciez imediata e brilho natural duradouro.
+  key_differentiators:
+    - "Hidratação intensa sem pesar nos fios."
+    - "Melhora a penteabilidade e acalma o couro cabeludo."
+    - "Concentrado que potencializa qualquer tratamento hidratante."
+  positioning: "Para cabelos intensamente hidratados, macios e brilhantes."
+  target_customer: "Pessoas com cabelos secos, porosos, finos ou quimicamente tratados que precisam de hidratação intensiva."
+
+benefits:
+  immediate_results:
+    - "Cabelos visivelmente mais macios e hidratados."
+    - "Melhora imediata da penteabilidade."
+  short_term:
+    - "Brilho natural e fios mais saudáveis."
+  long_term:
+    - "Restauração progressiva da saúde capilar."
+  functional:
+    - "Potencializa hidratação, brilho e maciez."
+    - "Acalma e equilibra o couro cabeludo."
+  emotional:
+    - "Confiança em cabelos sempre hidratados e saudáveis."
+  aesthetic:
+    - "Cabelos com brilho natural e toque sedoso."
+  protective:
+    - "Protege contra ressecamento e danos."
+
+actives:
+  - id: "hydrating_complex"
+    name: "Complexo Hidratante"
+    concentration: null
+    function: "Hidratação profunda e restauração da saúde capilar."
+    mechanism: "Penetra na fibra capilar fornecendo hidratação duradoura."
+    benefits:
+      - "Restaura maciez e elasticidade."
+      - "Proporciona brilho natural intenso."
+    source: "Vegetal"
+    certifications: ["Deep Hydration"]
+
+formulation:
+  texture: "Concentrated serum"
+  viscosity: "Light"
+  absorption: "Deep penetrating"
+  finish: "Silky and hydrated"
+  scent_profile: "Fresh and clean"
+  color: "Clear"
+  ph_level: null
+  full_inci: null
+
+hair_compatibility:
+  hair_types: ["Fine", "Thick", "Dry", "Porous"]
+  textures: ["Straight", "Wavy", "Curly", "Coily"]
+  conditions: ["Dry", "Damaged", "Chemically Treated", "Porous", "Brittle"]
+  porosity_levels: ["Medium", "High"]
+  scalp_types: ["Dry", "Sensitive", "Normal"]
+  excluded_types: []
+
+application:
+  frequency: "2-3 times per week or as needed"
+  method: |
+    Misture 3-5 gotas com sua máscara, leave-in ou creme de pentear antes da aplicação. Para tratamento intensivo, aplique algumas gotas diretamente nos fios úmidos, concentrando nos comprimentos e pontas. Não enxágue quando usado como leave-in.
+  amount_guide: "3-5 drops mixed with hydrating products"
+  timing: "During treatment or as leave-in booster"
+  layering: ["Mix with masks, leave-in conditioners, or styling creams"]
+  styling_compatibility: ["Compatible with all hydrating and styling products"]
+  removal_method: "Rinse when mixed with wash-out treatments, leave-in when used as booster"
+
+performance_metrics:
+  clinical_results: []
+  user_study_results: ["5.0/5 estrelas baseado em 1 avaliação"]
+  before_after_claims: ["Cabelos visivelmente mais hidratados e com brilho natural."]
+  duration_of_effects: "Long-lasting hydration"
+  improvement_timeline: "Immediate softness with cumulative hydration benefits"
+
+technical_specs:
+  heat_protection_temp: null
+  humidity_resistance: "Maintains hydration in various humidity levels"
+  water_resistance: null
+  uv_protection: null
+  hold_strength: null
+  shine_level: "High natural shine"
+
+usage_scenarios:
+  daily_routine: |
+    Use 2-3 vezes por semana para manter hidratação constante.
+  special_occasions: |
+    Aplique antes de eventos para máximo brilho e maciez.
+  professional_use: |
+    Ideal para uso profissional em tratamentos hidratantes intensivos.
+  troubleshooting:
+    - "Para cabelos muito finos, use apenas 2-3 gotas nas pontas."
+    - "Para hidratação extra, deixe agir por mais tempo antes de enxaguar."
+  seasonal_tips:
+    - "Use mais frequentemente no inverno quando o ar está mais seco."
+
+safety_information:
+  contraindications: []
+  precautions: ["Evite contato com os olhos.", "Mantenha fora do alcance de crianças."]
+  storage_requirements: "Armazene em local fresco e seco."
+  shelf_life: "12 meses após abertura"
+  pregnancy_safe: true
+  child_safe: true
+
+regulatory_claims:
+  dermatologically_tested: null
+  hypoallergenic: null
+  non_comedogenic: null
+  cruelty_free: true
+  vegan: true
+  sulfate_free: true
+  paraben_free: true
+  silicone_free: true
+  artificial_fragrance_free: true
+
+certifications:
+  organic: []
+  sustainable: []
+  professional: []
+  awards: []
+
+marketing_copy:
+  hero_headline: "Hidratação Intensa e Brilho Natural"
+  subheadlines:
+    - "Concentrado que Restaura a Saúde dos Fios"
+    - "Maciez e Penteabilidade Sem Pesar"
+  elevator_pitch: "O Booster Hidratante GE Beauty oferece hidratação profunda, maciez sedosa e brilho natural para cabelos visivelmente mais saudáveis."
+  key_messages:
+    - "Hidrata profundamente sem pesar, ideal para cabelos finos."
+    - "Potencializa qualquer tratamento hidratante."
+  call_to_action:
+    - "Hidrate profundamente com o Booster Hidratante GE Beauty."
+  social_proof:
+    - "5.0/5 estrelas - 'Para meu cabelo cacheado é 10!' - Lígia"
+  comparison_points:
+    - "Mais concentrado que leave-ins convencionais, mais leve que óleos."
+
+content_hooks:
+  problem_statements:
+    - "Cabelos secos e porosos precisam de hidratação intensiva sem peso."
+  solution_narratives:
+    - "O Booster Hidratante oferece nutrição profunda em formato concentrado."
+  transformation_stories:
+    - "'Boosters maravilhosos! Para meu cabelo cacheado é 10!' - Lígia Baseggio"
+  expert_insights:
+    - "Formulado para restaurar a saúde capilar com hidratação duradoura."
+  ingredient_spotlights:
+    - "Complexo hidratante: tecnologia avançada para nutrição profunda."
+  routine_integration:
+    - "Misture com seus produtos favoritos para hidratação potencializada."
+
+disclaimers:
+  results_variability:
+    - "Os resultados podem variar de acordo com o tipo e condição do cabelo."
+  usage_limitations:
+    - "Para melhores resultados, use consistentemente como parte da rotina de hidratação."
+  regulatory_required: []

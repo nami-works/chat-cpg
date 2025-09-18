@@ -1,0 +1,23 @@
+[project]
+name = "_kigen"
+version = "0.1.0"
+description = "_kigen using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.119.0,<1.0.0"
+]
+
+[project.scripts]
+_kigen = "_kigen.main:run"
+run_crew = "_kigen.main:run"
+train = "_kigen.main:train"
+replay = "_kigen.main:replay"
+test = "_kigen.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

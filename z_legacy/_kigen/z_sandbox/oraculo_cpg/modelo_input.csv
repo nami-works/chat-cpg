@@ -1,0 +1,44 @@
+```csv
+# Exemplo de Input para Oráculo CPG
+
+"Input","Tipo","Exemplo de Valor","Observações"
+"diretório_monitorado","string","/home/user/documentos","Caminho do diretório a ser monitorado. Deve ser absoluto."
+"permissao_extracao","boolean","TRUE","Confirmação do usuário para extração de dados."
+"estilo","arquivo","guia_estilo.md","Arquivo .md com guia de tom e voz da marca."
+"produtos","arquivo","portfolio_produtos.md","Arquivo .md com lista detalhada de produtos."
+"marca","string","https://www.exemplo.com.br","Domínio do site oficial da marca."
+"guia_ferramentas","url","https://docs.crewai.com/how-to/create-custom-tools","Link para o guia de ferramentas."
+"conceito_agents","url","https://docs.crewai.com/concepts/agents","Link com conceitos de agentes."
+"docling","url","https://pypi.org/project/docling","Documentação da biblioteca para extração de conteúdo."
+"pdfplumber","url","https://pypi.org/project/pdfplumber","Documentação da biblioteca para manuseio de PDFs."
+"unstructured","url","https://pypi.org/project/unstructured","Documentação da biblioteca para dados não estruturados."
+"langchain","url","https://docs.langchain.com/docs/","Documentação do framework de linguagem natural."
+"faiss","url","https://github.com/facebookresearch/faiss","Repositório para biblioteca de busca eficiente."
+"weaviate","url","https://weaviate.io/","Documentação do banco de dados semântico."
+"streamlit","url","https://docs.streamlit.io/","Documentação para construção de interfaces web."
+```
+
+### Observações de Estrutura
+- Os campos e exemplos de valores devem fornecer uma compreensão clara do que é esperado do usuário.
+- Cada entrada tem uma descrição que serve como orientação sobre a coleta de informações.
+
+### Como Carregar o Arquivo no `main.py`
+Para carregar e usar o arquivo CSV no seu código Python, você pode usar a biblioteca `pandas` como abaixo:
+
+```python
+import pandas as pd
+
+# Carregando o arquivo CSV
+inputs_df = pd.read_csv('caminho/para/exemplo_input.csv')
+
+# Exibindo os inputs carregados
+print(inputs_df)
+
+# Acesso a campos específicos
+diretorio_monitorado = inputs_df.loc[inputs_df['Input'] == 'diretório_monitorado', 'Exemplo de Valor'].values[0]
+print(diretorio_monitorado)
+```
+
+Este código lê o arquivo `exemplo_input.csv`, permite visualizar os dados carregados e acessa informações específicas, ajudando a orientar o desenvolvimento do sistema de forma eficiente. 
+
+Com esta estrutura, o Oráculo CPG está preparado para coletar e validar inputs de maneira organizada e eficiente.

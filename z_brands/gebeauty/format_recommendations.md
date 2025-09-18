@@ -49,6 +49,37 @@ Essas informações serão configuradas **diretamente no painel do Shopify**, na
 
 ---
 
+### ✅ Resumo HTML (Excerpt / Summary HTML)
+
+Gere um **Resumo HTML** curto e persuasivo para o campo de "Summary HTML" (Excerpt) do post no Shopify.
+
+#### Otimização de conteúdo
+- Mantenha o resumo conciso e atraente — **150 a 160 caracteres** para evitar truncamento em resultados de busca.
+- Inclua **palavras‑chave relevantes** de forma natural no texto.
+- Escreva um resumo **original**, que não apenas repita o título do post.
+- Foque no **principal benefício** ou proposta de valor que a leitora vai ganhar.
+
+#### Táticas de engajamento
+- Crie resumos que **despertem curiosidade** ou façam **perguntas instigantes**.
+- Destaque **benefícios específicos, soluções ou resultados** que o post entrega.
+- Use **linguagem orientada à ação** que incentive cliques.
+- Inclua **números ou detalhes específicos** quando fizer sentido (ex.: "5 estratégias comprovadas").
+
+#### Considerações de SEO
+- Incorpore **palavra‑chave primária e secundária** naturalmente, sem keyword stuffing.
+- Garanta que cada resumo seja **único** entre todos os posts.
+- Escreva conteúdo **descritivo e fiel** ao post completo.
+- Considere incluir o **nome da marca** ou o foco da loja quando relevante.
+
+#### Boas práticas técnicas
+- Quando o tema/tema visual suportar, use **formatação básica em HTML** para aplicar ênfase.
+- Evite marcações excessivas; mantenha a **legibilidade** e a **compatibilidade** com o tema.
+
+> Exemplo (até 160 caracteres):
+> "Descubra 5 estratégias práticas para proteger a cor dos fios no dia a dia, com orientações de uso e ingredientes‑chave para resultados visíveis."
+
+---
+
 ### ✅ Outros pontos importantes
 
 8. Evitar links que não sejam essenciais.  

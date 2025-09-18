@@ -1,0 +1,173 @@
+product:
+  id: "nude-leite-aveia-proteina-baunilha-cafe-250ml"
+  name: "Bebida de Aveia com Proteína Baunilha & Café 250ml"
+  brand: "Nude"
+  canonical_url: "https://heynude.com.br/produto/bebida-de-aveia-com-proteina-baunilha-e-cafe-250-ml"
+  slug: "nude-leite-aveia-proteina-baunilha-cafe-250ml"
+  # Add web field for URL injection
+  web: "https://heynude.com.br/products/proteica-baunilha-cafe"
+  category_hierarchy:
+    - "Alimentos & Bebidas"
+    - "Bebidas Vegetais"
+    - "Pronto para beber"
+    - "Proteicas"
+  tags:
+    - "plant-based"
+    - "sem lactose"
+    - "sem glúten"
+    - "clean label"
+    - "on the go"
+    - "baunilha"
+    - "café"
+    - "rico em proteína"
+  gtin: null
+  sku: null
+  variants:
+    flavor: "Baunilha & Café"
+    size_ml: 250
+  package:
+    net_volume_ml: 250
+    unit_count: 1
+    package_description: "Bebida vegetal proteica sabor baunilha com café, embalagem 250ml"
+    storage: "Conservar em local fresco e seco. Após aberto, manter refrigerado e consumir imediatamente."
+  availability:
+    status: null
+    last_checked_at: "2025-08-28T00:00:00-03:00"
+  pricing:
+    currency: "BRL"
+    price: null
+    observed_prices:
+      - retailer: "Zona Cerealista"
+        url: "https://www.zonacerealista.com.br/bebida-de-aveia-com-proteina-baunilha-e-cafe-nude-250ml"
+        price: 9.90
+        currency: "BRL"
+        observed_at: "2025-08-28"
+  images:
+    primary: null
+    gallery: []
+  short_description: >
+    Bebida vegetal de aveia proteica sabor baunilha com café. Clean label, sem glúten e sem lactose.
+  long_description: >
+    A Bebida de Aveia Nude com Proteína Baunilha & Café 250ml é prática, nutritiva e saborosa.
+    Elaborada com aveia upcycled e proteína vegetal, é clean label, sem lactose, sem glúten e 100% plant-based.
+    Combina o toque aromático do café com a suavidade da baunilha, oferecendo energia e saciedade.
+    Ideal para consumo on the go, como lanche da tarde ou pós-treino.
+  ingredients:
+    - água
+    - aveia
+    - proteína de ervilha
+    - óleo de girassol
+    - café solúvel
+    - aroma natural de baunilha
+    - açúcar demerara
+    - sal marinho
+  allergens:
+    contains:
+      - aveia
+    may_contain: []
+    gluten_statement: "Não contém glúten"
+    lactose_statement: "Sem lactose"
+  claims:
+    - "Rico em proteína vegetal"
+    - "Sabor baunilha & café"
+    - "Fonte de energia"
+    - "Clean label"
+    - "Sem lactose"
+    - "Sem glúten"
+    - "Plant-based"
+    - "Pronto para beber"
+  sustainability:
+    upcycled_certified: true
+    upcycled_notes: "Feito a partir da biomassa reaproveitada da aveia"
+    carbon_footprint:
+      notes: "Impacto ambiental inferior a bebidas lácteas tradicionais"
+  nutrition:
+    serving:
+      size_ml: 250
+      servings_per_container: 1
+    per_100ml:
+      energy_kcal: 64
+      carbohydrates_g: 8.3
+      sugars_total_g: 4.0
+      protein_g: 3.4
+      total_fat_g: 2.1
+      saturated_fat_g: 0.4
+      trans_fat_g: 0
+      fiber_g: 0.8
+      sodium_mg: 45
+    per_serving_ml: 250
+    per_serving:
+      energy_kcal: 160
+      carbohydrates_g: 20.8
+      sugars_total_g: 10
+      protein_g: 8.5
+      total_fat_g: 5.2
+      saturated_fat_g: 1.0
+      trans_fat_g: 0
+      fiber_g: 2.0
+      sodium_mg: 112
+    notes: "Tabela nutricional baseada em dados de revendedores; confirmar no rótulo oficial."
+  usage_suggestions:
+    - "Consumir pronto para beber, gelado ou em temperatura ambiente"
+    - "Ideal como lanche pós-treino"
+    - "Boa opção para lanche rápido com energia extra de café"
+  audience:
+    dietary_preferences:
+      - "vegano"
+      - "plant-based"
+      - "sem lactose"
+      - "sem glúten"
+      - "consumidores ativos"
+      - "amantes de café"
+    cautions: []
+  seo:
+    title: "Bebida de Aveia com Proteína Baunilha & Café 250ml | Nude — Plant-based e Energizante"
+    meta_description: "Nude Leite de Aveia com Proteína Baunilha & Café 250ml: bebida vegetal proteica, clean label, sem lactose e sem glúten. Energia e nutrição em uma só bebida."
+    keywords:
+      - "bebida proteica vegetal"
+      - "aveia baunilha café"
+      - "vegano"
+      - "sem lactose"
+      - "sem glúten"
+      - "clean label"
+      - "lanche pós-treino"
+      - "energia com café"
+    canonical: "https://heynude.com.br/produto/bebida-de-aveia-com-proteina-baunilha-e-cafe-250-ml"
+  schema_org:
+    "@context": "https://schema.org"
+    "@type": "Product"
+    name: "Bebida de Aveia com Proteína Baunilha & Café 250ml"
+    brand:
+      "@type": "Brand"
+      name: "Nude"
+    description: "Bebida vegetal de aveia proteica sabor baunilha & café, clean label, sem lactose e sem glúten."
+    sku: null
+    gtin13: null
+    category: "Bebidas vegetais proteicas"
+    url: "https://heynude.com.br/produto/bebida-de-aveia-com-proteina-baunilha-e-cafe-250-ml"
+    offers:
+      "@type": "Offer"
+      priceCurrency: "BRL"
+      price: null
+      availability: null
+      url: "https://heynude.com.br/produto/bebida-de-aveia-com-proteina-baunilha-e-cafe-250-ml"
+    nutrition:
+      "@type": "NutritionInformation"
+      servingSize: "250 ml"
+      calories: "160 kcal"
+      proteinContent: "8.5 g"
+      carbohydrateContent: "20.8 g"
+      fiberContent: "2 g"
+      fatContent: "5.2 g"
+      saturatedFatContent: "1 g"
+      sodiumContent: "112 mg"
+  data_quality:
+    status: "partially_verified"
+    notes:
+      - "Página oficial não carregou; dados baseados em revendedores."
+      - "Preço e disponibilidade oficiais pendentes."
+    recommended_followups:
+      - "Capturar imagens oficiais da embalagem"
+      - "Confirmar tabela nutricional no rótulo"
+      - "Verificar SKU/GTIN no ERP"
+      - "Checar preço e estoque no site oficial"

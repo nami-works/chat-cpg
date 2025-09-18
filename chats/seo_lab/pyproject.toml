@@ -1,0 +1,23 @@
+[project]
+name = "seo_lab"
+version = "0.1.0"
+description = "SEO lab using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.114.0,<1.0.0"
+]
+
+[project.scripts]
+seo_lab = "seo_lab.main:run"
+run_crew = "seo_lab.main:run"
+train = "seo_lab.main:train"
+replay = "seo_lab.main:replay"
+test = "seo_lab.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

@@ -1,0 +1,171 @@
+meta:
+  product_id: "leave-in-com-protecao-termica"
+  display_name: "Leave-in com Proteção Térmica"
+  brand: "GE Beauty"
+  slug: "leave-in-com-protecao-termica"
+  category: "leave-in"
+  subcategory: "heat protectant"
+  version: 1
+  last_update: "2025-08-01"
+  launch_date: null
+  price_range: "R$ 99,00"
+  sizes_available: ["150mL"]
+
+product_description:
+  short: "Proteção térmica, fios sem frizz e com brilho natural."
+  detailed: |
+    O Leave-in com Proteção Térmica GE Beauty é uma fórmula leve que oferece proteção completa contra danos térmicos causados por secador, chapinha e babyliss. Nutre profundamente, sela as cutículas e controla o frizz, deixando os cabelos macios, soltos e com brilho natural. Ideal para uso diário, proporciona hidratação sem pesar nos fios, sendo perfeito para todos os tipos de cabelo, especialmente cabelos finos, cacheados, crespos e quimicamente tratados.
+  key_differentiators:
+    - "Fórmula leve que não pesa nos fios, ideal para cabelos finos."
+    - "Proteção térmica eficaz contra ferramentas de calor."
+    - "Controla frizz e proporciona brilho natural sem oleosidade."
+  positioning: "Para cabelos protegidos, hidratados e livres de frizz no dia a dia."
+  target_customer: "Pessoas que usam ferramentas de calor regularmente e buscam proteção térmica com hidratação leve."
+
+benefits:
+  immediate_results:
+    - "Cabelos protegidos contra o calor das ferramentas."
+    - "Redução imediata do frizz e aumento do brilho."
+  short_term:
+    - "Fios mais macios, soltos e disciplinados."
+  long_term:
+    - "Prevenção de danos térmicos e manutenção da saúde capilar."
+  functional:
+    - "Protege contra danos térmicos até altas temperaturas."
+    - "Hidrata sem pesar nos fios."
+  emotional:
+    - "Confiança para usar ferramentas de calor sem medo de danos."
+  aesthetic:
+    - "Cabelos com movimento natural, brilho e maciez."
+  protective:
+    - "Escudo protetor contra secador, chapinha e babyliss."
+
+actives:
+  - id: "thermal_protection_complex"
+    name: "Complexo de Proteção Térmica"
+    concentration: null
+    function: "Proteção contra danos causados pelo calor."
+    mechanism: "Forma uma barreira protetora que resiste às altas temperaturas."
+    benefits:
+      - "Previne ressecamento e quebra causados pelo calor."
+      - "Mantém a hidratação natural dos fios."
+    source: "Sintético"
+    certifications: ["Heat Protection"]
+
+formulation:
+  texture: "Light cream"
+  viscosity: "Light"
+  absorption: "Fast"
+  finish: "Natural and lightweight"
+  scent_profile: "Fresh and pleasant"
+  color: "White/cream"
+  ph_level: null
+  full_inci: null
+
+hair_compatibility:
+  hair_types: ["Fine", "Thick", "Normal"]
+  textures: ["Straight", "Wavy", "Curly", "Coily"]
+  conditions: ["Damaged", "Colored", "Chemically Treated", "Heat-damaged", "Frizzy"]
+  porosity_levels: ["Low", "Medium", "High"]
+  scalp_types: ["All scalp types"]
+  excluded_types: []
+
+application:
+  frequency: "Daily use"
+  method: |
+    Aplique nos cabelos úmidos ou secos, distribuindo uniformemente dos meios às pontas. Não enxágue. Use antes de ferramentas de calor para máxima proteção. Pode ser usado como finalizador em cabelos secos para controle de frizz.
+  amount_guide: "2-3 borrifadas ou pequena quantidade nas mãos"
+  timing: "Before heat styling or as a daily leave-in"
+  layering: ["Can be layered with other styling products"]
+  styling_compatibility: ["Perfect for use with blow dryer, flat iron, and curling iron"]
+  removal_method: "No need to rinse - leave-in formula"
+
+performance_metrics:
+  clinical_results: []
+  user_study_results: ["4.71/5 estrelas baseado em 7 avaliações"]
+  before_after_claims: ["Cabelos visivelmente mais protegidos e com menos frizz."]
+  duration_of_effects: "All-day protection and frizz control"
+  improvement_timeline: "Immediate protection with cumulative benefits"
+
+technical_specs:
+  heat_protection_temp: "Up to 230°C"
+  humidity_resistance: "Good frizz control in humid conditions"
+  water_resistance: null
+  uv_protection: null
+  hold_strength: "Light hold"
+  shine_level: "Natural shine"
+
+usage_scenarios:
+  daily_routine: |
+    Use diariamente como leave-in para hidratação e proteção contínua.
+  special_occasions: |
+    Aplique antes de modelar os cabelos para eventos especiais.
+  professional_use: |
+    Ideal para uso profissional em salões durante procedimentos com calor.
+  troubleshooting:
+    - "Se os cabelos ficarem pesados, reduza a quantidade aplicada."
+    - "Para cabelos muito finos, aplique apenas nas pontas."
+  seasonal_tips:
+    - "Use mais frequentemente no verão quando há maior exposição ao calor."
+
+safety_information:
+  contraindications: []
+  precautions: ["Evite contato com os olhos.", "Mantenha fora do alcance de crianças."]
+  storage_requirements: "Armazene em local fresco e seco, longe do calor excessivo."
+  shelf_life: "12 meses após abertura"
+  pregnancy_safe: true
+  child_safe: true
+
+regulatory_claims:
+  dermatologically_tested: null
+  hypoallergenic: null
+  non_comedogenic: null
+  cruelty_free: true
+  vegan: true
+  sulfate_free: true
+  paraben_free: true
+  silicone_free: true
+  artificial_fragrance_free: null
+
+certifications:
+  organic: []
+  sustainable: []
+  professional: []
+  awards: []
+
+marketing_copy:
+  hero_headline: "Proteção Térmica e Fios Sem Frizz"
+  subheadlines:
+    - "Fórmula Leve que Não Pesa nos Fios"
+    - "Proteção Completa Contra Ferramentas de Calor"
+  elevator_pitch: "O Leave-in com Proteção Térmica GE Beauty oferece proteção completa contra o calor, hidratação leve e controle de frizz para cabelos saudáveis e brilhantes."
+  key_messages:
+    - "Protege contra danos térmicos sem pesar nos fios."
+    - "Ideal para cabelos finos e todos os tipos de textura."
+  call_to_action:
+    - "Proteja seus cabelos com o Leave-in GE Beauty."
+  social_proof:
+    - "4.71/5 estrelas - 'O melhor leave-in que já usei' - Beatriz"
+  comparison_points:
+    - "Mais leve que leave-ins convencionais, perfeito para cabelos finos."
+
+content_hooks:
+  problem_statements:
+    - "Ferramentas de calor podem causar danos irreversíveis aos cabelos."
+  solution_narratives:
+    - "O Leave-in com Proteção Térmica oferece escudo protetor eficaz."
+  transformation_stories:
+    - "'Deixa meu cabelo super hidratado e leve!' - Lígia Baseggio"
+  expert_insights:
+    - "Formulado especificamente para proteção térmica sem comprometer a leveza."
+  ingredient_spotlights:
+    - "Complexo de proteção térmica: tecnologia avançada contra o calor."
+  routine_integration:
+    - "Use diariamente para proteção contínua e cabelos sempre saudáveis."
+
+disclaimers:
+  results_variability:
+    - "Os resultados podem variar de acordo com o tipo de cabelo e frequência de uso de ferramentas de calor."
+  usage_limitations:
+    - "Para máxima proteção, aplique sempre antes do uso de ferramentas de calor."
+  regulatory_required: []

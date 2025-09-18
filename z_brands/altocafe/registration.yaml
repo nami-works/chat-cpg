@@ -1,0 +1,48 @@
+brand: "https://altocafe.com.br"
+brand_category: premium coffee and beverages
+blog: "https://blog.altocafe.com.br"
+preferred_language: "pt_BR"
+
+# API Configuration
+apis:
+  google_ads:
+    enabled: true
+    # ⚠️  SECURITY: Credentials are loaded from environment variables or secure config files
+    # See config/secure_credentials.yaml.template for setup instructions
+    country_code: "BR"
+    language_code: "pt"
+    
+  semrush:
+    enabled: false
+    api_key: ""
+    
+  ahrefs:
+    enabled: false
+    api_key: ""
+
+# Keyword Research Settings
+keyword_research:
+  enabled: true
+  primary_source: "google_ads"
+  fallback_sources: ["google_trends", "manual_csv"]
+  cache_duration_hours: 24
+  max_keywords_per_theme: 50
+  filters:
+    min_search_volume: 100
+    max_search_volume: 100000
+    max_seo_difficulty: 30
+    min_cpc: 0.1
+    max_cpc: 10.0
+
+# Content Strategy
+content_strategy:
+  target_keyword_density: 0.02
+  min_content_length: 800
+  max_content_length: 2000
+  include_competitor_analysis: true
+  seasonal_keyword_tracking: true
+
+benchmarks:
+  - "https://blog.starbucks.com"
+  - "https://blog.nespresso.com"
+  - "https://blog.cafepele.com.br"

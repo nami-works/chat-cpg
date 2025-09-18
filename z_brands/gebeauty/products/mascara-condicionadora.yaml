@@ -1,0 +1,171 @@
+meta:
+  product_id: "mascara-condicionadora"
+  display_name: "Máscara Condicionadora"
+  brand: "GE Beauty"
+  slug: "mascara-condicionadora"
+  category: "conditioner"
+  subcategory: "deep conditioning mask"
+  version: 1
+  last_update: "2025-08-01"
+  launch_date: null
+  price_range: "R$ 95,00"
+  sizes_available: ["200mL"]
+
+product_description:
+  short: "Hidratação intensa e fios sem frizz em todos os tipos de cabelo."
+  detailed: |
+    A Máscara Condicionadora GE Beauty é uma máscara leve e vegana que proporciona hidratação intensa e nutrição profunda para todos os tipos de cabelo. Sua fórmula avançada sela as cutículas, controla o frizz e recupera a maciez natural dos fios. Ideal para cabelos ressecados, danificados, coloridos ou quimicamente tratados, oferece tratamento intensivo que deixa os cabelos visivelmente mais saudáveis, macios e com brilho natural.
+  key_differentiators:
+    - "Fórmula vegana e leve que não pesa nos fios."
+    - "Hidratação intensa que sela as cutículas."
+    - "Adequada para todos os tipos de cabelo, inclusive coloridos e tratados."
+  positioning: "Para cabelos intensamente hidratados, macios e livres de frizz."
+  target_customer: "Pessoas que buscam hidratação profunda e controle de frizz para cabelos ressecados ou danificados."
+
+benefits:
+  immediate_results:
+    - "Cabelos visivelmente mais macios e hidratados."
+    - "Redução imediata do frizz e volume."
+  short_term:
+    - "Fios mais disciplinados e com brilho natural."
+  long_term:
+    - "Recuperação da saúde capilar e fortalecimento dos fios."
+  functional:
+    - "Nutre e hidrata profundamente."
+    - "Sela as cutículas e controla o frizz."
+  emotional:
+    - "Confiança em cabelos sempre bem cuidados e saudáveis."
+  aesthetic:
+    - "Cabelos com maciez natural e brilho intenso."
+  protective:
+    - "Protege contra danos externos e quebra."
+
+actives:
+  - id: "deep_conditioning_complex"
+    name: "Complexo de Condicionamento Profundo"
+    concentration: null
+    function: "Hidratação intensa e selamento das cutículas."
+    mechanism: "Penetra na fibra capilar fornecendo nutrição profunda."
+    benefits:
+      - "Restaura a maciez e elasticidade dos fios."
+      - "Controla o frizz e proporciona brilho natural."
+    source: "Vegetal"
+    certifications: ["Vegano"]
+
+formulation:
+  texture: "Cream"
+  viscosity: "Rich"
+  absorption: "Deep penetrating"
+  finish: "Soft and smooth"
+  scent_profile: "Pleasant and subtle"
+  color: "White/cream"
+  ph_level: null
+  full_inci: null
+
+hair_compatibility:
+  hair_types: ["Fine", "Thick", "Normal", "Damaged"]
+  textures: ["Straight", "Wavy", "Curly", "Coily"]
+  conditions: ["Damaged", "Colored", "Chemically Treated", "Dry", "Frizzy"]
+  porosity_levels: ["Low", "Medium", "High"]
+  scalp_types: ["All scalp types"]
+  excluded_types: []
+
+application:
+  frequency: "2-3 times per week"
+  method: |
+    Após lavar os cabelos com shampoo, aplique a máscara nos fios úmidos, evitando a raiz. Deixe agir por 3-5 minutos e enxágue abundantemente. Para tratamento intensivo, deixe agir por até 10 minutos.
+  amount_guide: "Quantidade suficiente para cobrir os fios"
+  timing: "After shampooing"
+  layering: ["Use after shampoo, before leave-in products"]
+  styling_compatibility: ["Compatible with all styling products"]
+  removal_method: "Rinse thoroughly with water"
+
+performance_metrics:
+  clinical_results: []
+  user_study_results: ["4.83/5 estrelas baseado em 6 avaliações"]
+  before_after_claims: ["Cabelos visivelmente mais macios e hidratados desde a primeira aplicação."]
+  duration_of_effects: "Lasts until next wash"
+  improvement_timeline: "Immediate softness with cumulative benefits over time"
+
+technical_specs:
+  heat_protection_temp: null
+  humidity_resistance: "Good frizz control in humid conditions"
+  water_resistance: null
+  uv_protection: null
+  hold_strength: null
+  shine_level: "High natural shine"
+
+usage_scenarios:
+  daily_routine: |
+    Use 2-3 vezes por semana como parte da rotina de cuidados capilares.
+  special_occasions: |
+    Aplique antes de eventos especiais para cabelos extra macios e brilhantes.
+  professional_use: |
+    Ideal para uso profissional em salões para tratamentos intensivos.
+  troubleshooting:
+    - "Se os cabelos ficarem pesados, reduza a quantidade ou frequência de uso."
+    - "Para cabelos muito ressecados, deixe agir por mais tempo."
+  seasonal_tips:
+    - "Use com mais frequência no inverno quando o ar está mais seco."
+
+safety_information:
+  contraindications: []
+  precautions: ["Evite contato com os olhos.", "Em caso de irritação, suspenda o uso."]
+  storage_requirements: "Armazene em local fresco e seco."
+  shelf_life: "12 meses após abertura"
+  pregnancy_safe: true
+  child_safe: true
+
+regulatory_claims:
+  dermatologically_tested: null
+  hypoallergenic: null
+  non_comedogenic: null
+  cruelty_free: true
+  vegan: true
+  sulfate_free: true
+  paraben_free: true
+  silicone_free: true
+  artificial_fragrance_free: null
+
+certifications:
+  organic: []
+  sustainable: []
+  professional: []
+  awards: []
+
+marketing_copy:
+  hero_headline: "Hidratação Intensa e Fios Sem Frizz"
+  subheadlines:
+    - "Máscara Vegana para Todos os Tipos de Cabelo"
+    - "Nutrição Profunda e Maciez Natural"
+  elevator_pitch: "A Máscara Condicionadora GE Beauty oferece hidratação intensa e controle de frizz, deixando os cabelos macios, brilhantes e saudáveis."
+  key_messages:
+    - "Hidrata profundamente sem pesar nos fios."
+    - "Fórmula vegana adequada para todos os tipos de cabelo."
+  call_to_action:
+    - "Transforme seus cabelos com a Máscara Condicionadora GE Beauty."
+  social_proof:
+    - "Avaliada com 4.83 estrelas - 'A máscara é excelente' - Maria Luísa"
+  comparison_points:
+    - "Mais nutritiva que condicionadores convencionais."
+
+content_hooks:
+  problem_statements:
+    - "Cabelos ressecados e com frizz precisam de hidratação intensa."
+  solution_narratives:
+    - "A Máscara Condicionadora oferece nutrição profunda e controle de frizz."
+  transformation_stories:
+    - "'Nunca vi meu cabelo tão maravilhoso' - Rafaelly Rebecca"
+  expert_insights:
+    - "Formulada para proporcionar hidratação intensa sem pesar nos fios."
+  ingredient_spotlights:
+    - "Fórmula vegana: nutrição natural e sustentável."
+  routine_integration:
+    - "Use 2-3 vezes por semana para cabelos sempre hidratados."
+
+disclaimers:
+  results_variability:
+    - "Os resultados podem variar de acordo com o tipo e condição do cabelo."
+  usage_limitations:
+    - "Use conforme indicado para melhores resultados."
+  regulatory_required: []

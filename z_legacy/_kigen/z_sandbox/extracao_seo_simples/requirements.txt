@@ -1,0 +1,4 @@
+requests==2.31.0
+openai==0.27.8
+git+https://github.com/nltk/nltk.git
+git+https://github.com/explosion/spaCy.git

@@ -1,0 +1,3 @@
+products = {
+    "forca_protecao": [],
+}

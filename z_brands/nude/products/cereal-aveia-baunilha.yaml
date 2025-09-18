@@ -1,0 +1,81 @@
+meta:
+  product_id: "cereal-aveia-baunilha"
+  display_name: "Cereal de Aveia Sabor Baunilha 180g"
+  brand: "Nude"
+  slug: "cereal-aveia-baunilha"
+  category: "cereal"
+  subcategory: "oatmeal"
+  version: 1
+  last_update: "2025-08-28"
+  launch_date: null
+  price_range: "R$ 24,90"
+  sizes_available: ["180g"]
+  # Add web field for URL injection
+  web: "https://heynude.com.br/products/cereal-aveia-baunilha"
+
+product_description:
+  short: "Cereal de aveia crocante, clean label, com 7,7 g de proteína e 4,6 g de fibras por porção."
+  detailed: |
+    O Nude Cereal de Aveia Sabor Baunilha é um cereal matinal crocante, proteico e plant-based.
+    Desenvolvido com aveia upcycled, é clean label (sem corantes, conservantes, aromas ou adoçantes artificiais),
+    sem glúten e sem lactose. Ideal para consumir com bebida vegetal, iogurte, frutas, mingau ou puro.
+  key_differentiators:
+    - "7,7 g de proteína por porção"
+    - "4,6 g de fibras por porção"
+    - "100% vegetal e clean label"
+  positioning: "Para quem busca um café da manhã nutritivo e prático."
+  target_customer: "Consumidores que buscam cereais saudáveis, sem glúten e com alto teor proteico."
+
+benefits:
+  immediate_results:
+    - "Cereal crocante e saboroso"
+    - "Alto teor de proteína e fibras"
+  short_term:
+    - "Saciedade prolongada"
+    - "Energia sustentada"
+  long_term:
+    - "Contribui para uma alimentação equilibrada"
+  functional:
+    - "Fonte de proteína vegetal"
+    - "Rico em fibras alimentares"
+  emotional:
+    - "Satisfação com escolha saudável"
+  aesthetic:
+    - "Cereal crocante e apetitoso"
+  protective:
+    - "Sem ingredientes artificiais"
+
+actives:
+  - id: "aveia"
+    name: "Aveia"
+    concentration: null
+    function: "Fonte de fibras e proteínas"
+    mechanism: "Fornece nutrientes essenciais para o organismo"
+    benefits:
+      - "Rico em fibras solúveis"
+      - "Fonte de proteína vegetal"
+    source: "Natural"
+    certifications: ["Upcycled"]
+
+  - id: "proteina-ervilha"
+    name: "Proteína de Ervilha"
+    concentration: null
+    function: "Suplementação proteica"
+    mechanism: "Fornece aminoácidos essenciais"
+    benefits:
+      - "Alto teor proteico"
+      - "Completa o perfil nutricional"
+    source: "Vegetal"
+    certifications: ["Plant-based"]
+
+formulation:
+  texture: "Crocante"
+  viscosity: "Sólido"
+  absorption: "N/A"
+  finish: "Natural"
+  scent_profile: "Baunilha natural"
+  color: "Natural da aveia"
+  ph_level: null
+  full_inci: |
+    Farinha de arroz, aveia, proteína de ervilha, maçã em pó, fibra de chicória, 
+    óleo de coco, sal, aromas naturais

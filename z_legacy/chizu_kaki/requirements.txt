@@ -1,0 +1,39 @@
+# Aqui está a versão completa e refinada do arquivo `requirements.txt`, juntamente com a descrição das bibliotecas em uso, que são essenciais para a execução da Crew ChizuKaki:
+
+# ```plaintext
+pandas==1.5.0
+geopy==2.3.0
+requests==2.28.0
+# ```
+
+# ### Descrição das Bibliotecas:
+
+# 1. **pandas**: 
+#    - **Versão**: 1.5.0
+#    - **Propósito**: Biblioteca amplamente utilizada para manipulação e análise de dados, permitindo a leitura do arquivo CSV de entrada e a organização dos dados resultantes em um formato tabular.
+#    - **Link**: [pandas no PyPI](https://pypi.org/project/pandas/)
+
+# 2. **geopy**: 
+#    - **Versão**: 2.3.0
+#    - **Propósito**: Biblioteca especializada em geolocalização que fornece ferramentas para calcular distâncias geodésicas entre coordenadas geográficas, fundamental para o correto funcionamento da Crew ao comparar CEPs de clientes com shoppings.
+#    - **Link**: [geopy no PyPI](https://pypi.org/project/geopy/)
+
+# 3. **requests**: 
+#    - **Versão**: 2.28.0
+#    - **Propósito**: Biblioteca essencial para realizar requisições HTTP, permitindo a comunicação com APIs como a ViaCEP, que fornece dados de geocodificação (conversão de CEP em coordenadas).
+#    - **Link**: [requests no PyPI](https://pypi.org/project/requests/)
+
+# ### Justificativa da Escolha das Bibliotecas:
+
+# - **Pandas** é vital para a manipulação de dados estruturados, simplificando operações como leitura de arquivos CSV, validação e transformação dos dados necessários para análise.
+# - **Geopy** é escolhido por sua precisão e confiabilidade em cálculos de distância, suportando as operações geoespaciais que a Crew requer.
+# - **Requests** é fundamental para interagir com serviços externos, assegurando que a Crew obtenha coordenadas precisas para os CEPs.
+
+# ### Análise de Necessidade e Segurança
+
+# - **Todas as bibliotecas mencionadas são populares e bem documentadas**, com uma grande comunidade de suporte e atualizações regulares, garantindo segurança e compatibilidade.
+# - **Validade do Uso**: Cada biblioteca foi selecionada com base em sua aplicabilidade prática e presença em projetos semelhantes, conforme evidenciado por exemplos em [GitHub](https://github.com) e resoluções no [StackOverflow](https://stackoverflow.com), fazendo delas escolhas sólidas para o projeto da Crew ChizuKaki.
+
+# ### Conclusão:
+
+# Este conjunto de bibliotecas, junto com a estrutura de dados e funções implementadas, oferece uma base robusta para a Crew ChizuKaki operar eficientemente na análise de proximidade entre os CEPs dos clientes e a lista de shoppings, atingindo os objetivos estabelecidos. As bibliotecas foram escolhidas para maximizar a eficiência e a clareza do processo de análise e geração de relatórios.

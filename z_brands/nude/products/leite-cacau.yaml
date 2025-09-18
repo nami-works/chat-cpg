@@ -1,0 +1,162 @@
+product:
+  id: "nude-leite-aveia-cacau-1l"
+  name: "Bebida de Aveia Nude Cacau 1L"
+  brand: "Nude"
+  canonical_url: "https://heynude.com.br/produto/bebida-de-aveia-cacau-nude.-1l"
+  slug: "nude-leite-aveia-cacau-1l"
+  # Add web field for URL injection
+  web: "https://heynude.com.br/products/leite-cacau"
+  category_hierarchy:
+    - "Alimentos & Bebidas"
+    - "Bebidas Vegetais"
+    - "Leite de Aveia"
+  tags:
+    - "plant-based"
+    - "sem lactose"
+    - "sem glúten"
+    - "clean label"
+    - "saborizado"
+    - "cacau"
+  gtin: null
+  sku: null
+  variants:
+    flavor: "Cacau"
+    size_ml: 1000
+  package:
+    net_volume_ml: 1000
+    unit_count: 1
+    package_description: "Bebida vegetal de aveia sabor cacau, embalagem de 1 litro"
+    storage: "Conservar em local fresco e seco. Após aberto, manter refrigerado e consumir em até 5 dias."
+  availability:
+    status: null
+    last_checked_at: "2025-08-28T00:00:00-03:00"
+  pricing:
+    currency: "BRL"
+    price: null
+    observed_prices:
+      - retailer: "Zona Cerealista"
+        url: "https://www.zonacerealista.com.br/leite-de-aveia-cacau-nude-1l"
+        price: 16.90
+        currency: "BRL"
+        observed_at: "2025-08-28"
+  images:
+    primary: null
+    gallery: []
+  short_description: >
+    Bebida vegetal de aveia sabor cacau, clean label, sem glúten e sem lactose.
+  long_description: >
+    O Nude Leite de Aveia Cacau 1L é uma bebida vegetal saborizada naturalmente,
+    feita com aveia upcycled. É clean label, sem aditivos artificiais, sem lactose
+    e sem glúten. Combina o sabor do cacau com a cremosidade da aveia,
+    ideal para consumo puro, em cafés, smoothies, vitaminas e receitas.
+  ingredients:
+    - água
+    - aveia
+    - óleo de girassol
+    - cacau em pó
+    - sal marinho
+  allergens:
+    contains:
+      - aveia
+    may_contain: []
+    gluten_statement: "Não contém glúten"
+    lactose_statement: "Sem lactose"
+  claims:
+    - "Sabor natural de cacau"
+    - "Clean label"
+    - "Sem lactose"
+    - "Sem glúten"
+    - "Plant-based"
+    - "Sem aditivos artificiais"
+  sustainability:
+    upcycled_certified: true
+    upcycled_notes: "Produzido a partir da biomassa da base de aveia reaproveitada"
+    carbon_footprint:
+      notes: "Impacto ambiental inferior ao leite de vaca; valor específico não informado"
+  nutrition:
+    serving:
+      size_ml: 200
+      servings_per_container: 5
+    per_100ml:
+      energy_kcal: 60
+      carbohydrates_g: 10
+      sugars_total_g: 5.0
+      protein_g: 1.2
+      total_fat_g: 1.8
+      saturated_fat_g: 0.4
+      trans_fat_g: 0
+      fiber_g: 0.8
+      sodium_mg: 42
+    per_serving_ml: 200
+    per_serving:
+      energy_kcal: 120
+      carbohydrates_g: 20
+      sugars_total_g: 10
+      protein_g: 2.4
+      total_fat_g: 3.6
+      saturated_fat_g: 0.8
+      trans_fat_g: 0
+      fiber_g: 1.6
+      sodium_mg: 84
+    notes: "Tabela nutricional baseada em revendedores; confirmar com rótulo oficial."
+  usage_suggestions:
+    - "Consumir puro, gelado ou quente"
+    - "Adicionar a cafés, vitaminas e shakes"
+    - "Usar em sobremesas como bolos, mousses e pudins"
+    - "Combinar com cereais Nude"
+  audience:
+    dietary_preferences:
+      - "vegano"
+      - "plant-based"
+      - "sem lactose"
+      - "sem glúten"
+    cautions: []
+  seo:
+    title: "Bebida de Aveia Cacau 1L | Nude — Plant-based, Clean Label e Sabor Natural"
+    meta_description: "Nude Leite de Aveia Cacau 1L: bebida vegetal sabor cacau, clean label, sem lactose e sem glúten. 100% vegetal e deliciosa."
+    keywords:
+      - "leite de aveia cacau"
+      - "bebida vegetal saborizada"
+      - "vegano"
+      - "sem lactose"
+      - "clean label"
+      - "sem glúten"
+    canonical: "https://heynude.com.br/produto/bebida-de-aveia-cacau-nude.-1l"
+  schema_org:
+    "@context": "https://schema.org"
+    "@type": "Product"
+    name: "Bebida de Aveia Nude Cacau 1L"
+    brand:
+      "@type": "Brand"
+      name: "Nude"
+    description: "Bebida vegetal de aveia sabor cacau, clean label, sem lactose e sem glúten."
+    sku: null
+    gtin13: null
+    category: "Bebidas vegetais"
+    url: "https://heynude.com.br/produto/bebida-de-aveia-cacau-nude.-1l"
+    offers:
+      "@type": "Offer"
+      priceCurrency: "BRL"
+      price: null
+      availability: null
+      url: "https://heynude.com.br/produto/bebida-de-aveia-cacau-nude.-1l"
+    nutrition:
+      "@type": "NutritionInformation"
+      servingSize: "200 ml"
+      calories: "120 kcal"
+      proteinContent: "2.4 g"
+      carbohydrateContent: "20 g"
+      fiberContent: "1.6 g"
+      fatContent: "3.6 g"
+      saturatedFatContent: "0.8 g"
+      sodiumContent: "84 mg"
+  data_quality:
+    status: "partially_verified"
+    notes:
+      - "Página oficial não carregou; dados confirmados via revendedores."
+      - "Preço e disponibilidade oficiais pendentes de verificação."
+    recommended_followups:
+      - "Capturar imagens oficiais da embalagem"
+      - "Confirmar tabela nutricional no rótulo"
+      - "Verificar SKU/GTIN no ERP"
+      - "Checar preço e estoque no site oficial"

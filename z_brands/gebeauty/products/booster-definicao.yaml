@@ -1,0 +1,171 @@
+meta:
+  product_id: "booster-definicao"
+  display_name: "Booster Definição"
+  brand: "GE Beauty"
+  slug: "booster-definicao"
+  category: "booster"
+  subcategory: "styling enhancer"
+  version: 1
+  last_update: "2025-08-01"
+  launch_date: null
+  price_range: "R$ 69,00"
+  sizes_available: ["15mL"]
+
+product_description:
+  short: "Volume, definição e textura natural por até 12 horas."
+  detailed: |
+    O Booster Definição GE Beauty é um concentrado que realça, prolonga e protege a finalização sem pesar nos fios. Especialmente formulado para potencializar a textura natural e proporcionar definição duradoura por até 12 horas, este booster oferece volume flexível, movimento e controle de frizz. Ideal para todos os tipos de cabelo, especialmente cabelos finos, lisos, ondulados, cacheados e crespos que precisam de mais definição e textura.
+  key_differentiators:
+    - "Definição e textura natural por até 12 horas."
+    - "Volume flexível sem pesar nos fios."
+    - "Realça e prolonga qualquer finalização."
+  positioning: "Para cabelos com definição, volume e textura natural duradoura."
+  target_customer: "Pessoas que buscam definição, volume e textura natural, especialmente cabelos finos ou sem movimento."
+
+benefits:
+  immediate_results:
+    - "Volume e definição instantâneos."
+    - "Textura natural realçada."
+  short_term:
+    - "Finalização prolongada por até 12 horas."
+  long_term:
+    - "Melhora progressiva da textura e definição natural."
+  functional:
+    - "Potencializa textura e definição."
+    - "Prolonga a duração da finalização."
+  emotional:
+    - "Confiança em cabelos sempre bem definidos."
+  aesthetic:
+    - "Cabelos com movimento, volume e textura natural."
+  protective:
+    - "Protege a finalização contra fatores externos."
+
+actives:
+  - id: "definition_complex"
+    name: "Complexo de Definição"
+    concentration: null
+    function: "Realça textura natural e prolonga definição."
+    mechanism: "Cria estrutura flexível que mantém a forma por 12 horas."
+    benefits:
+      - "Volume flexível sem rigidez."
+      - "Definição duradoura e natural."
+    source: "Sintético"
+    certifications: ["Long-lasting Definition"]
+
+formulation:
+  texture: "Light serum"
+  viscosity: "Light"
+  absorption: "Fast"
+  finish: "Natural definition"
+  scent_profile: "Fresh"
+  color: "Clear"
+  ph_level: null
+  full_inci: null
+
+hair_compatibility:
+  hair_types: ["Fine", "Thick", "Normal", "Flat"]
+  textures: ["Straight", "Wavy", "Curly", "Coily"]
+  conditions: ["Lack of volume", "Lack of definition", "Flat hair"]
+  porosity_levels: ["Low", "Medium", "High"]
+  scalp_types: ["All scalp types"]
+  excluded_types: []
+
+application:
+  frequency: "As needed for styling"
+  method: |
+    Misture 3-5 gotas com seu leave-in, creme de pentear ou finalizador antes da aplicação. Pode ser usado em cabelos úmidos ou secos. Para máxima definição, aplique nos fios modelados e deixe secar naturalmente ou com difusor.
+  amount_guide: "3-5 drops mixed with styling products"
+  timing: "During styling routine"
+  layering: ["Mix with leave-in, styling cream, or finishing products"]
+  styling_compatibility: ["Perfect for scrunching, diffusing, or air drying"]
+  removal_method: "Wash out with regular shampoo"
+
+performance_metrics:
+  clinical_results: []
+  user_study_results: ["3.5/5 estrelas baseado em 8 avaliações"]
+  before_after_claims: ["Cabelos com mais volume, definição e movimento por até 12 horas."]
+  duration_of_effects: "Up to 12 hours of definition"
+  improvement_timeline: "Immediate results with each use"
+
+technical_specs:
+  heat_protection_temp: null
+  humidity_resistance: "Good definition hold in humid conditions"
+  water_resistance: null
+  uv_protection: null
+  hold_strength: "Flexible hold"
+  shine_level: "Natural shine"
+
+usage_scenarios:
+  daily_routine: |
+    Use diariamente para realçar a textura natural e prolongar a finalização.
+  special_occasions: |
+    Aplique antes de eventos para definição duradoura e volume.
+  professional_use: |
+    Ideal para uso profissional em finalizações que precisam durar.
+  troubleshooting:
+    - "Para cabelos muito finos, use apenas 2-3 gotas."
+    - "Para mais volume, aplique na raiz úmida antes de secar."
+  seasonal_tips:
+    - "Use mais no inverno quando o cabelo tende a ficar mais liso."
+
+safety_information:
+  contraindications: []
+  precautions: ["Evite contato com os olhos.", "Mantenha fora do alcance de crianças."]
+  storage_requirements: "Armazene em local fresco e seco."
+  shelf_life: "12 meses após abertura"
+  pregnancy_safe: true
+  child_safe: true
+
+regulatory_claims:
+  dermatologically_tested: null
+  hypoallergenic: null
+  non_comedogenic: null
+  cruelty_free: true
+  vegan: true
+  sulfate_free: true
+  paraben_free: true
+  silicone_free: true
+  artificial_fragrance_free: true
+
+certifications:
+  organic: []
+  sustainable: []
+  professional: []
+  awards: []
+
+marketing_copy:
+  hero_headline: "Volume e Definição por Até 12 Horas"
+  subheadlines:
+    - "Realça Textura Natural Sem Pesar"
+    - "Prolonga Qualquer Finalização"
+  elevator_pitch: "O Booster Definição GE Beauty oferece volume flexível, definição natural e textura realçada por até 12 horas."
+  key_messages:
+    - "Define e dá movimento mesmo aos cabelos mais lisos."
+    - "Volume flexível sem rigidez ou peso."
+  call_to_action:
+    - "Defina seus cabelos com o Booster Definição GE Beauty."
+  social_proof:
+    - "'Define mesmo! Primeira vez testando e já sei que vou voltar a comprar' - Paula"
+  comparison_points:
+    - "Mais leve que mousses convencionais, mais duradouro que sprays."
+
+content_hooks:
+  problem_statements:
+    - "Cabelos lisos e sem movimento precisam de definição natural."
+  solution_narratives:
+    - "O Booster Definição oferece textura e volume por até 12 horas."
+  transformation_stories:
+    - "'Meu cabelo pesado e liso ganhou definição e movimento' - Paula Duarte"
+  expert_insights:
+    - "Formulado para realçar a textura natural sem pesar nos fios."
+  ingredient_spotlights:
+    - "Complexo de definição: tecnologia para volume flexível duradouro."
+  routine_integration:
+    - "Misture com seus finalizadores favoritos para potencializar resultados."
+
+disclaimers:
+  results_variability:
+    - "Os resultados podem variar de acordo com o tipo de cabelo e produtos utilizados."
+  usage_limitations:
+    - "Para melhores resultados, misture sempre com outros produtos de finalização."
+  regulatory_required: []
