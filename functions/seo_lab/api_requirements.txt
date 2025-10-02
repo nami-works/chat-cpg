@@ -1,0 +1,35 @@
+# FastAPI and web server
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+
+# Your existing CrewAI dependencies
+requests
+python-dotenv
+PyYAML
+
+# LangChain ecosystem
+langchain
+langchain-openai
+langchain-community
+langchain-core
+
+# NLP and AI
+spacy
+
+# Document processing
+unstructured
+python-docx
+openpyxl
+pypdf
+
+# CrewAI
+crewai
+
+# Additional dependencies for document processing
+python-pptx
+pandas
+numpy
+
+# CORS support
+python-multipart
