@@ -8,12 +8,6 @@ requests
 python-dotenv
 PyYAML
 
-# LangChain ecosystem
-langchain
-langchain-openai
-langchain-community
-langchain-core
-
 # NLP and AI
 spacy
 
